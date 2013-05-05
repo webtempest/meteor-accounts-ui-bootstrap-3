@@ -1,8 +1,8 @@
 {
   "name": "accounts-ui-bootstrap-3",
   "description": "Meteor's accounts templates styled for bootstrap-3",
-  "homepage": "http://mangasocial.com",
-  "author": "Manga Social Team <info@mangasocial.com>",
-  "version": "0.1.1",
+  "homepage": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-dropdown",
+  "author": "Manga Social Team (http://mangasocial.com)",
+  "version": "0.1.2",
   "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-dropdown.git"
 }
