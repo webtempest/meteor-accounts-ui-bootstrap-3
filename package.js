@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use(['stylus','accounts-urls', 'accounts-base', 'underscore', 'templating','bootstrap-3'], 'client');
+  api.use(['accounts-password','stylus','accounts-urls', 'accounts-base', 'underscore', 'templating','bootstrap-3'], 'client');
 
   api.add_files([
     'accounts_ui.js',
