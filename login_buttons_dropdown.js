@@ -1,4 +1,5 @@
 (function () {
+
   // for convenience
   var loginButtonsSession = Accounts._loginButtonsSession;
 
@@ -92,7 +93,7 @@
 
       loginButtonsSession.set('inSignupFlow', true);
       loginButtonsSession.set('inForgotPasswordFlow', false);
-      
+
       // force the ui to update so that we have the approprate fields to fill in
       Meteor.flush();
 
@@ -117,7 +118,7 @@
 
       loginButtonsSession.set('inSignupFlow', false);
       loginButtonsSession.set('inForgotPasswordFlow', true);
-      
+
       // force the ui to update so that we have the approprate fields to fill in
       Meteor.flush();
       //toggleDropdown();
@@ -200,7 +201,7 @@
       {fieldName: 'username-or-email', fieldLabel: 'Username or Email',
        visible: function () {
          return _.contains(
-           ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
+           ["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
            Accounts.ui._passwordSignupFields());
        }},
       {fieldName: 'username', fieldLabel: 'Username',
@@ -221,13 +222,13 @@
       {fieldName: 'username', fieldLabel: 'Username',
        visible: function () {
          return _.contains(
-           ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
+           ["USERNAME_AND_EMAIL_CONFIRM","USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
            Accounts.ui._passwordSignupFields());
        }},
       {fieldName: 'email', fieldLabel: 'Email', inputType: 'email',
        visible: function () {
          return _.contains(
-           ["USERNAME_AND_EMAIL", "EMAIL_ONLY"],
+           ["USERNAME_AND_EMAIL_CONFIRM","USERNAME_AND_EMAIL", "EMAIL_ONLY"],
            Accounts.ui._passwordSignupFields());
        }},
       {fieldName: 'email', fieldLabel: 'Email (optional)', inputType: 'email',
@@ -245,7 +246,7 @@
          // they'll necessarily have an email set, since they can use
          // the "forgot password" flow.
          return _.contains(
-           ["USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
+           ["USERNAME_AND_EMAIL_CONFIRM","USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
            Accounts.ui._passwordSignupFields());
        }}
     ];
@@ -267,7 +268,7 @@
 
   Template._loginButtonsLoggedOutPasswordService.showForgotPasswordLink = function () {
     return _.contains(
-      ["USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "EMAIL_ONLY"],
+      ["USERNAME_AND_EMAIL_CONFIRM","USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "EMAIL_ONLY"],
       Accounts.ui._passwordSignupFields());
   };
 

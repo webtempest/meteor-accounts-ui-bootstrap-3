@@ -5,8 +5,8 @@
   <div class="nav-collapse">
     <ul class="nav pull-right">
       <li id="login-dropdown-list" class="dropdown">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown">{{displayName}}<strong class="caret"></strong></a>
-        <div class="dropdown-menu" style="padding: 20px; padding-bottom: 20px;">   
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">{{displayName}}</strong></a>
+        <div class="dropdown-menu pull-right col-sm-3">
           {{#if inMessageOnlyFlow}}
             {{> _loginButtonsMessages}}
           {{else}}
@@ -36,8 +36,8 @@
   <div class="nav-collapse">
     <ul class="nav pull-right">
       <li id="login-dropdown-list" class="dropdown">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In / Up <strong class="caret"></strong></a>
-        <div class="dropdown-menu" style="padding: 20px; padding-bottom: 20px;">   
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Come in!</a>
+        <div class="dropdown-menu pull-right">
           {{> _loginButtonsLoggedOutAllServices}}
         </div>
       </li>
@@ -77,7 +77,7 @@
       {{> _loginButtonsFormField}}
     {{/each}}
     {{> _loginButtonsMessages}}
-    <button class="btn btn-primary" id="login-buttons-password" type="button">
+    <button class="btn btn-primary col-sm-12" id="login-buttons-password" type="button">
       {{#if inSignupFlow}}
         Create
       {{else}}
@@ -85,12 +85,12 @@
       {{/if}}
     </button>
     {{#if inLoginFlow}}
-        <button id="signup-link" class="btn" type="button">Create account</button>
+      <div id="login-other-options" class="col-sm-12">
       {{#if showForgotPasswordLink}}
-      <div>
-        <a id="forgot-password-link">Forgot password</a>
-      </div>
+        <a id="forgot-password-link" class="col-sm-7 pull-left" href="#">Forgot password?</a>
       {{/if}}
+        <a id="signup-link" class="col-sm-5 pull-right" href="#">Create account</a>
+      </div>
     {{/if}}
     {{#if inSignupFlow}}
       {{> _loginButtonsBackToLoginLink}}
@@ -101,23 +101,21 @@
 <template name="_forgotPasswordForm">
   <div class="login-form">
     <div id="forgot-password-email-label-and-input"> {{! XXX we should probably use loginButtonsFormField }}
-      <label id="forgot-password-email-label" for="forgot-password-email">Email</label>
-      <input id="forgot-password-email" type="email"/>
+      <input id="forgot-password-email" type="email" placeholder="E-mail" />
     </div>
     {{> _loginButtonsMessages}}
-    <button class="btn btn-primary login-button-form-submit" id="login-buttons-forgot-password">Reset password</button>
+    <button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">Reset password</button>
     {{> _loginButtonsBackToLoginLink}}
   </div>
 </template>
 
 <template name="_loginButtonsBackToLoginLink">
-    <button id="back-to-login-link" class="btn">Cancel</button>
+    <button id="back-to-login-link" class="btn col-sm-12">Cancel</button>
 </template>
 
 <template name="_loginButtonsFormField">
   {{#if visible}}
-    <label id="login-{{fieldName}}-label" for="login-{{fieldName}}">{{fieldLabel}}</label>
-    <input id="login-{{fieldName}}" type="{{inputType}}" />
+    <input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" />
   {{/if}}
 </template>
 

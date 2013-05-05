@@ -19,6 +19,7 @@ Accounts.ui.config = function(options) {
   // deal with `passwordSignupFields`
   if (options.passwordSignupFields) {
     if (_.contains([
+      "USERNAME_AND_EMAIL_CONFIRM",
       "USERNAME_AND_EMAIL",
       "USERNAME_AND_OPTIONAL_EMAIL",
       "USERNAME_ONLY",
@@ -51,3 +52,6 @@ Accounts.ui._passwordSignupFields = function () {
   return Accounts.ui._options.passwordSignupFields || "EMAIL_ONLY";
 };
 
+Accounts.ui.config({
+  passwordSignupFields: 'USERNAME_AND_EMAIL_CONFIRM'
+});
