@@ -36,6 +36,10 @@
   //
   // resetPasswordDialog template
   //
+  Template._resetPasswordDialog.rendered = function() {
+    var $modal = $(this.find('#login-buttons-reset-password-modal'));
+    $modal.modal();
+  }
 
   Template._resetPasswordDialog.events({
     'click #login-buttons-reset-password-button': function () {
@@ -48,6 +52,7 @@
     'click #login-buttons-cancel-reset-password': function () {
       loginButtonsSession.set('resetPasswordToken', null);
       Accounts._enableAutoLogin();
+      $('#login-buttons-reset-password-modal').modal("hide");
     }
   });
 
@@ -65,6 +70,7 @@
         } else {
           loginButtonsSession.set('resetPasswordToken', null);
           Accounts._enableAutoLogin();
+          $('#login-buttons-reset-password-modal').modal("hide");
         }
       });
   };
