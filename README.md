@@ -14,7 +14,7 @@ http://oortcloud.github.com/meteorite/
 How to add to your meteor app
 -----------------------------
 
-mrt add accounts-ui-bootstrap-dropdown
+mrt add accounts-ui-bootstrap-3
 
 How to use
 -------------
