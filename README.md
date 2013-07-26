@@ -1,7 +1,7 @@
-meteor-accounts-ui-bootstrap-dropdown
+meteor-accounts-ui-bootstrap-3
 =====================================
 
-Meteor accounts-ui styled with twitter/bootstrap dropdown
+Meteor accounts-ui styled with twitter/bootstrap 3
 
 Prerequisites
 -------------
