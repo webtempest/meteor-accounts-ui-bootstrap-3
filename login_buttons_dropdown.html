@@ -36,7 +36,7 @@
   <div class="nav-collapse">
     <ul class="nav pull-right">
       <li id="login-dropdown-list" class="dropdown">
-        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Come in!</a>
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign in!</a>
         <div class="dropdown-menu pull-right">
           {{> _loginButtonsLoggedOutAllServices}}
         </div>
@@ -85,11 +85,11 @@
       {{/if}}
     </button>
     {{#if inLoginFlow}}
-      <div id="login-other-options" class="col-sm-12">
+      <div id="login-other-options">
       {{#if showForgotPasswordLink}}
-        <a id="forgot-password-link" class="col-sm-7 pull-left" href="#">Forgot password?</a>
+        <a id="forgot-password-link" class="pull-left" href="#">Forgot password?</a>
       {{/if}}
-        <a id="signup-link" class="col-sm-5 pull-right" href="#">Create account</a>
+        <a id="signup-link" class="pull-right" href="#">Create account</a>
       </div>
     {{/if}}
     {{#if inSignupFlow}}
@@ -101,7 +101,7 @@
 <template name="_forgotPasswordForm">
   <div class="login-form">
     <div id="forgot-password-email-label-and-input"> {{! XXX we should probably use loginButtonsFormField }}
-      <input id="forgot-password-email" type="email" placeholder="E-mail" />
+      <input id="forgot-password-email" type="email" placeholder="E-mail" class="form-control" />
     </div>
     {{> _loginButtonsMessages}}
     <button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">Reset password</button>
@@ -115,7 +115,7 @@
 
 <template name="_loginButtonsFormField">
   {{#if visible}}
-    <input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" />
+    <input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
   {{/if}}
 </template>
 
