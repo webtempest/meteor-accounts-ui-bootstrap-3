@@ -5,27 +5,25 @@
   -->
 
 <template name="_loginButtons">
-  <div id="login-buttons" class="login-buttons-dropdown-align-{{align}}">
-    {{#if currentUser}}
-      {{#if loggingIn}}
-        {{! We aren't actually logged in yet; we're just setting Meteor.userId
-            optimistically during an at-startup login-with-token. We expose this
-            state so other UIs can treat it specially, but we'll just treat it
-            as logged out. }}
-        {{#if dropdown}}
-          {{> _loginButtonsLoggingIn }}
-        {{else}}
-          <div class="login-buttons-with-only-one-button">
-            {{> _loginButtonsLoggingInSingleLoginButton }}
-          </div>
-        {{/if}}
+  {{#if currentUser}}
+    {{#if loggingIn}}
+      {{! We aren't actually logged in yet; we're just setting Meteor.userId
+          optimistically during an at-startup login-with-token. We expose this
+          state so other UIs can treat it specially, but we'll just treat it
+          as logged out. }}
+      {{#if dropdown}}
+        {{> _loginButtonsLoggingIn }}
       {{else}}
-        {{> _loginButtonsLoggedIn}}
+        <div class="login-buttons-with-only-one-button">
+          {{> _loginButtonsLoggingInSingleLoginButton }}
+        </div>
       {{/if}}
     {{else}}
-      {{> _loginButtonsLoggedOut}}
+      {{> _loginButtonsLoggedIn}}
     {{/if}}
-  </div>
+  {{else}}
+    {{> _loginButtonsLoggedOut}}
+  {{/if}}
 </template>
 
 <template name="_loginButtonsLoggedIn">
@@ -63,7 +61,7 @@
 <!-- used in various places to display messages to user -->
 <template name="_loginButtonsMessages">
   {{#if errorMessage}}
-    <div class="alert alert-error">{{errorMessage}}</div>
+    <div class="alert alert-danger">{{errorMessage}}</div>
   {{/if}}
   {{#if infoMessage}}
     <div class="alert alert-success no-margin">{{infoMessage}}</div>
