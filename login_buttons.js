@@ -108,25 +108,29 @@
   };
 
   Accounts._loginButtons.getLoginServices = function () {
-    var ret = [];
-    // make sure to put password last, since this is how it is styled
-    // in the ui as well.
-    _.each(
-      ['facebook', 'github', 'google', 'twitter', 'weibo', 'password'],
-      function (service) {
-        if (Accounts[service])
-          ret.push({name: service});
-      });
+    // First look for OAuth services.
+    var services = Package['accounts-oauth'] ? Accounts.oauth.serviceNames() : [];
 
-    return ret;
+    // Be equally kind to all login services. This also preserves
+    // backwards-compatibility. (But maybe order should be
+    // configurable?)
+    services.sort();
+
+    // Add password, if it's there; it must come last.
+    if (this.hasPasswordService())
+      services.push('password');
+
+    return _.map(services, function(name) {
+      return {name: name};
+    });
   };
 
   Accounts._loginButtons.hasPasswordService = function () {
-    return Accounts.password;
+    return !!Package['accounts-password'];
   };
 
   Accounts._loginButtons.dropdown = function () {
-    return Accounts._loginButtons.hasPasswordService() || Accounts._loginButtons.getLoginServices().length > 1;
+    return this.hasPasswordService() || getLoginServices().length > 1;
   };
 
   // XXX improve these. should this be in accounts-password instead?
