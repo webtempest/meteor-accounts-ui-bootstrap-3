@@ -92,11 +92,17 @@
       if (event.keyCode === 13)
         enrollAccount();
     },
-    'click #login-buttons-cancel-enroll-account': function () {
+    'click #login-buttons-cancel-enroll-account-button': function () {
       loginButtonsSession.set('enrollAccountToken', null);
       Accounts._enableAutoLogin();
+      $modal.modal("hide");
     }
   });
+
+  Template._enrollAccountDialog.rendered = function() {
+    $modal = $(this.find('#login-buttons-enroll-account-modal'));
+    $modal.modal();
+  };
 
   var enrollAccount = function () {
     loginButtonsSession.resetMessages();
@@ -112,6 +118,7 @@
         } else {
           loginButtonsSession.set('enrollAccountToken', null);
           Accounts._enableAutoLogin();
+          $modal.modal("hide");
         }
       });
   };
