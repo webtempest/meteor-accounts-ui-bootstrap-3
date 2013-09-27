@@ -272,6 +272,10 @@
       Accounts.ui._passwordSignupFields());
   };
 
+  Template._loginButtonsLoggedOutPasswordService.showCreateAccountLink = function() {
+    return !Accounts._options.forbidClientAccountCreation;
+  };
+
   Template._loginButtonsFormField.inputType = function () {
     return this.inputType || "text";
   };
