@@ -8,10 +8,10 @@
   Handlebars.registerHelper(
     "loginButtons",
     function (options) {
-      if (options.hash.align === "right")
-        return new Handlebars.SafeString(Template._loginButtons({align: "right"}));
-      else
+      if (options.hash.align === "left")
         return new Handlebars.SafeString(Template._loginButtons({align: "left"}));
+      else
+        return new Handlebars.SafeString(Template._loginButtons({align: "right"}));
     });
 
   // shared between dropdown and single mode
