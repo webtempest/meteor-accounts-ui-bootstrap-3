@@ -3,7 +3,7 @@
 <!--           -->
 <template name="_loginButtonsLoggedInDropdown">
   <li id="login-dropdown-list" class="dropdown">
-    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <a class="dropdown-toggle"  data-toggle="dropdown">
       {{displayName}}
       <b class="caret"></b>
     </a>
@@ -33,7 +33,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
   <li id="login-dropdown-list" class="dropdown">
-    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <a class="dropdown-toggle"  data-toggle="dropdown">
       Sign In{{#unless forbidClientAccountCreation}} / Up{{/unless}}
       <b class="caret"></b>
     </a>
@@ -85,10 +85,10 @@
     {{#if inLoginFlow}}
       <div id="login-other-options">
       {{#if showForgotPasswordLink}}
-        <a id="forgot-password-link" class="pull-left" href="#">Forgot password?</a>
+        <a id="forgot-password-link" class="pull-left" >Forgot password?</a>
       {{/if}}
       {{#if showCreateAccountLink}}
-        <a id="signup-link" class="pull-right" href="#">Create account</a>
+        <a id="signup-link" class="pull-right" >Create account</a>
       {{/if}}
       </div>
     {{/if}}
