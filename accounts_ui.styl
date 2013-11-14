@@ -33,13 +33,17 @@
 		margin-top: 30%;
 
 .login-buttons-dropdown-align-left
-	&#login-buttons #login-dropdown-list .dropdown-menu
-		float: left;
-		left: 0;
-		right: auto;
+	&#login-buttons + li
+		.dropdown-menu
+			float: left;
+			left: 0;
+			right: auto;
 .login-buttons-dropdown-align-right
-	&#login-buttons #login-dropdown-list .dropdown-menu
-		float: right;
-		right: 0;
-		left: auto;
+	&#login-buttons + li
+		.dropdown-menu
+			float: right;
+			right: 0;
+			left: auto;
 
+#login-buttons
+	display: none;
