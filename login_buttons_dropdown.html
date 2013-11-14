@@ -34,7 +34,7 @@
 <template name="_loginButtonsLoggedOutDropdown">
   <li id="login-dropdown-list" class="dropdown">
     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-      Sign In / Up
+      Sign In{{#unless forbidClientAccountCreation}} / Up{{/unless}}
       <b class="caret"></b>
     </a>
     <div class="dropdown-menu">

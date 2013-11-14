@@ -180,6 +180,10 @@
     return Accounts._loginButtons.hasPasswordService();
   };
 
+  Template._loginButtonsLoggedOutDropdown.forbidClientAccountCreation = function () {
+    return Accounts._options.forbidClientAccountCreation;
+  };
+
   Template._loginButtonsLoggedOutAllServices.services = function () {
     return Accounts._loginButtons.getLoginServices();
   };
