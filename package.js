@@ -9,6 +9,8 @@ Package.on_use(function (api) {
     'accounts_ui.js',
 
     'login_buttons_images.css',
+    'login_buttons_dropdown.styl',
+
     'login_buttons.html',
     'login_buttons_single.html',
     'login_buttons_dropdown.html',

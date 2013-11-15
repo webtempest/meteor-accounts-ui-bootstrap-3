@@ -147,6 +147,11 @@
   // loginButtonsMessagesDialog template
   //
 
+  // Template._loginButtonsMessagesDialog.rendered = function() {
+  //   var $modal = $(this.find('#configure-login-service-dialog-modal'));
+  //   $modal.modal();
+  // }
+
   Template._loginButtonsMessagesDialog.events({
     'click #messages-dialog-dismiss-button': function () {
       loginButtonsSession.resetMessages();
