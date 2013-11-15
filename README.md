@@ -20,3 +20,11 @@ How to use
 -------------
 
 Add {{ loginButtons }} to your template
+
+
+Screenshots
+-------------
+
+![Sign In](https://dl.dropboxusercontent.com/u/7263172/1.png)
+![Sign Up](https://dl.dropboxusercontent.com/u/7263172/2.png)
+![Configure Login Service](https://dl.dropboxusercontent.com/u/7263172/3.png)
