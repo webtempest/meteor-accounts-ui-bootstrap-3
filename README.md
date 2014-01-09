@@ -21,6 +21,24 @@ How to use
 
 Add {{ loginButtons }} to your template
 
+Example:
+
+```html
+<div class="navbar navbar-default" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Project name</a>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Link</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      {{ loginButtons }} <!-- here -->
+    </ul>
+  </div>
+</div>
+```
+
 
 Screenshots
 -------------
