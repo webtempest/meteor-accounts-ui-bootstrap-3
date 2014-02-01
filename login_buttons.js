@@ -173,4 +173,8 @@
         }
     };
 
+    Accounts._loginButtons.rendered = function () {
+        debugger;
+    };
+
 })();
