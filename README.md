@@ -21,6 +21,19 @@ How to use
 
 Add {{ loginButtons }} to your template
 
+Aligning
+-------------
+
+You can align loginButtons dropdown with `align` parameter. Without parameter it defaults to `align="right"`.
+
+```
+{{ loginButtons align="right"}}
+```
+or
+```
+{{ loginButtons align="left"}}
+```
+
 Example:
 
 ```html
