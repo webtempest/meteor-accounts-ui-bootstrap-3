@@ -61,6 +61,10 @@
     };
 
 
+    Template._loginButtonsLoggedInDropdownActions.additionalLoggedInDropdownActions = function () {
+      return Template._loginButtonsAdditionalLoggedInDropdownActions !== undefined;
+    };
+
     //
     // loginButtonsLoggedOutDropdown template and related
     //
