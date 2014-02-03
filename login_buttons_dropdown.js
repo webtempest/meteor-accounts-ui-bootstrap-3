@@ -19,6 +19,9 @@
         }
     });
 
+    Template._loginButtons.toggleDropdown = function() {
+      toggleDropdown();
+    };
 
     //
     // loginButtonsLoggedInDropdown template and related
