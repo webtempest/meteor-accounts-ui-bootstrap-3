@@ -10,7 +10,7 @@
 
 <template name="_resetPasswordDialog">
   {{#if inResetPasswordFlow}}
-    <div class="modal" id="login-buttons-reset-password-modal">
+    <div class="modal accounts-ui-modal fade in" id="login-buttons-reset-password-modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -35,7 +35,7 @@
 
 <template name="_enrollAccountDialog">
   {{#if inEnrollAccountFlow}}
-    <div class="modal" id="login-buttons-enroll-account-modal">
+    <div class="modal accounts-ui-modal fade in" id="login-buttons-enroll-account-modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -55,6 +55,7 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dalog -->
     </div><!-- /.modal -->
+    <div class="modal-backdrop  in"></div>
   {{/if}}
 </template>
 
@@ -69,7 +70,8 @@
 
 <template name="_configureLoginServiceDialog">
   {{#if visible}}
-  <div class="modal-dialog" id="configure-login-service-dialog-modal">
+  <div class="modal accounts-ui-modal fade in" id="configure-login-service-dialog-modal">
+    <div class="modal-dialog">
       <div class="modal-content">
           <div class="modal-header">
               <h4 class="modal-title">Configure Service</h4>
@@ -101,17 +103,18 @@
             </div>
           </div>
           <div class="modal-footer new-section">
-                <div class="login-button btn btn-danger configure-login-service-dismiss-button">
-                  I'll do this later
-                </div>
-                {{#isolate}}
-                  <div class="login-button login-button-configure btn btn-success {{#if saveDisabled}}login-button-disabled{{/if}}"
-                     id="configure-login-service-dialog-save-configuration">
-                    Save Configuration
-                  </div>
-                {{/isolate}}
+            <div class="login-button btn btn-danger configure-login-service-dismiss-button">
+              I'll do this later
+            </div>
+            {{#isolate}}
+              <div class="login-button login-button-configure btn btn-success {{#if saveDisabled}}login-button-disabled{{/if}}"
+                 id="configure-login-service-dialog-save-configuration">
+                Save Configuration
               </div>
+            {{/isolate}}
+          </div>
       </div>
+    </div>
   </div>
   <div class="modal-backdrop  in"></div>
   {{/if}}
