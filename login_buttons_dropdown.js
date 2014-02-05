@@ -19,6 +19,9 @@
         }
     });
 
+    Template._loginButtons.toggleDropdown = function() {
+      toggleDropdown();
+    };
 
     //
     // loginButtonsLoggedInDropdown template and related
@@ -60,6 +63,10 @@
         return user.username || (user.emails && user.emails[0] && user.emails[0].address);
     };
 
+
+    Template._loginButtonsLoggedInDropdownActions.additionalLoggedInDropdownActions = function () {
+      return Template._loginButtonsAdditionalLoggedInDropdownActions !== undefined;
+    };
 
     //
     // loginButtonsLoggedOutDropdown template and related

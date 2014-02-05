@@ -22,9 +22,14 @@
 </template>
 
 <template name="_loginButtonsLoggedInDropdownActions">
+  {{#if additionalLoggedInDropdownActions}}
+    {{> _loginButtonsAdditionalLoggedInDropdownActions}}
+  {{/if}}
+
   {{#if allowChangingPassword}}
     <button class="btn btn-default btn-block" id="login-buttons-open-change-password">Change password</button>
   {{/if}}
+
   <button class="btn btn-block btn-primary" id="login-buttons-logout">Sign out</button>
 </template>
 
