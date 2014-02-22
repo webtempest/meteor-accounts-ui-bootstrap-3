@@ -136,7 +136,7 @@
     };
 
     Accounts._loginButtons.dropdown = function() {
-        return this.hasPasswordService() || getLoginServices().length > 1;
+        return this.hasPasswordService() || Accounts._loginButtons.getLoginServices().length > 1;
     };
 
     // XXX improve these. should this be in accounts-password instead?
