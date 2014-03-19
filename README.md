@@ -9,17 +9,23 @@ Prerequisites
 Use the meteorite package manager
 http://oortcloud.github.com/meteorite/
 
-[sudo] npm install -g meteorite
+`[sudo] npm install -g meteorite`
+
+You will also need the following:
+
+* Bootstrap 3: `mrt add bootstrap-3`
+* At least one accounts plugin: `mrt add accounts-password`, `mrt add accounts-github`, etc.
+
 
 How to add to your meteor app
 -----------------------------
 
-mrt add accounts-ui-bootstrap-3
+`mrt add accounts-ui-bootstrap-3`
 
 How to use
 -------------
 
-Add {{ loginButtons }} to your template
+Add `{{ loginButtons }}` to your template
 
 Aligning
 -------------
