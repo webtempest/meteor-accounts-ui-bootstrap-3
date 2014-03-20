@@ -10,7 +10,7 @@ if (!Accounts.ui._options) {
 
 Accounts.ui.navigate = function (route, hash) {
     // if router is iron-router
-    if(Router && _.isFunction(Router.go)) {
+    if(window.Router && _.isFunction(Router.go)) {
         Router.go(route, hash);
     }
 }
