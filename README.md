@@ -25,20 +25,7 @@ How to add to your meteor app
 How to use
 -------------
 
-Add `{{ loginButtons }}` to your template
-
-Aligning
--------------
-
-You can align loginButtons dropdown with `align` parameter. Without parameter it defaults to `align="right"`.
-
-```
-{{ loginButtons align="right"}}
-```
-or
-```
-{{ loginButtons align="left"}}
-```
+Add `{{> loginButtons }}` to your template
 
 Example:
 
@@ -52,7 +39,7 @@ Example:
       <li class="active"><a href="#">Link</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      {{ loginButtons }} <!-- here -->
+      {{> loginButtons }} <!-- here -->
     </ul>
   </div>
 </div>
