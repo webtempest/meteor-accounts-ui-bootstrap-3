@@ -5,18 +5,9 @@
     // for convenience
     var loginButtonsSession = Accounts._loginButtonsSession;
 
-    Handlebars.registerHelper(
-        "loginButtons",
-        function(options) {
-            if (options.hash.align === "left")
-                return new Handlebars.SafeString(Template._loginButtons({
-                    align: "left"
-                }));
-            else
-                return new Handlebars.SafeString(Template._loginButtons({
-                    align: "right"
-                }));
-        });
+    UI.registerHelper("loginButtons", function () {
+        return Template._loginButtons;
+    });
 
     // shared between dropdown and single mode
     Template._loginButtons.events({
@@ -25,10 +16,6 @@
                 loginButtonsSession.closeDropdown();
             });
         }
-    });
-
-    Template._loginButtons.preserve({
-        'input[id]': Spark._labelFromIdOrName
     });
 
     //
@@ -136,7 +123,7 @@
     };
 
     Accounts._loginButtons.dropdown = function() {
-        return this.hasPasswordService() || getLoginServices().length > 1;
+        return this.hasPasswordService() || Accounts._loginButtons.getLoginServices().length > 1;
     };
 
     // XXX improve these. should this be in accounts-password instead?
