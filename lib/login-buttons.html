@@ -1,0 +1,59 @@
+<template name="_LoginButtonsWrapLi">
+  <li id="login-buttons" class="dropdown">
+    {{> UI.contentBlock}}
+  </li>
+</template>
+
+<template name="_LoginButtonsWrapDiv">
+  <div id="login-buttons" class="dropdown">
+    {{> UI.contentBlock}}
+  </div>
+</template>
+
+<template name="LoginButtons">
+  {{#Wrap}}
+    <a class="dropdown-toggle" data-toggle="dropdown">
+      {{#if currentUser}}
+        {{ displayName }} <b class="caret"></b>
+      {{else}}
+        {{ _lbtext "sign-in" }} <b class="caret"></b>
+      {{/if}}
+    </a>
+
+    <div class="dropdown-menu">
+      <div class="col-xs-12">
+        {{> LoginButtonsDropdown}}
+      </div>
+    </div>
+  {{/Wrap}}
+</template>
+
+<template name="_LogginButtonsLoggedInDropdown">
+
+</template>
+
+<template name="_LogginButtonsLoggingInDropdown">
+</template>
+
+<template name="_LogginButtonsLoggedOutDropdown">
+
+</template>
+
+<template name="_LoginButtonsSignUpDropdown">
+  <form class="login-buttons-signup-form form">
+    {{#each fields}}
+      {{> _LoginButtonsField}}
+    {{/each}}
+
+    <input class="btn btn-primary form-control" type="submit" value="{{ _lbtext "sign-up" }}">
+    <a class="btn btn-default btn-cancel form-control">{{ _lbtext "cancel" }}</a>
+  </form>
+</template>
+
+<template name="_LoginButtonsSignInDropdown">
+
+</template>
+
+<template name="_LoginButtonsField">
+  <input class="form-control" type="{{ type }}" name="{{ field }}" placeholder="{{ _lbtext field }}">
+</template>
