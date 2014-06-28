@@ -97,6 +97,7 @@
       this.set('configureLoginServiceDialogVisible', true);
       this.set('configureLoginServiceDialogServiceName', name);
       this.set('configureLoginServiceDialogSaveDisabled', true);
+      $('#configure-login-service-dialog-modal').modal();
     }
   };
 }) ();
