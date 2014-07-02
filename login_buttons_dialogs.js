@@ -42,7 +42,8 @@
 	}
 
 	Template._resetPasswordDialog.events({
-		'click #login-buttons-reset-password-button': function () {
+		'click #login-buttons-reset-password-button': function (event) {
+			event.stopPropagation();
 			resetPassword();
 		},
 		'keypress #reset-password-new-password': function (event) {
@@ -171,6 +172,7 @@
 
 	Template._configureLoginServiceDialog.events({
 		'click .configure-login-service-dismiss-button': function () {
+			event.stopPropagation();
 			loginButtonsSession.set('configureLoginServiceDialogVisible', false);
 			$('#configure-login-service-dialog-modal').modal('hide');
 		},
