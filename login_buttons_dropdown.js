@@ -6,10 +6,10 @@
 	// events shared between loginButtonsLoggedOutDropdown and
 	// loginButtonsLoggedInDropdown
 	Template._loginButtons.events({
-		'click input': function(){
+		'click input': function(event){
 			event.stopPropagation();
 		},
-		'click #login-name-link, click #login-sign-in-link': function() {
+		'click #login-name-link, click #login-sign-in-link': function(event) {
 			event.stopPropagation();
 			loginButtonsSession.set('dropdownVisible', true);
 			Meteor.flush();
@@ -138,7 +138,7 @@
 				if (usernameOrEmail.indexOf('@') !== -1)
 					document.getElementById('forgot-password-email').value = usernameOrEmail;
 		},
-		'click #back-to-login-link': function() {
+		'click #back-to-login-link': function(event) {
 			event.stopPropagation();
 			loginButtonsSession.resetMessages();
 
