@@ -6,7 +6,9 @@
 	<li id="login-dropdown-list" class="dropdown">
 		<a class="dropdown-toggle"  data-toggle="dropdown">
 			{{displayName}}
-			<img src="{{user_profile_picture}}" width="30px" class="img-circular" alt="#" />
+			{{#with user_profile_picture}}
+				<img src="{{this}}" width="30px" class="img-circular" alt="#" />
+			{{/with}}
 			<b class="caret"></b>
 		</a>
 		<div class="dropdown-menu col-sm-3">
