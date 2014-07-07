@@ -171,7 +171,7 @@
 	//
 
 	Template._configureLoginServiceDialog.events({
-		'click .configure-login-service-dismiss-button': function () {
+		'click .configure-login-service-dismiss-button': function (event) {
 			event.stopPropagation();
 			loginButtonsSession.set('configureLoginServiceDialogVisible', false);
 			$('#configure-login-service-dialog-modal').modal('hide');
