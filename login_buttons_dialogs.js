@@ -141,6 +141,9 @@
 	});
 
 	Template._justVerifiedEmailDialog.visible = function () {
+		if (loginButtonsSession.get('justVerifiedEmail')){
+			setTimeout(function(){$('#login-buttons-email-address-verified-modal').modal()}, 500)
+		}
 		return loginButtonsSession.get('justVerifiedEmail');
 	};
 
