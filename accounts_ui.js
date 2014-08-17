@@ -22,7 +22,8 @@ Accounts.ui.config = function(options) {
 		if (!_.contains(VALID_KEYS, key))
 			throw new Error("Accounts.ui.config: Invalid key: " + key);
 	});
-
+	
+	options.extraSignupFields = options.extraSignupFields || []
 	// deal with `passwordSignupFields`
 	if (options.passwordSignupFields) {
 		if (_.contains([
