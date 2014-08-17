@@ -61,9 +61,17 @@
 
 <template name="_justVerifiedEmailDialog">
 	{{#if visible}}
-		<div class="accounts-dialog accounts-centered-dialog">
-			email verified
-			<div class="login-button" id="just-verified-dismiss-button">dismiss</div>
+		<div class="modal" id="login-buttons-email-address-verified-modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<h4><b>email address verified</b></h4>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-info login-button" id="just-verified-dismiss-button" data-dismiss="modal">dismiss</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	{{/if}}
 </template>
