@@ -3,6 +3,6 @@
   "description": "Meteor's accounts templates styled for bootstrap-3 (blaze support) see repo for legacy",
   "homepage": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3",
   "author": "Manga Social Team (http://mangasocial.com)",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git"
 }
