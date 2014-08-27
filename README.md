@@ -1,26 +1,21 @@
 meteor-accounts-ui-bootstrap-3
 =====================================
 
-Meteor accounts-ui styled with twitter/bootstrap 3
+Meteor accounts-ui styled with Twitter's Bootstrap 3
 
-Prerequisites
+Installation
 -------------
 
-Use the meteorite package manager
-http://oortcloud.github.com/meteorite/
+### Installation
 
-`[sudo] npm install -g meteorite`
+With Meteor 0.9:
 
-You will also need the following:
+```sh
+$meteor add ian:accounts-ui-bootstrap-3
+```
 
-* Bootstrap 3: `mrt add bootstrap-3`
-* At least one accounts plugin: `mrt add accounts-password`, `mrt add accounts-github`, etc.
-
-
-How to add to your meteor app
------------------------------
-
-`mrt add accounts-ui-bootstrap-3`
+* Bootstrap 3: `meteor add ian:bootstrap-3`, but this will be added automatically.
+* At least one accounts plugin: `meteor add accounts-password`, `meteor add accounts-github`, etc.
 
 How to use
 -------------
