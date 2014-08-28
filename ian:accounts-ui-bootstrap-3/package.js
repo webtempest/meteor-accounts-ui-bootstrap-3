@@ -18,8 +18,9 @@ Package.on_use(function (api) {
 		'accounts_ui.js',
 
 		// translations
-		'i18n/en_US.i18n.js',
-		'i18n/es_ES.i18n.js',
+		'i18n/en.i18n.js',
+		'i18n/es.i18n.js',
+		'i18n/ca.i18n.js',
 		'i18n.js',
 
 		'login_buttons.html',

@@ -1,4 +1,4 @@
-i18n.map('es_ES', {
+i18n.map('es', {
 	_resetPasswordDialog: {
 		title: 'Restablece tu contraseña',
 		cancel: 'Cancelar',
