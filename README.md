@@ -95,7 +95,7 @@ accountsUIBootstrap3.map('es_ES', {
 })
 ```
 
-You can use the [translation files](https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3/tree/i18n/ian:accounts-ui-bootstrap-3/i18n) in this repo as an example.
+You can use the translation files in the `i18n` folder as an example.
 
 
 Screenshots
