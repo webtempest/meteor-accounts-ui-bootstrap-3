@@ -1,10 +1,12 @@
 <!-- vim:set ft=handlebars ts=2 sw=2: -->
 <template name="_loginButtonsLoggedOutSingleLoginButton">
-	{{#if configured}}
-		<button class="login-button btn btn-block btn-{{capitalizedName}}">{{i18n '_loginButtonsLoggedOutSingleLoginButton.signInWith'}} {{capitalizedName}}</button>
-	{{else}}
-		<button class="login-button btn btn-block configure-button btn-danger">{{i18n '_loginButtonsLoggedOutSingleLoginButton.configure'}} {{capitalizedName}} {{i18n '_loginButtonsLoggedOutSingleLoginButton.login'}}</button>
-	{{/if}}
+	<div class="navbar-form">
+		{{#if configured}}
+			<button class="login-button btn btn-block btn-{{capitalizedName}}">{{i18n '_loginButtonsLoggedOutSingleLoginButton.signInWith'}} {{capitalizedName}}</button>
+		{{else}}
+			<button class="login-button btn btn-block configure-button btn-danger">{{i18n '_loginButtonsLoggedOutSingleLoginButton.configure'}} {{capitalizedName}} {{i18n '_loginButtonsLoggedOutSingleLoginButton.login'}}</button>
+		{{/if}}
+	</div>
 </template>
 
 <template name="_loginButtonsLoggingInSingleLoginButton">
