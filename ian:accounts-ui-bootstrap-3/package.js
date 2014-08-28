@@ -1,6 +1,6 @@
 Package.describe({
 	summary: 'Bootstrap-styled version of login widgets.',
-	version: '1.0.5',
+	version: '1.0.7',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3",
 });
 
