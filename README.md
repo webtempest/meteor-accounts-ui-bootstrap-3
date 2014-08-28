@@ -71,16 +71,17 @@ Template._loginButtonsLoggedInDropdown.events({
 Localization
 -------------
 
-The default language is English, but this package also comes with Spanish translations built in. If you want to change the language to Spanish run the following from the client:
+The default language is English, but this package also comes with Spanish and Catalan translations built in. If you want to change the language run the following on the client:
 
 ```javascript
-accountsUIBootstrap3.setLanguage('es_ES');
+accountsUIBootstrap3.setLanguage('es'); // for Spanish
+accountsUIBootstrap3.setLanguage('ca'); // for Catalan
 ```
 
 If you want to implement your own language, use the `map` function like so:
 
 ```javascript
-accountsUIBootstrap3.map('es_ES', {
+accountsUIBootstrap3.map('es', {
     _resetPasswordDialog: {
       title: 'Restablece tu contraseña',
       cancel: 'Cancelar',
