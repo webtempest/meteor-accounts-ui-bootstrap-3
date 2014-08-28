@@ -45,7 +45,7 @@ i18n.map('es', {
 		cancel: 'Cancelar'
 	},
 	_loginButtonsLoggedOutSingleLoginButton: {
-		signInWith: 'Iniciar sesión con',
+		signInWith: 'Inicia sesión con',
 		configure: 'Configurar',
 		login: ''
 	},

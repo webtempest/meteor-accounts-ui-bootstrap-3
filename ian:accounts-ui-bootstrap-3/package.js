@@ -1,6 +1,6 @@
 Package.describe({
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.1.2',
+	version: '1.1.3',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3",
 });
 
