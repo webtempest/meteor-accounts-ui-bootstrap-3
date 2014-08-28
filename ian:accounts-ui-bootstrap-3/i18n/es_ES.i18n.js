@@ -34,6 +34,7 @@ i18n.map('es_ES', {
 		createAcc: 'Registrarse'
 	},
 	_forgotPasswordForm: {
+		email: 'Correo electrónico',
 		reset: 'Restablecer contraseña'
 	},
 	_loginButtonsBackToLoginLink: {
