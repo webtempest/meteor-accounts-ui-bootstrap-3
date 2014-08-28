@@ -31,10 +31,10 @@
 	{{/if}}
 
 	{{#if allowChangingPassword}}
-		<button class="btn btn-default btn-block" id="login-buttons-open-change-password">Change password</button>
+		<button class="btn btn-default btn-block" id="login-buttons-open-change-password">{{i18n '_loginButtonsLoggedInDropdownActions.password'}}</button>
 	{{/if}}
 
-	<button class="btn btn-block btn-primary" id="login-buttons-logout">Sign out</button>
+	<button class="btn btn-block btn-primary" id="login-buttons-logout">{{i18n '_loginButtonsLoggedInDropdownActions.signOut'}}</button>
 </template>
 
 <!--            -->
@@ -42,7 +42,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle"  data-toggle="dropdown">Sign in{{#unless forbidClientAccountCreation}} / up{{/unless}}<b class="caret"></b></a>
+		<a class="dropdown-toggle"  data-toggle="dropdown">{{i18n '_loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n '_loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
 		<div class="dropdown-menu">
 			{{> _loginButtonsLoggedOutAllServices}}
 		</div>
@@ -68,7 +68,7 @@
 <template name="_loginButtonsLoggedOutPasswordServiceSeparator">
 	<div class="or">
 		<span class="hline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-		<span class="or-text">or</span>
+		<span class="or-text">{{i18n '_loginButtonsLoggedOutPasswordServiceSeparator.or'}}</span>
 		<span class="hline">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 	</div>
 </template>
@@ -84,19 +84,19 @@
 			{{/each}}
 			<button class="btn btn-primary col-sm-12" id="login-buttons-password" type="submit">
 				{{#if inSignupFlow}}
-					Create
+					{{i18n '_loginButtonsLoggedOutPasswordService.create'}}
 				{{else}}
-					Sign In
+					{{i18n '_loginButtonsLoggedOutPasswordService.signIn'}}
 				{{/if}}
 			</button>
 		</form>
 		{{#if inLoginFlow}}
 			<div id="login-other-options">
 			{{#if showForgotPasswordLink}}
-				<a id="forgot-password-link" class="pull-left" >Forgot password?</a>
+				<a id="forgot-password-link" class="pull-left" >{{i18n '_loginButtonsLoggedOutPasswordService.forgot'}}</a>
 			{{/if}}
 			{{#if showCreateAccountLink}}
-				<a id="signup-link" class="pull-right" >Create account</a>
+				<a id="signup-link" class="pull-right" >{{i18n '_loginButtonsLoggedOutPasswordService.createAcc'}}</a>
 			{{/if}}
 			</div>
 		{{/if}}
@@ -110,15 +110,15 @@
 	<div class="login-form">
 		{{> _loginButtonsMessages}}
 		<div id="forgot-password-email-label-and-input"> {{! XXX we should probably use loginButtonsFormField }}
-			<input id="forgot-password-email" type="email" placeholder="Email" class="form-control" />
+			<input id="forgot-password-email" type="email" placeholder="{{i18n '_forgotPasswordForm.email'}}" class="form-control" />
 		</div>
-		<button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">Reset password</button>
+		<button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">{{i18n '_forgotPasswordForm.reset'}}</button>
 		{{> _loginButtonsBackToLoginLink}}
 	</div>
 </template>
 
 <template name="_loginButtonsBackToLoginLink">
-		<button id="back-to-login-link" class="btn btn-default col-sm-12">Cancel</button>
+		<button id="back-to-login-link" class="btn btn-default col-sm-12">{{i18n '_loginButtonsBackToLoginLink.back'}}</button>
 </template>
 
 <template name="_loginButtonsFormField">
@@ -132,6 +132,6 @@
 	{{#each fields}}
 		{{> _loginButtonsFormField}}
 	{{/each}}
-	<button class="btn btn-primary" id="login-buttons-do-change-password">Change password</button>
-	<button class="btn btn-default" id="login-buttons-cancel-change-password">Cancel</button>
+	<button class="btn btn-primary" id="login-buttons-do-change-password">{{i18n '_loginButtonsChangePassword.submit'}}</button>
+	<button class="btn btn-default" id="login-buttons-cancel-change-password">{{i18n '_loginButtonsChangePassword.cancel'}}</button>
 </template>

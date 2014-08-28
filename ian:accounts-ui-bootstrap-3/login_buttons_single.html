@@ -1,9 +1,9 @@
 <!-- vim:set ft=handlebars ts=2 sw=2: -->
 <template name="_loginButtonsLoggedOutSingleLoginButton">
 	{{#if configured}}
-		<button class="login-button btn btn-block btn-{{capitalizedName}}">Sign in with {{capitalizedName}}</button>
+		<button class="login-button btn btn-block btn-{{capitalizedName}}">{{i18n '_loginButtonsLoggedOutSingleLoginButton.signInWith'}} {{capitalizedName}}</button>
 	{{else}}
-		<button class="login-button btn btn-block configure-button btn-danger">Configure {{capitalizedName}} Login</button>
+		<button class="login-button btn btn-block configure-button btn-danger">{{i18n '_loginButtonsLoggedOutSingleLoginButton.configure'}} {{capitalizedName}} {{i18n '_loginButtonsLoggedOutSingleLoginButton.login'}}</button>
 	{{/if}}
 </template>
 
@@ -15,6 +15,6 @@
 
 <template name="_loginButtonsLoggedInSingleLogoutButton">
 	<li>
-		<a href="#" id="login-buttons-logout">{{displayName}} Sign Out</a>
+		<a href="#" id="login-buttons-logout">{{displayName}} {{i18n '_loginButtonsLoggedInSingleLogoutButton.signOut'}}</a>
 	</li>
 </template>

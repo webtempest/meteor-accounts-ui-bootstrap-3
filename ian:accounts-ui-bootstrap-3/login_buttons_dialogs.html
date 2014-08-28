@@ -16,16 +16,16 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title">reset your password</h4>
+						<h4 class="modal-title">{{i18n '_resetPasswordDialog.title'}}</h4>
 					</div>
 					<div class="modal-body">
-						<input id="reset-password-new-password" class="form-control" type="password" placeholder="New Password"/>
+						<input id="reset-password-new-password" class="form-control" type="password" placeholder="{{i18n '_resetPasswordDialog.newPassword'}}"/>
 						{{> _loginButtonsMessages}}
 					</div>
 					<div class="modal-footer">
-						<a class="btn btn-default" id="login-buttons-cancel-reset-password">close</a>
+						<a class="btn btn-default" id="login-buttons-cancel-reset-password">{{i18n '_resetPasswordDialog.cancel'}}</a>
 						<button class="btn btn-primary" id="login-buttons-reset-password-button">
-							set password
+							{{i18n '_resetPasswordDialog.submit'}}
 						</button>
 					</div>
 				</div><!-- /.modal-content -->
@@ -41,16 +41,16 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						<h4 class="modal-title">choose a password</h4>
+						<h4 class="modal-title">{{i18n '_enrollAccountDialog.title'}}</h4>
 					</div>
 					<div class="modal-body">
-						<input id="enroll-account-password" class="form-control" type="password" placeholder="New Password" />
+						<input id="enroll-account-password" class="form-control" type="password" placeholder="{{i18n '_enrollAccountDialog.newPassword'}}" />
 						{{> _loginButtonsMessages}}
 					</div>
 					<div class="modal-footer">
-						<a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">close</a>
+						<a class="btn btn-default" id="login-buttons-cancel-enroll-account-button">{{i18n '_enrollAccountDialog.cancel'}}</a>
 						<button class="btn btn-primary" id="login-buttons-enroll-account-button">
-							set password
+							{{i18n '_enrollAccountDialog.submit'}}
 						</button>
 					</div>
 				</div><!-- /.modal-content -->
@@ -65,10 +65,10 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body">
-						<h4><b>email address verified</b></h4>
+						<h4><b>{{i18n '_justVerifiedEmailDialog.verified'}}</b></h4>
 					</div>
 					<div class="modal-footer">
-						<button class="btn btn-info login-button" id="just-verified-dismiss-button" data-dismiss="modal">dismiss</button>
+						<button class="btn btn-info login-button" id="just-verified-dismiss-button" data-dismiss="modal">{{i18n '_justVerifiedEmailDialog.dismiss'}}</button>
 					</div>
 				</div>
 			</div>
@@ -129,7 +129,7 @@
 	{{#if visible}}
 		<div class="accounts-dialog accounts-centered-dialog" id="login-buttons-message-dialog">
 			{{> _loginButtonsMessages}}
-			<div class="login-button" id="messages-dialog-dismiss-button">Dismiss</div>
+			<div class="login-button" id="messages-dialog-dismiss-button">{{i18n '_loginButtonsMessagesDialog.dismiss'}}</div>
 		</div>
 	{{/if}}
 </template>
