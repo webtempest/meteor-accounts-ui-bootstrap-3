@@ -6,8 +6,6 @@ Meteor accounts-ui styled with Twitter's Bootstrap 3, now with multi-language su
 Installation
 -------------
 
-### Installation
-
 With Meteor 0.9:
 
 ```sh
@@ -73,7 +71,7 @@ Template._loginButtonsLoggedInDropdown.events({
 Localization
 -------------
 
-The default language is English, but this package also comes with Spanish translations built in. If you want to change the language to spanish run the following from the client:
+The default language is English, but this package also comes with Spanish translations built in. If you want to change the language to Spanish run the following from the client:
 
 ```javascript
 accountsUIBootstrap3.setLanguage('es_ES');
@@ -97,7 +95,7 @@ accountsUIBootstrap3.map('es_ES', {
 })
 ```
 
-You can use the [translation files](ian:accounts-ui-bootstrap-3/i18n/) in this repo as an example.
+You can use the [translation files](https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3/tree/i18n/ian:accounts-ui-bootstrap-3/i18n) in this repo as an example.
 
 
 Screenshots

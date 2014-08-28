@@ -1,14 +1,26 @@
 Package.describe({
-	summary: 'Bootstrap-styled version of login widgets.',
-	version: '1.0.7',
+	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
+	version: '1.1.0',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3",
 });
 
 Package.on_use(function (api) {
-	api.use(['session@1.0.0', 'handlebars@1.0.0', 'stylus@1.0.0', 'accounts-base@1.0.0', 'underscore@1.0.0', 'templating@1.0.0'], 'client');
+	api.use(['session@1.0.0',
+		'handlebars@1.0.0',
+		'stylus@1.0.0',
+		'accounts-base@1.0.0',
+		'underscore@1.0.0',
+		'templating@1.0.0',
+		'anti:i18n@0.4.3'
+		],'client')
 
 	api.add_files([
 		'accounts_ui.js',
+
+		// translations
+		'i18n/en_US.i18n.js',
+		'i18n/es_ES.i18n.js',
+		'i18n.js',
 
 		'login_buttons.html',
 		'login_buttons_single.html',
@@ -21,5 +33,8 @@ Package.on_use(function (api) {
 		'login_buttons_single.js',
 		'login_buttons_dropdown.js',
 		'login_buttons_dialogs.js',
-		'accounts_ui.styl'], 'client');
-});
+		'accounts_ui.styl'
+		], 'client')
+
+	api.export('accountsUIBootstrap3', 'client')
+})
