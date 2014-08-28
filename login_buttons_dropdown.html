@@ -78,18 +78,16 @@
 		{{> _forgotPasswordForm}}
 	{{else}}
 		{{> _loginButtonsMessages}}
-		<form class="form-signin" role="form">
-			{{#each fields}}
-				{{> _loginButtonsFormField}}
-			{{/each}}
-			<button class="btn btn-primary col-sm-12" id="login-buttons-password" type="submit">
-				{{#if inSignupFlow}}
-					{{i18n '_loginButtonsLoggedOutPasswordService.create'}}
-				{{else}}
-					{{i18n '_loginButtonsLoggedOutPasswordService.signIn'}}
-				{{/if}}
-			</button>
-		</form>
+		{{#each fields}}
+			{{> _loginButtonsFormField}}
+		{{/each}}
+		<button class="btn btn-primary col-sm-12" id="login-buttons-password" type="button">
+			{{#if inSignupFlow}}
+				{{i18n '_loginButtonsLoggedOutPasswordService.create'}}
+			{{else}}
+				{{i18n '_loginButtonsLoggedOutPasswordService.signIn'}}
+			{{/if}}
+		</button>
 		{{#if inLoginFlow}}
 			<div id="login-other-options">
 			{{#if showForgotPasswordLink}}
