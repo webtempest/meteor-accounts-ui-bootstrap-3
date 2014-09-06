@@ -219,7 +219,7 @@
 			}
 		}, {
 			fieldName: 'username',
-			fieldLabel: i18n('loginFieldsusername'),
+			fieldLabel: i18n('loginFields.username'),
 			visible: function() {
 				return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
 			}
