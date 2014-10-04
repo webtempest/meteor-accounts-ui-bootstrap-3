@@ -1,6 +1,6 @@
 i18n.map('fr', {
   _resetPasswordDialog: {
-    title: 'Reinitialiser mon mot de passe',
+    title: 'Réinitialiser mon mot de passe',
     newPassword: 'Nouveau mot de passe',
     cancel: 'Annuler',
     submit: 'Définir le mot de passe'
@@ -20,24 +20,24 @@ i18n.map('fr', {
   },
   _loginButtonsLoggedInDropdownActions: {
     password: 'Changer le mot de passe',
-    signOut: 'Déconnection'
+    signOut: 'Déconnexion'
   },
   _loginButtonsLoggedOutDropdown: {
-    signIn: 'S\'authentifier',
-    up: 'up'
+    signIn: 'Connexion',
+    up: 'Inscription'
   },
   _loginButtonsLoggedOutPasswordServiceSeparator: {
-    or: 'or'
+    or: 'ou'
   },
   _loginButtonsLoggedOutPasswordService: {
     create: 'Créer',
-    signIn: 'S\'authentifier',
-    forgot: 'Oubli du mot de passe?',
-    createAcc: 'Créer un compte'
+    signIn: 'Connexion',
+    forgot: 'Mot de passe oublié ?',
+    createAcc: 'Inscription'
   },
   _forgotPasswordForm: {
     email: 'Email',
-    reset: 'Reinitialiser le mot de passe'
+    reset: 'Réinitialiser le mot de passe'
   },
   _loginButtonsBackToLoginLink: {
     back: 'Annuler'
@@ -47,15 +47,15 @@ i18n.map('fr', {
     cancel: 'Annuler'
   },
   _loginButtonsLoggedOutSingleLoginButton: {
-    signInWith: 'S\'authentifier avec',
+    signInWith: 'Se connecter avec',
     configure: 'Configurer',
-    login: 'S\'authentifier'
+    login: 'Connexion'
   },
   _loginButtonsLoggedInSingleLogoutButton: {
-    signOut: 'Déconnection'
+    signOut: 'Déconnexion'
   },
   _loginButtonsLoggedOut: {
-    noLoginServices: 'Aucun service d\'authentification configuré'
+    noLoginServices: 'Aucun service d\'authentification n\'est configuré'
   },
   loginFields: {
     'username-or-email': 'Nom d\'utilisateur ou email',
