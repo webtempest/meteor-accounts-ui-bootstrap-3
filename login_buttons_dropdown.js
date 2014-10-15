@@ -439,7 +439,9 @@
 	};
 
 	var toggleDropdown = function() {
-		$('#login-dropdown-list .dropdown-menu').dropdown('toggle');
+		// $('#login-dropdown-list .dropdown-menu').dropdown('toggle');
+        $("#login-dropdown-list").toggleClass("open");
+		
 	};
 
 	var signup = function() {
