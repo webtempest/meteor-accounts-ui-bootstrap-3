@@ -44,6 +44,8 @@ Example:
 </div>
 ```
 
+You can also configure `Accounts.ui` to your liking as you would [with the official `accounts-ui`](https://docs.meteor.com/#/full/accounts_ui_config) package.
+
 Add additional logged in actions
 --------------------------------
 
@@ -103,6 +105,6 @@ You can use the translation files in the `i18n` folder as an example.
 Screenshots
 -------------
 
-![Sign In](https://dl.dropboxusercontent.com/u/7263172/1.png)
-![Sign Up](https://dl.dropboxusercontent.com/u/7263172/2.png)
-![Configure Login Service](https://dl.dropboxusercontent.com/u/7263172/3.png)
+![Sign In](http://i.imgur.com/SGLZkOE.png)
+![Sign Up](http://i.imgur.com/7S3C18J.png)
+![Configure Login Service](http://i.imgur.com/Noa7sSm.png)
