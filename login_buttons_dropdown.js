@@ -339,21 +339,21 @@
 	Template._loginButtonsChangePassword.fields = function() {
 		return [{
 			fieldName: 'old-password',
-			fieldLabel: 'Current Password',
+			fieldLabel: i18n('changePasswordFields.current'),
 			inputType: 'password',
 			visible: function() {
 				return true;
 			}
 		}, {
 			fieldName: 'password',
-			fieldLabel: 'New Password',
+			fieldLabel: i18n('changePasswordFields.new'),
 			inputType: 'password',
 			visible: function() {
 				return true;
 			}
 		}, {
 			fieldName: 'password-again',
-			fieldLabel: 'New Password (again)',
+			fieldLabel: i18n('changePasswordFields.new-again'),
 			inputType: 'password',
 			visible: function() {
 				// No need to make users double-enter their password if

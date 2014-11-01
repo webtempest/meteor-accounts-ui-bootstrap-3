@@ -67,5 +67,10 @@ i18n.map('es', {
 		'email-opt': 'Correo elect. (opcional)',
 		'password': 'Contraseña',
 		'password-again': 'Contraseña (otra vez)'
+	},
+	changePasswordFields: {
+		'current': 'Contraseña Actual',
+		'new': 'Nueva Contraseña',
+		'new-again': 'Nueva Contraseña (otra vez)'
 	}
 })

@@ -67,5 +67,10 @@ i18n.map('ca', {
 		'email-opt': 'Adreça elect. (opcional)',
 		'password': 'Contrasenya',
 		'password-again': 'Contrasenya (un altre cop)'
+	},
+	changePasswordFields: {
+		'current': 'Contrasenya Actual',
+		'new': 'Nova Contrasenya',
+		'new-again': 'Nova Contrasenya (un altre cop)'
 	}
 })

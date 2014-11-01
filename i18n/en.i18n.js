@@ -69,5 +69,10 @@ i18n.map('en', {
 		'email-opt': 'Email (optional)',
 		'password': 'Password',
 		'password-again': 'Password (again)'
+	},
+	changePasswordFields: {
+		'current': 'Current Password',
+		'new': 'New Password',
+		'new-again': 'New Password (again)'
 	}
 })
