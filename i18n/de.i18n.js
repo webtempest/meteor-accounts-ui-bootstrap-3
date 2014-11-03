@@ -49,7 +49,7 @@ i18n.map("de", {
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
 		signInWith: "Anmelden mit",
-		configure: "Konifgurieren",
+		configure: "Konfigurieren",
 		login: "Anmelden"
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
