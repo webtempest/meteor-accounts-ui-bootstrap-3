@@ -2,9 +2,9 @@
 <template name="_loginButtonsLoggedOutSingleLoginButton">
 	<div class="navbar-form">
 		{{#if configured}}
-			<button class="login-button btn btn-block btn-{{capitalizedName}}">{{i18n '_loginButtonsLoggedOutSingleLoginButton.signInWith'}} {{capitalizedName}}</button>
+			<button class="login-button btn btn-block btn-{{capitalizedName}}">{{i18n 'loginButtonsLoggedOutSingleLoginButton.signInWith'}} {{capitalizedName}}</button>
 		{{else}}
-			<button class="login-button btn btn-block configure-button btn-danger">{{i18n '_loginButtonsLoggedOutSingleLoginButton.configure'}} {{capitalizedName}} {{i18n '_loginButtonsLoggedOutSingleLoginButton.login'}}</button>
+			<button class="login-button btn btn-block configure-button btn-danger">{{i18n 'loginButtonsLoggedOutSingleLoginButton.configure'}} {{capitalizedName}} {{i18n 'loginButtonsLoggedOutSingleLoginButton.login'}}</button>
 		{{/if}}
 	</div>
 </template>
@@ -17,6 +17,6 @@
 
 <template name="_loginButtonsLoggedInSingleLogoutButton">
 	<li>
-		<a href="#" id="login-buttons-logout">{{displayName}} {{i18n '_loginButtonsLoggedInSingleLogoutButton.signOut'}}</a>
+		<a href="#" id="login-buttons-logout">{{displayName}} {{i18n 'loginButtonsLoggedInSingleLogoutButton.signOut'}}</a>
 	</li>
 </template>

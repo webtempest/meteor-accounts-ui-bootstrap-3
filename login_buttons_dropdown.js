@@ -211,7 +211,7 @@
 	Template._loginButtonsLoggedOutPasswordService.fields = function() {
 		var loginFields = [{
 			fieldName: 'username-or-email',
-			fieldLabel: i18n('loginFields.username-or-email'),
+			fieldLabel: i18n('loginFields.usernameOrEmail'),
 			visible: function() {
 				return _.contains(
 					["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
@@ -258,7 +258,7 @@
 			}
 		}, {
 			fieldName: 'email',
-			fieldLabel: i18n('signupFields.email-opt'),
+			fieldLabel: i18n('signupFields.emailOpt'),
 			inputType: 'email',
 			visible: function() {
 				return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
@@ -272,7 +272,7 @@
 			}
 		}, {
 			fieldName: 'password-again',
-			fieldLabel: i18n('signupFields.password-again'),
+			fieldLabel: i18n('signupFields.passwordAgain'),
 			inputType: 'password',
 			visible: function() {
 				// No need to make users double-enter their password if
@@ -339,21 +339,21 @@
 	Template._loginButtonsChangePassword.fields = function() {
 		return [{
 			fieldName: 'old-password',
-			fieldLabel: i18n('changePasswordFields.current'),
+			fieldLabel: i18n('changePasswordFields.currentPassword'),
 			inputType: 'password',
 			visible: function() {
 				return true;
 			}
 		}, {
 			fieldName: 'password',
-			fieldLabel: i18n('changePasswordFields.new'),
+			fieldLabel: i18n('changePasswordFields.newPassword'),
 			inputType: 'password',
 			visible: function() {
 				return true;
 			}
 		}, {
 			fieldName: 'password-again',
-			fieldLabel: i18n('changePasswordFields.new-again'),
+			fieldLabel: i18n('changePasswordFields.newPasswordAgain'),
 			inputType: 'password',
 			visible: function() {
 				// No need to make users double-enter their password if
@@ -522,10 +522,10 @@
 				if (error)
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 				else
-					loginButtonsSession.infoMessage("Email sent");
+					loginButtonsSession.infoMessage(i18n('forgotPasswordForm.sent'));
 			});
 		} else {
-			loginButtonsSession.infoMessage("Email sent");
+			loginButtonsSession.infoMessage(i18n('forgotPasswordForm.sent'));
 		}
 	};
 
@@ -564,7 +564,7 @@
 			// notably not trimmed. a password could (?) start or end with a space
 			var password = elementValueById('login-password');
 			if (password !== passwordAgain) {
-				loginButtonsSession.errorMessage("Passwords don't match");
+				loginButtonsSession.errorMessage(i18n('errorMessages.passwordsDontMatch'));
 				return false;
 			}
 		}

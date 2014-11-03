@@ -1,76 +1,85 @@
-i18n.map('es', {
-	_resetPasswordDialog: {
-		title: 'Restablece tu contraseña',
-		cancel: 'Cancelar',
-		submit: 'Guardar'
+i18n.map("es", {
+	resetPasswordDialog: {
+		title: "Restablece tu contraseña",
+		newPassword: "Nueva contraseña",
+		cancel: "Cancelar",
+		submit: "Guardar"
 	},
-	_enrollAccountDialog: {
-		title: 'Escribe una contraseña',
-		cancel: 'Cerrar',
-		submit: 'Guardar contraseña'
+	enrollAccountDialog: {
+		title: "Escribe una contraseña",
+		newPassword: "Nueva contraseña",
+		cancel: "Cerrar",
+		submit: "Guardar contraseña"
 	},
-	_justVerifiedEmailDialog: {
-		verified: 'Correo electrónico verificado',
-		dismiss: 'Cerrar'
+	justVerifiedEmailDialog: {
+		verified: "Correo electrónico verificado",
+		dismiss: "Cerrar"
 	},
-	_loginButtonsMessagesDialog: {
-		dismiss: 'Cerrar',
+	loginButtonsMessagesDialog: {
+		dismiss: "Cerrar",
 	},
-	_loginButtonsLoggedInDropdownActions: {
-		password: 'Cambiar contraseña',
-		signOut: 'Cerrar sesión'
+	loginButtonsLoggedInDropdownActions: {
+		password: "Cambiar contraseña",
+		signOut: "Cerrar sesión"
 	},
-	_loginButtonsLoggedOutDropdown: {
-		signIn: 'Iniciar sesión',
-		up: 'registrarse'
+	loginButtonsLoggedOutDropdown: {
+		signIn: "Iniciar sesión",
+		up: "registrarse"
 	},
-	_loginButtonsLoggedOutPasswordServiceSeparator: {
-		or: 'o'
+	loginButtonsLoggedOutPasswordServiceSeparator: {
+		or: "o"
 	},
-	_loginButtonsLoggedOutPasswordService: {
-		create: 'Crear',
-		signIn: 'Iniciar sesión',
-		forgot: 'Ha olvidado su contraseña?',
-		createAcc: 'Registrarse'
+	loginButtonsLoggedOutPasswordService: {
+		create: "Crear",
+		signIn: "Iniciar sesión",
+		forgot: "Ha olvidado su contraseña?",
+		createAcc: "Registrarse"
 	},
-	_forgotPasswordForm: {
-		email: 'Correo electrónico',
-		reset: 'Restablecer contraseña'
+	forgotPasswordForm: {
+		email: "Correo electrónico",
+		reset: "Restablecer contraseña",
+		sent: "Email enviado"
 	},
-	_loginButtonsBackToLoginLink: {
-		back: 'Cancelar'
+	loginButtonsBackToLoginLink: {
+		back: "Cancelar"
 	},
-	_loginButtonsChangePassword: {
-		submit: 'Cambiar contraseña',
-		cancel: 'Cancelar'
+	loginButtonsChangePassword: {
+		submit: "Cambiar contraseña",
+		cancel: "Cancelar"
 	},
-	_loginButtonsLoggedOutSingleLoginButton: {
-		signInWith: 'Inicia sesión con',
-		configure: 'Configurar',
-		login: ''
+	loginButtonsLoggedOutSingleLoginButton: {
+		signInWith: "Inicia sesión con",
+		configure: "Configurar",
+		login: ""
 	},
-	_loginButtonsLoggedInSingleLogoutButton: {
-		signOut: 'Cerrar sesión'
+	loginButtonsLoggedInSingleLogoutButton: {
+		signOut: "Cerrar sesión"
 	},
-	_loginButtonsLoggedOut: {
-		noLoginServices: 'No hay ningún servicio configurado'
+	loginButtonsLoggedOut: {
+		noLoginServices: "No hay ningún servicio configurado"
 	},
 	loginFields: {
-		'username-or-email': 'Usuario o contraseña',
-		'username': 'Usuario',
-		'email': 'Correo electrónico',
-		'password': 'Contraseña'
+		usernameOrEmail: "Usuario o contraseña",
+		username: "Usuario",
+		email: "Correo electrónico",
+		password: "Contraseña"
 	},
 	signupFields: {
-		'username': 'Usuario',
-		'email': 'Correo electrónico',
-		'email-opt': 'Correo elect. (opcional)',
-		'password': 'Contraseña',
-		'password-again': 'Contraseña (otra vez)'
+		username: "Usuario",
+		email: "Correo electrónico",
+		emailOpt: "Correo elect. (opcional)",
+		password: "Contraseña",
+		passwordAgain: "Contraseña (otra vez)"
 	},
 	changePasswordFields: {
-		'current': 'Contraseña Actual',
-		'new': 'Nueva Contraseña',
-		'new-again': 'Nueva Contraseña (otra vez)'
+		currentPassword: "Contraseña Actual",
+		newPassword: "Nueva Contraseña",
+		newPasswordAgain: "Nueva Contraseña (otra vez)"
+	},
+	errorMessages: {
+		usernameTooShort: "El nombre de usuario tiene que tener 3 caracteres como mínimo",
+		invalidEmail: "Correo electrónico inválido",
+		passwordTooShort: "La contraseña tiene que tener 3 caracteres como mínimo",
+		passwordsDontMatch: "Las contraseñas no son iguales"
 	}
 })
