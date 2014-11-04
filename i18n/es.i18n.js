@@ -50,7 +50,6 @@ i18n.map("es", {
 	loginButtonsLoggedOutSingleLoginButton: {
 		signInWith: "Inicia sesión con",
 		configure: "Configurar",
-		login: ""
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
 		signOut: "Cerrar sesión"

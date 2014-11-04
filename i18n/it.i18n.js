@@ -50,7 +50,6 @@ i18n.map("it", {
 	loginButtonsLoggedOutSingleLoginButton: {
 		signInWith: "Accedi con",
 		configure: "Configura",
-		login: "Accedi"
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
 		signOut: "Esci"
