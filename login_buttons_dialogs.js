@@ -75,12 +75,13 @@
 	Template._resetPasswordDialog.helpers({
 		inResetPasswordFlow: function() {
 			return loginButtonsSession.get('resetPasswordToken');
-		},
-		rendered: function() {
-			var $modal = $(this.find('#login-buttons-reset-password-modal'));
-			$modal.modal();
 		}
 	});
+
+	Template._resetPasswordDialog.rendered = function() {
+		var $modal = $(this.find('#login-buttons-reset-password-modal'));
+		$modal.modal();
+	}
 
 	//
 	// enrollAccountDialog template
@@ -123,12 +124,13 @@
 	Template._enrollAccountDialog.helpers({
 		inEnrollAccountFlow: function() {
 			return loginButtonsSession.get('enrollAccountToken');
-		},
-		rendered: function() {
-			$modal = $(this.find('#login-buttons-enroll-account-modal'));
-			$modal.modal();
 		}
 	});
+
+	Template._enrollAccountDialog.rendered = function() {
+		$modal = $(this.find('#login-buttons-enroll-account-modal'));
+		$modal.modal();
+	};
 
 	//
 	// justVerifiedEmailDialog template
