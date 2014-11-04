@@ -1,6 +1,6 @@
 i18n.map("it", {
 	resetPasswordDialog: {
-		title: "Reset your password",
+		title: "Reimposta la password",
 		newPassword: "Nuova password",
 		cancel: "Cancella",
 		submit: "Imposta password"
