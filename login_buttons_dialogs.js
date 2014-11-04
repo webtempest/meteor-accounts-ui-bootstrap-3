@@ -81,7 +81,7 @@
 	Template._resetPasswordDialog.rendered = function() {
 		var $modal = $(this.find('#login-buttons-reset-password-modal'));
 		$modal.modal();
-	}
+	};
 
 	//
 	// enrollAccountDialog template
