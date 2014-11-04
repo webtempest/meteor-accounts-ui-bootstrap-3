@@ -5,7 +5,7 @@
 	// for convenience
 	var loginButtonsSession = Accounts._loginButtonsSession;
 
-	UI.registerHelper("loginButtons", function () {
+	UI.registerHelper("loginButtons", function() {
 		return Template._loginButtons;
 	});
 
@@ -21,26 +21,25 @@
 	//
 	// loginButtonLoggedOut template
 	//
+	Template._loginButtonsLoggedOut.helpers({
+		dropdown: function() {
+			return Accounts._loginButtons.dropdown();
+		},
+		services: function() {
+			return Accounts._loginButtons.getLoginServices();
+		},
+		singleService: function() {
+			var services = Accounts._loginButtons.getLoginServices();
+			if (services.length !== 1)
+				throw new Error(
+					"Shouldn't be rendering this template with more than one configured service");
+			return services[0];
+		},
+		configurationLoaded: function() {
+			return Accounts.loginServicesConfigured();
+		}
+	});
 
-	Template._loginButtonsLoggedOut.dropdown = function() {
-		return Accounts._loginButtons.dropdown();
-	};
-
-	Template._loginButtonsLoggedOut.services = function() {
-		return Accounts._loginButtons.getLoginServices();
-	};
-
-	Template._loginButtonsLoggedOut.singleService = function() {
-		var services = Accounts._loginButtons.getLoginServices();
-		if (services.length !== 1)
-			throw new Error(
-				"Shouldn't be rendering this template with more than one configured service");
-		return services[0];
-	};
-
-	Template._loginButtonsLoggedOut.configurationLoaded = function() {
-		return Accounts.loginServicesConfigured();
-	};
 
 
 	//
@@ -49,13 +48,14 @@
 
 	// decide whether we should show a dropdown rather than a row of
 	// buttons
-	Template._loginButtonsLoggedIn.dropdown = function() {
-		return Accounts._loginButtons.dropdown();
-	};
-
-	Template._loginButtonsLoggedIn.displayName = function() {
-		return Accounts._loginButtons.displayName();
-	};
+	Template._loginButtonsLoggedIn.helpers({
+		dropdown: function() {
+			return Accounts._loginButtons.dropdown();
+		},
+		displayName: function() {
+			return Accounts._loginButtons.displayName();
+		}
+	})
 
 
 
@@ -63,21 +63,27 @@
 	// loginButtonsMessage template
 	//
 
-	Template._loginButtonsMessages.errorMessage = function() {
-		return loginButtonsSession.get('errorMessage');
-	};
+	Template._loginButtonsMessages.helpers({
+		errorMessage: function() {
+			return loginButtonsSession.get('errorMessage');
+		},
+		infoMessage: function() {
+			return loginButtonsSession.get('infoMessage');
+		}
+	});
 
-	Template._loginButtonsMessages.infoMessage = function() {
-		return loginButtonsSession.get('infoMessage');
-	};
+
 
 	//
 	// loginButtonsLoggingInPadding template
 	//
 
-	Template._loginButtonsLoggingInPadding.dropdown = function() {
-		return Accounts._loginButtons.dropdown();
-	};
+
+	Template._loginButtonsLoggingInPadding.helpers({
+		dropdown: function() {
+			return Accounts._loginButtons.dropdown();
+		}
+	});
 
 	//
 	// helpers
@@ -160,7 +166,7 @@
 		}
 	};
 
-	Accounts._loginButtons.rendered = function () {
+	Accounts._loginButtons.rendered = function() {
 		debugger;
 	};
 
