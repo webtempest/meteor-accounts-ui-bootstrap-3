@@ -13,10 +13,10 @@ i18n.map("it", {
 	},
 	justVerifiedEmailDialog: {
 		verified: "Indirizzo email verificato",
-		dismiss: "Dismiss"
+		dismiss: "Chiudi"
 	},
 	loginButtonsMessagesDialog: {
-		dismiss: "Dismiss",
+		dismiss: "Chiudi",
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Cambia password",
