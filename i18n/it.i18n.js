@@ -20,24 +20,24 @@ i18n.map("it", {
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Cambia password",
-		signOut: "Sign out"
+		signOut: "Esci"
 	},
 	loginButtonsLoggedOutDropdown: {
-		signIn: "Sign in",
-		up: "up"
+		signIn: "Accedi",
+		up: "Registrati"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
-		or: "or"
+		or: "o"
 	},
 	loginButtonsLoggedOutPasswordService: {
-		create: "Create",
-		signIn: "Sign in",
+		create: "Crea",
+		signIn: "Accedi",
 		forgot: "Password dimenticata?",
-		createAcc: "Crea nuovo account"
+		createAcc: "Crea un account"
 	},
 	forgotPasswordForm: {
 		email: "Email",
-		reset: "Reset password",
+		reset: "Reimposta la password",
 		sent: "Email inviata"
 	},
 	loginButtonsBackToLoginLink: {
@@ -48,15 +48,15 @@ i18n.map("it", {
 		cancel: "Cancella"
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
-		signInWith: "Sign in with",
+		signInWith: "Accedi con",
 		configure: "Configura",
-		login: "login"
+		login: "Accedi"
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
-		signOut: "Sign out"
+		signOut: "Esci"
 	},
 	loginButtonsLoggedOut: {
-		noLoginServices: "No login services configured"
+		noLoginServices: "Nessun servizio di accesso configurato"
 	},
 	loginFields: {
 		usernameOrEmail: "Username o Email",
@@ -69,17 +69,17 @@ i18n.map("it", {
 		email: "Email",
 		emailOpt: "Email (opzionale)",
 		password: "Password",
-		passwordAgain: "Password (again)"
+		passwordAgain: "Password (di nuovo)"
 	},
 	changePasswordFields: {
 		currentPassword: "Password corrente",
 		newPassword: "Nuova password",
-		newPasswordAgain: "Nuova password (again)"
+		newPasswordAgain: "Nuova password (di nuovo)"
 	},
 	errorMessages: {
-		usernameTooShort: "Username must be at least 3 characters long",
-		invalidEmail: "Invalid email",
-		passwordTooShort: "Password must be at least 6 characters long",
-		passwordsDontMatch: "Passwords don't match"
+		usernameTooShort: "La Username deve essere almeno di 3 caratteri",
+		invalidEmail: "Email non valida",
+		passwordTooShort: "La Password deve essere almeno di 6 caratteri",
+		passwordsDontMatch: "Le password non corrispondono"
 	}
 });
