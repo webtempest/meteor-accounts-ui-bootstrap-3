@@ -6,7 +6,7 @@
 	// events shared between loginButtonsLoggedOutDropdown and
 	// loginButtonsLoggedInDropdown
 	Template._loginButtons.events({
-		'click input': function(event){
+		'click input': function(event) {
 			event.stopPropagation();
 		},
 		'click #login-name-link, click #login-sign-in-link': function(event) {
@@ -36,36 +36,40 @@
 		}
 	});
 
-	Template._loginButtonsLoggedInDropdown.displayName = function() {
-		return Accounts._loginButtons.displayName();
-	};
+	Template._loginButtonsLoggedInDropdown.helpers({
+		displayName: function() {
+			return Accounts._loginButtons.displayName();
+		},
 
-	Template._loginButtonsLoggedInDropdown.inChangePasswordFlow = function() {
-		return loginButtonsSession.get('inChangePasswordFlow');
-	};
+		inChangePasswordFlow: function() {
+			return loginButtonsSession.get('inChangePasswordFlow');
+		},
 
-	Template._loginButtonsLoggedInDropdown.inMessageOnlyFlow = function() {
-		return loginButtonsSession.get('inMessageOnlyFlow');
-	};
+		inMessageOnlyFlow: function() {
+			return loginButtonsSession.get('inMessageOnlyFlow');
+		},
 
-	Template._loginButtonsLoggedInDropdown.dropdownVisible = function() {
-		return loginButtonsSession.get('dropdownVisible');
-	};
-
-	Template._loginButtonsLoggedInDropdownActions.allowChangingPassword = function() {
-		// it would be more correct to check whether the user has a password set,
-		// but in order to do that we'd have to send more data down to the client,
-		// and it'd be preferable not to send down the entire service.password document.
-		//
-		// instead we use the heuristic: if the user has a username or email set.
-		var user = Meteor.user();
-		return user.username || (user.emails && user.emails[0] && user.emails[0].address);
-	};
+		dropdownVisible: function() {
+			return loginButtonsSession.get('dropdownVisible');
+		}
+	});
 
 
-	Template._loginButtonsLoggedInDropdownActions.additionalLoggedInDropdownActions = function () {
-	  return Template._loginButtonsAdditionalLoggedInDropdownActions !== undefined;
-	};
+	Template._loginButtonsLoggedInDropdownActions.helpers({
+		allowChangingPassword: function() {
+			// it would be more correct to check whether the user has a password set,
+			// but in order to do that we'd have to send more data down to the client,
+			// and it'd be preferable not to send down the entire service.password document.
+			//
+			// instead we use the heuristic: if the user has a username or email set.
+			var user = Meteor.user();
+			return user.username || (user.emails && user.emails[0] && user.emails[0].address);
+		},
+		additionalLoggedInDropdownActions: function() {
+			return Template._loginButtonsAdditionalLoggedInDropdownActions !== undefined;
+		}
+	});
+
 
 	//
 	// loginButtonsLoggedOutDropdown template and related
@@ -165,156 +169,165 @@
 		}
 	});
 
-	// additional classes that can be helpful in styling the dropdown
-	Template._loginButtonsLoggedOutDropdown.additionalClasses = function() {
-		if (!Accounts.password) {
-			return false;
-		} else {
-			if (loginButtonsSession.get('inSignupFlow')) {
-				return 'login-form-create-account';
-			} else if (loginButtonsSession.get('inForgotPasswordFlow')) {
-				return 'login-form-forgot-password';
+
+	Template._loginButtonsLoggedOutDropdown.helpers({
+		// additional classes that can be helpful in styling the dropdown
+		additionalClasses: function() {
+			if (!Accounts.password) {
+				return false;
 			} else {
-				return 'login-form-sign-in';
+				if (loginButtonsSession.get('inSignupFlow')) {
+					return 'login-form-create-account';
+				} else if (loginButtonsSession.get('inForgotPasswordFlow')) {
+					return 'login-form-forgot-password';
+				} else {
+					return 'login-form-sign-in';
+				}
 			}
+		},
+
+		dropdownVisible: function() {
+			return loginButtonsSession.get('dropdownVisible');
+		},
+
+		hasPasswordService: function() {
+			return Accounts._loginButtons.hasPasswordService();
+		},
+
+		forbidClientAccountCreation: function() {
+			return Accounts._options.forbidClientAccountCreation;
 		}
-	};
+	});
 
-	Template._loginButtonsLoggedOutDropdown.dropdownVisible = function() {
-		return loginButtonsSession.get('dropdownVisible');
-	};
+	Template._loginButtonsLoggedOutAllServices.helpers({
+		services: function() {
+			return Accounts._loginButtons.getLoginServices();
+		},
 
-	Template._loginButtonsLoggedOutDropdown.hasPasswordService = function() {
-		return Accounts._loginButtons.hasPasswordService();
-	};
+		isPasswordService: function() {
+			return this.name === 'password';
+		},
 
-	Template._loginButtonsLoggedOutDropdown.forbidClientAccountCreation = function() {
-		return Accounts._options.forbidClientAccountCreation;
-	};
+		hasOtherServices: function() {
+			return Accounts._loginButtons.getLoginServices().length > 1;
+		},
 
-	Template._loginButtonsLoggedOutAllServices.services = function() {
-		return Accounts._loginButtons.getLoginServices();
-	};
+		hasPasswordService: function() {
+			return Accounts._loginButtons.hasPasswordService();
+		}
+	});
 
-	Template._loginButtonsLoggedOutAllServices.isPasswordService = function() {
-		return this.name === 'password';
-	};
 
-	Template._loginButtonsLoggedOutAllServices.hasOtherServices = function() {
-		return Accounts._loginButtons.getLoginServices().length > 1;
-	};
+	Template._loginButtonsLoggedOutPasswordService.helpers({
+		fields: function() {
+			var loginFields = [{
+				fieldName: 'username-or-email',
+				fieldLabel: i18n('loginFields.usernameOrEmail'),
+				visible: function() {
+					return _.contains(
+						["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
+						Accounts.ui._passwordSignupFields());
+				}
+			}, {
+				fieldName: 'username',
+				fieldLabel: i18n('loginFields.username'),
+				visible: function() {
+					return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
+				}
+			}, {
+				fieldName: 'email',
+				fieldLabel: i18n('loginFields.email'),
+				inputType: 'email',
+				visible: function() {
+					return Accounts.ui._passwordSignupFields() === "EMAIL_ONLY";
+				}
+			}, {
+				fieldName: 'password',
+				fieldLabel: i18n('loginFields.password'),
+				inputType: 'password',
+				visible: function() {
+					return true;
+				}
+			}];
 
-	Template._loginButtonsLoggedOutAllServices.hasPasswordService = function() {
-		return Accounts._loginButtons.hasPasswordService();
-	};
+			var signupFields = [{
+				fieldName: 'username',
+				fieldLabel: i18n('signupFields.username'),
+				visible: function() {
+					return _.contains(
+						["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
+						Accounts.ui._passwordSignupFields());
+				}
+			}, {
+				fieldName: 'email',
+				fieldLabel: i18n('signupFields.email'),
+				inputType: 'email',
+				visible: function() {
+					return _.contains(
+						["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "EMAIL_ONLY"],
+						Accounts.ui._passwordSignupFields());
+				}
+			}, {
+				fieldName: 'email',
+				fieldLabel: i18n('signupFields.emailOpt'),
+				inputType: 'email',
+				visible: function() {
+					return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
+				}
+			}, {
+				fieldName: 'password',
+				fieldLabel: i18n('signupFields.password'),
+				inputType: 'password',
+				visible: function() {
+					return true;
+				}
+			}, {
+				fieldName: 'password-again',
+				fieldLabel: i18n('signupFields.passwordAgain'),
+				inputType: 'password',
+				visible: function() {
+					// No need to make users double-enter their password if
+					// they'll necessarily have an email set, since they can use
+					// the "forgot password" flow.
+					return _.contains(
+						["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
+						Accounts.ui._passwordSignupFields());
+				}
+			}];
 
-	Template._loginButtonsLoggedOutPasswordService.fields = function() {
-		var loginFields = [{
-			fieldName: 'username-or-email',
-			fieldLabel: i18n('loginFields.usernameOrEmail'),
-			visible: function() {
-				return _.contains(
-					["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL"],
-					Accounts.ui._passwordSignupFields());
-			}
-		}, {
-			fieldName: 'username',
-			fieldLabel: i18n('loginFields.username'),
-			visible: function() {
-				return Accounts.ui._passwordSignupFields() === "USERNAME_ONLY";
-			}
-		}, {
-			fieldName: 'email',
-			fieldLabel: i18n('loginFields.email'),
-			inputType: 'email',
-			visible: function() {
-				return Accounts.ui._passwordSignupFields() === "EMAIL_ONLY";
-			}
-		}, {
-			fieldName: 'password',
-			fieldLabel: i18n('loginFields.password'),
-			inputType: 'password',
-			visible: function() {
-				return true;
-			}
-		}];
+			signupFields = Accounts.ui._options.extraSignupFields.concat(signupFields);
 
-		var signupFields = [{
-			fieldName: 'username',
-			fieldLabel: i18n('signupFields.username'),
-			visible: function() {
-				return _.contains(
-					["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
-					Accounts.ui._passwordSignupFields());
-			}
-		}, {
-			fieldName: 'email',
-			fieldLabel: i18n('signupFields.email'),
-			inputType: 'email',
-			visible: function() {
-				return _.contains(
-					["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "EMAIL_ONLY"],
-					Accounts.ui._passwordSignupFields());
-			}
-		}, {
-			fieldName: 'email',
-			fieldLabel: i18n('signupFields.emailOpt'),
-			inputType: 'email',
-			visible: function() {
-				return Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL";
-			}
-		}, {
-			fieldName: 'password',
-			fieldLabel: i18n('signupFields.password'),
-			inputType: 'password',
-			visible: function() {
-				return true;
-			}
-		}, {
-			fieldName: 'password-again',
-			fieldLabel: i18n('signupFields.passwordAgain'),
-			inputType: 'password',
-			visible: function() {
-				// No need to make users double-enter their password if
-				// they'll necessarily have an email set, since they can use
-				// the "forgot password" flow.
-				return _.contains(
-					["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
-					Accounts.ui._passwordSignupFields());
-			}
-		}];
+			return loginButtonsSession.get('inSignupFlow') ? signupFields : loginFields;
+		},
 
-		signupFields = Accounts.ui._options.extraSignupFields.concat(signupFields);
+		inForgotPasswordFlow: function() {
+			return loginButtonsSession.get('inForgotPasswordFlow');
+		},
 
-		return loginButtonsSession.get('inSignupFlow') ? signupFields : loginFields;
-	};
+		inLoginFlow: function() {
+			return !loginButtonsSession.get('inSignupFlow') && !loginButtonsSession.get('inForgotPasswordFlow');
+		},
 
-	Template._loginButtonsLoggedOutPasswordService.inForgotPasswordFlow = function() {
-		return loginButtonsSession.get('inForgotPasswordFlow');
-	};
+		inSignupFlow: function() {
+			return loginButtonsSession.get('inSignupFlow');
+		},
 
-	Template._loginButtonsLoggedOutPasswordService.inLoginFlow = function() {
-		return !loginButtonsSession.get('inSignupFlow') && !loginButtonsSession.get('inForgotPasswordFlow');
-	};
+		showForgotPasswordLink: function() {
+			return _.contains(
+				["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "EMAIL_ONLY"],
+				Accounts.ui._passwordSignupFields());
+		},
 
-	Template._loginButtonsLoggedOutPasswordService.inSignupFlow = function() {
-		return loginButtonsSession.get('inSignupFlow');
-	};
+		showCreateAccountLink: function() {
+			return !Accounts._options.forbidClientAccountCreation;
+		}
+	});
 
-	Template._loginButtonsLoggedOutPasswordService.showForgotPasswordLink = function() {
-		return _.contains(
-			["USERNAME_AND_EMAIL_CONFIRM", "USERNAME_AND_EMAIL", "USERNAME_AND_OPTIONAL_EMAIL", "EMAIL_ONLY"],
-			Accounts.ui._passwordSignupFields());
-	};
-
-	Template._loginButtonsLoggedOutPasswordService.showCreateAccountLink = function() {
-		return !Accounts._options.forbidClientAccountCreation;
-	};
-
-	Template._loginButtonsFormField.inputType = function() {
-		return this.inputType || "text";
-	};
-
+	Template._loginButtonsFormField.helpers({
+		inputType: function() {
+			return this.inputType || "text";
+		}
+	});
 
 	//
 	// loginButtonsChangePassword template
@@ -336,36 +349,37 @@
 		}
 	});
 
-	Template._loginButtonsChangePassword.fields = function() {
-		return [{
-			fieldName: 'old-password',
-			fieldLabel: i18n('changePasswordFields.currentPassword'),
-			inputType: 'password',
-			visible: function() {
-				return true;
-			}
-		}, {
-			fieldName: 'password',
-			fieldLabel: i18n('changePasswordFields.newPassword'),
-			inputType: 'password',
-			visible: function() {
-				return true;
-			}
-		}, {
-			fieldName: 'password-again',
-			fieldLabel: i18n('changePasswordFields.newPasswordAgain'),
-			inputType: 'password',
-			visible: function() {
-				// No need to make users double-enter their password if
-				// they'll necessarily have an email set, since they can use
-				// the "forgot password" flow.
-				return _.contains(
-					["USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
-					Accounts.ui._passwordSignupFields());
-			}
-		}];
-	};
-
+	Template._loginButtonsChangePassword.helpers({
+		fields: function() {
+			return [{
+				fieldName: 'old-password',
+				fieldLabel: i18n('changePasswordFields.currentPassword'),
+				inputType: 'password',
+				visible: function() {
+					return true;
+				}
+			}, {
+				fieldName: 'password',
+				fieldLabel: i18n('changePasswordFields.newPassword'),
+				inputType: 'password',
+				visible: function() {
+					return true;
+				}
+			}, {
+				fieldName: 'password-again',
+				fieldLabel: i18n('changePasswordFields.newPasswordAgain'),
+				inputType: 'password',
+				visible: function() {
+					// No need to make users double-enter their password if
+					// they'll necessarily have an email set, since they can use
+					// the "forgot password" flow.
+					return _.contains(
+						["USERNAME_AND_OPTIONAL_EMAIL", "USERNAME_ONLY"],
+						Accounts.ui._passwordSignupFields());
+				}
+			}];
+		}
+	});
 
 	//
 	// helpers
@@ -440,8 +454,8 @@
 
 	var toggleDropdown = function() {
 		// $('#login-dropdown-list .dropdown-menu').dropdown('toggle');
-        $("#login-dropdown-list").toggleClass("open");
-		
+		$("#login-dropdown-list").toggleClass("open");
+
 	};
 
 	var signup = function() {
