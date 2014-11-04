@@ -80,6 +80,7 @@ accountsUIBootstrap3.setLanguage('es'); // for Spanish
 accountsUIBootstrap3.setLanguage('ca'); // for Catalan
 accountsUIBootstrap3.setLanguage('fr'); // for French
 accountsUIBootstrap3.setLanguage('de'); // for German
+accountsUIBootstrap3.setLanguage('it'); // for Italian
 ```
 
 If you want to implement your own language, use the `map` function like so:
