@@ -2,7 +2,7 @@ i18n.map("it", {
 	resetPasswordDialog: {
 		title: "Reimposta la password",
 		newPassword: "Nuova password",
-		cancel: "Cancella",
+		cancel: "Annulla",
 		submit: "Imposta password"
 	},
 	enrollAccountDialog: {
@@ -45,7 +45,7 @@ i18n.map("it", {
 	},
 	loginButtonsChangePassword: {
 		submit: "Cambia password",
-		cancel: "Cancella"
+		cancel: "Annulla"
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
 		signInWith: "Accedi con",
