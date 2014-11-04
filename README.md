@@ -73,7 +73,7 @@ Note that the dropdown will close since we're not stopping the propagation of th
 Localization
 -------------
 
-The default language is English, but this package also comes with Spanish, Catalan, French and German translations built in. If you want to change the language run the following on the client:
+The default language is English, but this package also comes with Spanish, Catalan, French, German and Italian translations built in. If you want to change the language run one of the following on the client:
 
 ```javascript
 accountsUIBootstrap3.setLanguage('es'); // for Spanish
