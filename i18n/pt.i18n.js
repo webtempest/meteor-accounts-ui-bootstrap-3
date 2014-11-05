@@ -1,4 +1,4 @@
-i18n.map("pt-BR", {
+i18n.map("pt", {
 	resetPasswordDialog: {
 		title: "Esqueceu sua senha?",
 		newPassword: "Nova senha",
