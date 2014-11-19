@@ -76,9 +76,9 @@ i18n.map("fr", {
 		newPasswordAgain: "Nouveau mot de passe (confirmation)"
 	},
 	errorMessages: {
-		usernameTooShort: "Username must be at least 3 characters long",
-		invalidEmail: "Invalid email",
-		passwordTooShort: "Password must be at least 6 characters long",
-		passwordsDontMatch: "Passwords don't match"
+		usernameTooShort: "Le nom d'utilisateur doit comporter au moins 3 caractères",
+		invalidEmail: "L'adresse email est invalide",
+		passwordTooShort: "Le mot de passe doit comporter au moins 6 caractères",
+		passwordsDontMatch: "Les mots de passe ne sont pas identiques"
 	}
 })
