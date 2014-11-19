@@ -18,7 +18,7 @@ You will also need at least one accounts plugin: `meteor add accounts-password`,
 How to use
 -------------
 
-Add `{{> loginButtons }}` to your template
+Add `{{> loginButtons}}` to your template
 
 Example:
 
@@ -38,7 +38,7 @@ Example:
 			<li class="active"><a href="#">Link</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			{{> loginButtons }} <!-- here -->
+			{{> loginButtons}} <!-- here -->
 		</ul>
 	</div>
 </div>
