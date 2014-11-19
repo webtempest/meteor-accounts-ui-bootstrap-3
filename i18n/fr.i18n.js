@@ -58,10 +58,10 @@ i18n.map("fr", {
 		noLoginServices: "Aucun service d'authentification n'est configuré"
 	},
 	loginFields: {
-		sernameOrEmail: "Nom d'utilisateur ou email",
-		sername: "Nom d'utilisateur",
-		mail: "Email",
-		assword: "Mot de passe"
+		usernameOrEmail: "Nom d'utilisateur ou email",
+		username: "Nom d'utilisateur",
+		email: "Email",
+		password: "Mot de passe"
 	},
 	signupFields: {
 		username: "Nom d'utilisateur",
