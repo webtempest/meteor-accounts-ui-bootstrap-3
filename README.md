@@ -9,7 +9,7 @@ Installation
 With Meteor 0.9:
 
 ```sh
-$ meteor add mizzao:bootstrap-3
+$ meteor add ian:bootstrap-3
 $ meteor add ian:accounts-ui-bootstrap-3
 ```
 
