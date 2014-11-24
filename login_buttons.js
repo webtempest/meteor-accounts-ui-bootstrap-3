@@ -75,17 +75,6 @@
 
 
 	//
-	// loginButtonsLoggingInPadding template
-	//
-
-
-	Template._loginButtonsLoggingInPadding.helpers({
-		dropdown: function() {
-			return Accounts._loginButtons.dropdown();
-		}
-	});
-
-	//
 	// helpers
 	//
 
