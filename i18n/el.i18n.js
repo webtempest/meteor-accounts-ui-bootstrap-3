@@ -8,7 +8,7 @@ i18n.map("el", {
 	enrollAccountDialog: {
 		title: "Επιλέξτε κωδικό",
 		newPassword: "Νέος κωδικός",
-		cancel: "Κλείσιμο",
+		cancel: "Ακύρωση",
 		submit: "Ορισμός κωδικού"
 	},
 	justVerifiedEmailDialog: {
@@ -24,7 +24,7 @@ i18n.map("el", {
 	},
 	loginButtonsLoggedOutDropdown: {
 		signIn: "Είσοδος",
-		up: "επάνω"
+		up: "Εγγραφή"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
 		or: "ή"
@@ -33,7 +33,7 @@ i18n.map("el", {
 		create: "Δημιουργία",
 		signIn: "Είσοδος",
 		forgot: "Ξεχάσατε τον κωδικό σας;",
-		createAcc: "Δημιουργία κωδικού"
+		createAcc: "Δημιουργία λογαριασμού"
 	},
 	forgotPasswordForm: {
 		email: "Ηλεκτρονικό ταχυδρομείο (email)",
@@ -41,7 +41,7 @@ i18n.map("el", {
 		sent: "Το email έχει αποσταλεί"
 	},
 	loginButtonsBackToLoginLink: {
-		back: "Ακύρωση"
+		back: "Επιστροφή"
 	},
 	loginButtonsChangePassword: {
 		submit: "Αλλαγή κωδικού",
