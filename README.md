@@ -44,7 +44,7 @@ Example:
 </div>
 ```
 
-You can also configure `Accounts.ui` to your liking as you would [with the official `accounts-ui`](https://docs.meteor.com/#/full/accounts_ui_config) package.
+You can also configure `Accounts.ui` to your liking as you would [with the official `accounts-ui` package](https://docs.meteor.com/#/full/accounts_ui_config).
 
 Add additional logged in actions
 --------------------------------
