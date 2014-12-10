@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'ian:accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.1.26',
+	version: '1.1.27',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
 })
 
@@ -27,6 +27,7 @@ Package.on_use(function (api) {
 		'i18n/it.i18n.js',
 		'i18n/pt.i18n.js',
 		'i18n/ru.i18n.js',
+		'i18n/el.i18n.js',
 		'i18n.js',
 
 		'login_buttons.html',
