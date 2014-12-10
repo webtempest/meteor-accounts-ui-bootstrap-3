@@ -1,5 +1,5 @@
 i18n.map("ru", {
-		resetPasswordDialog: {
+	resetPasswordDialog: {
 		title: "Сбросить пароль",
 		newPassword: "Новый пароль",
 		cancel: "Отмена",
