@@ -16,12 +16,15 @@
 		},
 		'click .login-close': function() {
 			loginButtonsSession.closeDropdown();
+		},
+		'click .dropdown-toggle': function() {
+			focusInput();
 		}
 	});
 
-	Template._loginButtons.toggleDropdown = function() {
-		toggleDropdown();
-	};
+	// Template._loginButtons.toggleDropdown = function() {
+	// 	toggleDropdown();
+	// };
 
 	//
 	// loginButtonsLoggedInDropdown template and related
@@ -452,10 +455,14 @@
 		});
 	};
 
-	var toggleDropdown = function() {
-		// $('#login-dropdown-list .dropdown-menu').dropdown('toggle');
-		$("#login-dropdown-list").toggleClass("open");
+	// var toggleDropdown = function() {
+	// 	$("#login-dropdown-list").toggleClass("open");
+	// }
 
+	var focusInput = function() {
+		setTimeout(function() {
+			$("#login-dropdown-list input").first().focus();
+		}, 0);
 	};
 
 	var signup = function() {
