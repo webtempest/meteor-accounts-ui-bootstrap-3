@@ -38,7 +38,8 @@ i18n.map("el", {
 	forgotPasswordForm: {
 		email: "Ηλεκτρονικό ταχυδρομείο (email)",
 		reset: "Ακύρωση κωδικού",
-		sent: "Το email έχει αποσταλεί"
+		sent: "Το email έχει αποσταλεί",
+		invalidEmail: "Μη έγκυρος λογαριασμός ηλεκτρονικού ταχυδρομείου (email)"
 	},
 	loginButtonsBackToLoginLink: {
 		back: "Επιστροφή"

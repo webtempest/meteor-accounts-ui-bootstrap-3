@@ -38,7 +38,8 @@ i18n.map("ca", {
 	forgotPasswordForm: {
 		email: "Adreça electrònica",
 		reset: "Restablir contrasenya",
-		sent: "Email enviat"
+		sent: "Email enviat",
+		invalidEmail: "Adreça invàlida"
 	},
 	loginButtonsBackToLoginLink: {
 		back: "Cancel·lar"
@@ -49,7 +50,7 @@ i18n.map("ca", {
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
 		signInWith: "Inicia sessió amb",
-		configure: "Configurar",
+		configure: "Configurar"
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
 		signOut: "Tancar sessió"
@@ -77,7 +78,7 @@ i18n.map("ca", {
 	},
 	errorMessages: {
 		usernameTooShort: "El nom d'usuari ha de tenir 3 caracters com a mínim",
-		invalidEmail: "Adreça electrònica invàlida",
+		invalidEmail: "Adreça invàlida",
 		passwordTooShort: "La contrasenya ha de tenir 3 caracters como a mínim",
 		passwordsDontMatch: "Les contrasenyes no són iguals"
 	}

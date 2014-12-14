@@ -539,7 +539,7 @@
 					loginButtonsSession.infoMessage(i18n('forgotPasswordForm.sent'));
 			});
 		} else {
-			loginButtonsSession.infoMessage(i18n('forgotPasswordForm.sent'));
+			loginButtonsSession.errorMessage(i18n('forgotPasswordForm.invalidEmail'));
 		}
 	};
 

@@ -38,7 +38,8 @@ i18n.map("fr", {
 	forgotPasswordForm: {
 		email: "Email",
 		reset: "Réinitialiser le mot de passe",
-		sent: "Email envoyé"
+		sent: "Email envoyé",
+		invalidEmail: "L'adresse email est invalide"
 	},
 	loginButtonsBackToLoginLink: {
 		back: "Annuler"

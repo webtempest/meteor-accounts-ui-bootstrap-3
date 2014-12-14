@@ -38,7 +38,8 @@ i18n.map("ru", {
 	forgotPasswordForm: {
 		email: "Email",
 		reset: "Сбросить пароль",
-		sent: "Вам отправлено письмо"
+		sent: "Вам отправлено письмо",
+		invalidEmail: "Некорректный email"
 	},
 	loginButtonsBackToLoginLink: {
 		back: "Отмена"
