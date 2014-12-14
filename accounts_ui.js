@@ -67,6 +67,35 @@ Accounts.ui.config = function(options) {
 			}
 		}
 	}
+
+	
+	// deal with `requestOfflineToken`
+	if (options.requestOfflineToken) {
+		_.each(options.requestOfflineToken, function (value, service) {
+			if (service !== 'google')
+				throw new Error("Accounts.ui.config: `requestOfflineToken` only supported for Google login at the moment.");
+
+			if (Accounts.ui._options.requestOfflineToken[service]) {
+				throw new Error("Accounts.ui.config: Can't set `requestOfflineToken` more than once for " + service);
+			} else {
+				Accounts.ui._options.requestOfflineToken[service] = value;
+			}
+		});
+	}
+
+	// deal with `forceApprovalPrompt`
+	if (options.forceApprovalPrompt) {
+		_.each(options.forceApprovalPrompt, function (value, service) {
+			if (service !== 'google')
+				throw new Error("Accounts.ui.config: `forceApprovalPrompt` only supported for Google login at the moment.");
+
+			if (Accounts.ui._options.forceApprovalPrompt[service]) {
+				throw new Error("Accounts.ui.config: Can't set `forceApprovalPrompt` more than once for " + service);
+			} else {
+				Accounts.ui._options.forceApprovalPrompt[service] = value;
+			}
+		});
+	}
 };
 
 Accounts.ui._passwordSignupFields = function() {
