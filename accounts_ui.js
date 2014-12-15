@@ -3,8 +3,10 @@ if (!Accounts.ui)
 
 if (!Accounts.ui._options) {
 	Accounts.ui._options = {
+		extraSignupFields: [],
 		requestPermissions: {},
-		extraSignupFields: []
+		requestOfflineToken: {},
+		forceApprovalPrompt: {}
 	};
 }
 
