@@ -22,9 +22,10 @@
 		}
 	});
 
-	// Template._loginButtons.toggleDropdown = function() {
-	// 	toggleDropdown();
-	// };
+	Template._loginButtons.toggleDropdown = function() {
+		toggleDropdown();
+		focusInput();
+	};
 
 	//
 	// loginButtonsLoggedInDropdown template and related
@@ -455,9 +456,9 @@
 		});
 	};
 
-	// var toggleDropdown = function() {
-	// 	$("#login-dropdown-list").toggleClass("open");
-	// }
+	var toggleDropdown = function() {
+		$("#login-dropdown-list").toggleClass("open");
+	}
 
 	var focusInput = function() {
 		setTimeout(function() {
