@@ -12,11 +12,11 @@ i18n.map("ru", {
 		submit: "Сохранить пароль"
 	},
 	justVerifiedEmailDialog: {
-		verified: "Проверяется email",
-		dismiss: "Остановить"
+		verified: "Email подтвержден",
+	    dismiss: "Закрыть"
 	},
 	loginButtonsMessagesDialog: {
-		dismiss: "Остановить",
+	    dismiss: "Закрыть"
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Изменить пароль",
