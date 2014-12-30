@@ -39,7 +39,7 @@ accountsUIBootstrap3.map("ko", {
 		email: "이메일 주소",
 		reset: "비밀번호 초기화하기",
 		sent: "이메일이 보내졌습니다",
-		invalidEmail: "옳바르지 않은 이메일 주소입니다"
+		invalidEmail: "올바르지 않은 이메일 주소입니다"
 	},
 	loginButtonsBackToLoginLink: {
 		back: "취소"
