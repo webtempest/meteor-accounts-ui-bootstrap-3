@@ -9,9 +9,10 @@ Installation
 With Meteor 0.9:
 
 ```sh
-$ meteor add ian:bootstrap-3
 $ meteor add ian:accounts-ui-bootstrap-3
 ```
+
+This package now uses [twbs:bootstrap](https://atmospherejs.com/twbs/bootstrap) for Bootstrap 3, and is already declared as a dependency. This is now the recommended package to use on Meteor.
 
 You will also need at least one accounts plugin: `meteor add accounts-password`, `meteor add accounts-github`, etc.
 
