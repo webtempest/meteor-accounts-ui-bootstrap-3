@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'ian:accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.8',
+	version: '1.2.9',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
 })
 
@@ -12,12 +12,14 @@ Package.on_use(function (api) {
 		'accounts-base@1.0.0',
 		'underscore@1.0.0',
 		'templating@1.0.0',
-		'twbs:bootstrap@3.3.1',
 		'anti:i18n@0.4.3'
 		],'client')
 
 	api.imply('accounts-base', ['client', 'server']);
 
+	// Allows the user of this package to choose their own Bootstrap
+	// implementation.
+	api.use('twbs:bootstrap@3.3.1', {weak: true});
 	// Allow us to call Accounts.oauth.serviceNames, if there are any OAuth
 	// services.
 	api.use('accounts-oauth@1.0.0', {weak: true});

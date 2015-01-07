@@ -9,10 +9,11 @@ Installation
 With Meteor 0.9:
 
 ```sh
+$ meteor add twbs:bootstrap
 $ meteor add ian:accounts-ui-bootstrap-3
 ```
 
-This package now uses [twbs:bootstrap](https://atmospherejs.com/twbs/bootstrap) for Bootstrap 3, and is already declared as a dependency. This is now the recommended package to use on Meteor.
+[twbs:bootstrap](https://atmospherejs.com/twbs/bootstrap) is the recommended Meteor implementation of Twitter's Bootstrap, and is declared as a weak dependency in this package. If you're using your own Bootstrap package, you're on your own regarding load order problems.
 
 You will also need at least one accounts plugin: `meteor add accounts-password`, `meteor add accounts-github`, etc.
 
