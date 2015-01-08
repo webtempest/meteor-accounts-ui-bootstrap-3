@@ -1,4 +1,4 @@
-i18n.map("br", {
+i18n.map("pt-BR", {
 	resetPasswordDialog: {
 		title: "Esqueceu sua senha?",
 		newPassword: "Nova senha",
@@ -16,7 +16,7 @@ i18n.map("br", {
 		dismiss: "Ignorar"
 	},
 	loginButtonsMessagesDialog: {
-		dismiss: "Ignorar",
+		dismiss: "Ignorar"
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Mudar senha",
