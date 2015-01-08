@@ -1,15 +1,15 @@
-i18n.map("pt", {
+i18n.map("br", {
 	resetPasswordDialog: {
-		title: "Esqueci-me da palavra-passe",
-		newPassword: "Nova palavra-passe",
+		title: "Esqueceu sua senha?",
+		newPassword: "Nova senha",
 		cancel: "Cancelar",
-		submit: "Alterar palavra-passe"
+		submit: "Alterar senha"
 	},
 	enrollAccountDialog: {
-		title: "Introduza a nova palavra-passe",
-		newPassword: "Nova palavra-passe",
+		title: "Digite a nova senha",
+		newPassword: "Nova senha",
 		cancel: "Fechar",
-		submit: "Alterar palavra-passe"
+		submit: "Alterar senha"
 	},
 	justVerifiedEmailDialog: {
 		verified: "E-mail verificado!",
@@ -19,25 +19,25 @@ i18n.map("pt", {
 		dismiss: "Ignorar"
 	},
 	loginButtonsLoggedInDropdownActions: {
-		password: "Mudar palavra-passe",
+		password: "Mudar senha",
 		signOut: "Sair"
 	},
 	loginButtonsLoggedOutDropdown: {
 		signIn: "Entrar",
-		up: "Registar"
+		up: "Cadastrar"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
 		or: "ou"
 	},
 	loginButtonsLoggedOutPasswordService: {
 		create: "Criar",
-		signIn: "Entrar",
-		forgot: "Esqueci-me da palavra-passe",
-		createAcc: "Registar"
+		signIn: "Login",
+		forgot: "Esqueceu sua senha?",
+		createAcc: "Cadastrar"
 	},
 	forgotPasswordForm: {
 		email: "E-mail",
-		reset: "Alterar palavra-passe",
+		reset: "Alterar senha",
 		sent: "E-mail enviado",
 		invalidEmail: "E-mail inválido"
 	},
@@ -45,11 +45,11 @@ i18n.map("pt", {
 		back: "Cancelar"
 	},
 	loginButtonsChangePassword: {
-		submit: "Mudar palavra-passe",
+		submit: "Mudar senha",
 		cancel: "Cancelar"
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
-		signInWith: "Entrar com",
+		signInWith: "Logar com",
 		configure: "Configurar"
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
@@ -59,28 +59,27 @@ i18n.map("pt", {
 		noLoginServices: "Nenhum servico de login configurado"
 	},
 	loginFields: {
-		usernameOrEmail: "Utilizador ou E-mail",
-		username: "Utilizador",
+		usernameOrEmail: "Usuário ou E-mail",
+		username: "Usuário",
 		email: "E-mail",
-		password: "Palavra-passe"
+		password: "Senha"
 	},
 	signupFields: {
-		username: "Utilizador",
+		username: "Usuário",
 		email: "E-mail",
 		emailOpt: "E-mail (opcional)",
-		password: "Palavra-passe",
-		passwordAgain: "Palavra-passe (confirmacão)"
+		password: "Senha",
+		passwordAgain: "Senha (confirmacão)"
 	},
 	changePasswordFields: {
-		currentPassword: "Palavra-passe atual",
-		newPassword: "Nova palavra-passe",
-		newPasswordAgain: "Nova palavra-passe (confirmacao)"
+		currentPassword: "Senha atual",
+		newPassword: "Nova Senha",
+		newPasswordAgain: "Nova Senha (confirmacao)"
 	},
 	errorMessages: {
-		usernameTooShort: "Utilizador precisa de ter mais de 3 caracteres",
+		usernameTooShort: "Usuário precisa ter mais de 3 caracteres",
 		invalidEmail: "E-mail inválido",
-		passwordTooShort: "Palavra-passe precisa ter mais de 6 caracteres",
-		passwordsDontMatch: "As Palavras-passe estão diferentes"
+		passwordTooShort: "Senha precisa ter mais de 6 caracteres",
+		passwordsDontMatch: "Senhas estão diferentes"
 	}
 });
-
