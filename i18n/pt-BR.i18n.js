@@ -1,4 +1,4 @@
-i18n.map("pt-BR", {
+ptBR = {
 	resetPasswordDialog: {
 		title: "Esqueceu sua senha?",
 		newPassword: "Nova senha",
@@ -88,4 +88,4 @@ i18n.map("pt-BR", {
 		passwordsDontMatch: "Senhas estão diferentes",
 		newPasswordSameAsOld: "A nova senha tem de ser diferente da antiga"
 	}
-})
+}
