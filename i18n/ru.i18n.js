@@ -38,7 +38,6 @@ i18n.map("ru", {
 	forgotPasswordForm: {
 		email: "Email",
 		reset: "Сбросить пароль",
-		sent: "Вам отправлено письмо",
 		invalidEmail: "Некорректный email"
 	},
 	loginButtonsBackToLoginLink: {
@@ -76,10 +75,17 @@ i18n.map("ru", {
 		newPassword: "Новый пароль",
 		newPasswordAgain: "Новый пароль (еще раз)"
 	},
+	infoMessages : {
+		sent: "Вам отправлено письмо",
+		passwordChanged: "Password changed"
+	},
 	errorMessages: {
-		usernameTooShort: "Имя пользователя должно быть длиной не менее 3-х символов",
+		userNotFound: "User not found",
 		invalidEmail: "Некорректный email",
+		incorrectPassword: "Incorrect password",
+		usernameTooShort: "Имя пользователя должно быть длиной не менее 3-х символов",
 		passwordTooShort: "Пароль должен быть длиной не менее 6-ти символов",
-		passwordsDontMatch: "Пароли не совпадают"
+		passwordsDontMatch: "Пароли не совпадают",
+		newPasswordSameAsOld: "New and old passwords must be different"
 	}
 })

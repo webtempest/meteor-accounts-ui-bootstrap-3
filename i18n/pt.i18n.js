@@ -76,11 +76,18 @@ i18n.map("pt", {
 		newPassword: "Nova palavra-passe",
 		newPasswordAgain: "Nova palavra-passe (confirmacao)"
 	},
+	infoMessages: {
+		sent: "E-mail enviado",
+		passwordChanged: "Palavra-passe alterada"
+	},
 	errorMessages: {
 		usernameTooShort: "Utilizador precisa de ter mais de 3 caracteres",
 		invalidEmail: "E-mail inválido",
 		passwordTooShort: "Palavra-passe precisa ter mais de 6 caracteres",
-		passwordsDontMatch: "As Palavras-passe estão diferentes"
+		passwordsDontMatch: "As Palavras-passe estão diferentes",
+		userNotFound: "Utilizador não encontrado",
+		incorrectPassword: "Palavra-passe incorreta",
+		newPasswordSameAsOld: "A nova palavra-passe tem de ser diferente da antiga"
 	}
 });
 

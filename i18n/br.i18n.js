@@ -16,7 +16,7 @@ i18n.map("br", {
 		dismiss: "Ignorar"
 	},
 	loginButtonsMessagesDialog: {
-		dismiss: "Ignorar"
+		dismiss: "Ignorar",
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Mudar senha",
@@ -38,7 +38,6 @@ i18n.map("br", {
 	forgotPasswordForm: {
 		email: "E-mail",
 		reset: "Alterar senha",
-		sent: "E-mail enviado",
 		invalidEmail: "E-mail inválido"
 	},
 	loginButtonsBackToLoginLink: {
@@ -50,7 +49,7 @@ i18n.map("br", {
 	},
 	loginButtonsLoggedOutSingleLoginButton: {
 		signInWith: "Logar com",
-		configure: "Configurar"
+		configure: "Configurar",
 	},
 	loginButtonsLoggedInSingleLogoutButton: {
 		signOut: "Sair"
@@ -76,10 +75,17 @@ i18n.map("br", {
 		newPassword: "Nova Senha",
 		newPasswordAgain: "Nova Senha (confirmacao)"
 	},
+	infoMessages: {
+		sent: "E-mail enviado",
+		passwordChanged: "Senha alterada"
+	},
 	errorMessages: {
-		usernameTooShort: "Usuário precisa ter mais de 3 caracteres",
+		userNotFound: "Usuário não encontrado",
 		invalidEmail: "E-mail inválido",
+		incorrectPassword: "Senha incorreta",
+		usernameTooShort: "Usuário precisa ter mais de 3 caracteres",
 		passwordTooShort: "Senha precisa ter mais de 6 caracteres",
-		passwordsDontMatch: "Senhas estão diferentes"
+		passwordsDontMatch: "Senhas estão diferentes",
+		newPasswordSameAsOld: "A nova senha tem de ser diferente da antiga"
 	}
-});
+})

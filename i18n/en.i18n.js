@@ -38,7 +38,6 @@ i18n.map("en", {
 	forgotPasswordForm: {
 		email: "Email",
 		reset: "Reset password",
-		sent: "Email sent",
 		invalidEmail: "Invalid email"
 	},
 	loginButtonsBackToLoginLink: {
@@ -76,10 +75,18 @@ i18n.map("en", {
 		newPassword: "New Password",
 		newPasswordAgain: "New Password (again)"
 	},
+	infoMessages : {
+		emailSent: "Email sent",
+		passwordChanged: "Password changed"
+	},
 	errorMessages: {
-		usernameTooShort: "Username must be at least 3 characters long",
+		userNotFound: "User not found",
 		invalidEmail: "Invalid email",
+		incorrectPassword: "Incorrect password",
+		usernameTooShort: "Username must be at least 3 characters long",
 		passwordTooShort: "Password must be at least 6 characters long",
-		passwordsDontMatch: "Passwords don't match"
+		passwordsDontMatch: "Passwords don't match",
+		newPasswordSameAsOld: "New and old passwords must be different",
+		signupsForbidden: "Signups forbidden"
 	}
 })

@@ -38,7 +38,6 @@ i18n.map("el", {
 	forgotPasswordForm: {
 		email: "Ηλεκτρονικό ταχυδρομείο (email)",
 		reset: "Ακύρωση κωδικού",
-		sent: "Το email έχει αποσταλεί",
 		invalidEmail: "Μη έγκυρος λογαριασμός ηλεκτρονικού ταχυδρομείου (email)"
 	},
 	loginButtonsBackToLoginLink: {
@@ -76,10 +75,17 @@ i18n.map("el", {
 		newPassword: "Νέος Κωδικός",
 		newPasswordAgain: "Νέος Κωδικός (ξανά)"
 	},
+	infoMessages: {
+		emailSent: "Το email έχει αποσταλεί",
+		passwordChanged: "Password changed"
+	},
 	errorMessages: {
-		usernameTooShort: "Το όνομα χρήστη πρέπει να είναι τουλάχιστον 3 χαρακτήρες",
+		userNotFound: "User not found",
 		invalidEmail: "Μη έγκυρος λογαριασμός ηλεκτρονικού ταχυδρομείου (email)",
+		incorrectPassword: "Incorrect password",
+		usernameTooShort: "Το όνομα χρήστη πρέπει να είναι τουλάχιστον 3 χαρακτήρες",
 		passwordTooShort: "Ο κωδικός πρέπει να είναι τουλάχιστον 6 χαρακτήρες",
-		passwordsDontMatch: "Οι κωδικοί δεν ταιριάζουν"
+		passwordsDontMatch: "Οι κωδικοί δεν ταιριάζουν",
+		newPasswordSameAsOld: "New and old passwords must be different"
 	}
 })

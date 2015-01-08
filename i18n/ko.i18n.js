@@ -38,7 +38,6 @@ i18n.map("ko", {
 	forgotPasswordForm: {
 		email: "이메일 주소",
 		reset: "비밀번호 초기화하기",
-		sent: "이메일이 보내졌습니다",
 		invalidEmail: "올바르지 않은 이메일 주소입니다"
 	},
 	loginButtonsBackToLoginLink: {
@@ -76,10 +75,17 @@ i18n.map("ko", {
 		newPassword: "새로운 비밀번호",
 		newPasswordAgain: "새로운 비밀번호 (확인)"
 	},
+	infoMessages: {
+		sent: "이메일이 보내졌습니다",
+		passwordChanged: "Password changed"
+	},
 	errorMessages: {
-		usernameTooShort: "사용자이름은 최소 3글자 이상이어야 합니다",
+		userNotFound: "User not found",
 		invalidEmail: "잘못된 이메일 주소",
+		incorrectPassword: "Incorrect password",
+		usernameTooShort: "사용자이름은 최소 3글자 이상이어야 합니다",
 		passwordTooShort: "비밀번호는 최소 6글자 이상이어야 합니다",
-		passwordsDontMatch: "비밀번호가 맞지 않습니다"
+		passwordsDontMatch: "비밀번호가 맞지 않습니다",
+		newPasswordSameAsOld: "New and old passwords must be different"
 	}
 })
