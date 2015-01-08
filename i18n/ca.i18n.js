@@ -38,7 +38,6 @@ i18n.map("ca", {
 	forgotPasswordForm: {
 		email: "Adreça electrònica",
 		reset: "Restablir contrasenya",
-		sent: "Email enviat",
 		invalidEmail: "Adreça invàlida"
 	},
 	loginButtonsBackToLoginLink: {
@@ -76,10 +75,17 @@ i18n.map("ca", {
 		newPassword: "Nova Contrasenya",
 		newPasswordAgain: "Nova Contrasenya (un altre cop)"
 	},
+	infoMessages: {
+		sent: "Email enviat",
+		passwordChanged: "Contrasenya canviada"
+	},
 	errorMessages: {
-		usernameTooShort: "El nom d'usuari ha de tenir 3 caracters com a mínim",
+		userNotFound: "L'usuari no existeix",
 		invalidEmail: "Adreça invàlida",
-		passwordTooShort: "La contrasenya ha de tenir 3 caracters como a mínim",
-		passwordsDontMatch: "Les contrasenyes no són iguals"
+		incorrectPassword: "Contrasenya incorrecta",
+		usernameTooShort: "El nom d'usuari ha de tenir 3 caracters com a mínim",
+		passwordTooShort: "La contrasenya ha de tenir 6 caracters como a mínim",
+		passwordsDontMatch: "Les contrasenyes no són iguals",
+		newPasswordSameAsOld: "La contrasenya nova i l'actual no poden ser iguals"
 	}
 })

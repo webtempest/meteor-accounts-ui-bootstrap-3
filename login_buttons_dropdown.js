@@ -449,7 +449,10 @@
 
 		Meteor.loginWithPassword(loginSelector, password, function(error, result) {
 			if (error) {
-				loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				if (error.reason == 'Incorrect password')
+					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
+				else 
+					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 			} else {
 				loginButtonsSession.closeDropdown();
 			}
@@ -526,7 +529,10 @@
 
 		Accounts.createUser(options, function(error) {
 			if (error) {
-				loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				if (error.reason == 'Signups forbidden')
+					loginButtonsSession.errorMessage(i18n('errorMessages.signupsForbidden'))
+				else 
+					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 			} else {
 				loginButtonsSession.closeDropdown();
 			}
@@ -541,10 +547,13 @@
 			Accounts.forgotPassword({
 				email: email
 			}, function(error) {
-				if (error)
-					loginButtonsSession.errorMessage(error.reason || "Unknown error");
-				else
-					loginButtonsSession.infoMessage(i18n('forgotPasswordForm.sent'));
+				if (error) {
+					if (error.reason == 'User not found')
+						loginButtonsSession.errorMessage(i18n('errorMessages.userNotFound'))
+					else 
+						loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				} else
+					loginButtonsSession.infoMessage(i18n('infoMessages.emailSent'));
 			});
 		} else {
 			loginButtonsSession.errorMessage(i18n('forgotPasswordForm.invalidEmail'));
@@ -553,12 +562,16 @@
 
 	var changePassword = function() {
 		loginButtonsSession.resetMessages();
-
 		// notably not trimmed. a password could (?) start or end with a space
 		var oldPassword = elementValueById('login-old-password');
-
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
+		
+		if (password == oldPassword) {
+			loginButtonsSession.errorMessage(i18n('errorMessages.newPasswordSameAsOld'));
+			return;
+		}
+
 		if (!Accounts._loginButtons.validatePassword(password))
 			return;
 
@@ -567,9 +580,12 @@
 
 		Accounts.changePassword(oldPassword, password, function(error) {
 			if (error) {
-				loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				if (error.reason == 'Incorrect password')
+					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
+				else 
+					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 			} else {
-				loginButtonsSession.infoMessage("Password changed");
+				loginButtonsSession.infoMessage(i18n('infoMessages.passwordChanged'));
 
 				// wait 3 seconds, then expire the msg
 				Meteor.setTimeout(function() {

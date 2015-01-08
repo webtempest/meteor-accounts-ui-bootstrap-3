@@ -38,7 +38,6 @@ i18n.map("pt", {
 	forgotPasswordForm: {
 		email: "E-mail",
 		reset: "Alterar senha",
-		sent: "E-mail enviado",
 		invalidEmail: "E-mail inválido"
 	},
 	loginButtonsBackToLoginLink: {
@@ -76,10 +75,17 @@ i18n.map("pt", {
 		newPassword: "Nova Senha",
 		newPasswordAgain: "Nova Senha (confirmacao)"
 	},
+	infoMessages: {
+		sent: "E-mail enviado",
+		passwordChanged: "Password changed"
+	},
 	errorMessages: {
-		usernameTooShort: "Usuário precisa ter mais de 3 caracteres",
+		userNotFound: "User not found",
 		invalidEmail: "E-mail inválido",
+		incorrectPassword: "Incorrect password",
+		usernameTooShort: "Usuário precisa ter mais de 3 caracteres",
 		passwordTooShort: "Senha precisa ter mais de 6 caracteres",
-		passwordsDontMatch: "Senhas estão diferentes"
+		passwordsDontMatch: "Senhas estão diferentes",
+		newPasswordSameAsOld: "New and old passwords must be different"
 	}
 })
