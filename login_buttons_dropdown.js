@@ -449,7 +449,9 @@
 
 		Meteor.loginWithPassword(loginSelector, password, function(error, result) {
 			if (error) {
-				if (error.reason == 'Incorrect password')
+				if (error.reason == 'User not found')
+					loginButtonsSession.errorMessage(i18n('errorMessages.userNotFound'))
+				else if (error.reason == 'Incorrect password')
 					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
 				else 
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
