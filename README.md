@@ -83,10 +83,12 @@ accountsUIBootstrap3.setLanguage('ca'); // for Catalan
 accountsUIBootstrap3.setLanguage('fr'); // for French
 accountsUIBootstrap3.setLanguage('de'); // for German
 accountsUIBootstrap3.setLanguage('it'); // for Italian
-accountsUIBootstrap3.setLanguage('pt'); // for Portuguese
+accountsUIBootstrap3.setLanguage('pt-PT'); // for Portuguese (Portugal)
+accountsUIBootstrap3.setLanguage('pt-BR'); // for Portuguese (Brazil)
 accountsUIBootstrap3.setLanguage('ru'); // for Russian
 accountsUIBootstrap3.setLanguage('el'); // for Greek
 accountsUIBootstrap3.setLanguage('ko'); // for Korean
+accountsUIBootstrap3.setLanguage('ar'); // for Arabic
 ```
 
 If you want to implement your own language, use the `map` function like so:
@@ -108,7 +110,6 @@ accountsUIBootstrap3.map('es', {
 ```
 
 You can use the translation files in the `i18n` folder as an example.
-
 
 Screenshots
 -------------
