@@ -12,7 +12,7 @@ i18n.map("ar", {
     submit: "تم"
   },
   justVerifiedEmailDialog: {
-    verified: "تم تأكيد البريد الالكتروني",
+    verified: "تم تأكيد البريد",
     dismiss:  "حسنًا"
   },
   loginButtonsMessagesDialog: {
@@ -23,21 +23,21 @@ i18n.map("ar", {
     signOut: "تسجيل الخروج"
   },
   loginButtonsLoggedOutDropdown: {
-    signIn: "تسجيل دخول",
-    up: "up"
+    signIn: "دخول",
+    up: "إنشاء حساب"
   },
   loginButtonsLoggedOutPasswordServiceSeparator: {
     or: "أو"
   },
   loginButtonsLoggedOutPasswordService: {
     create: "أنشئ",
-    signIn: "سجل دخولك",
+    signIn: "دخول",
     forgot: "نسيت كلمة السر؟",
-    createAcc: "انشئ حسابًا"
+    createAcc: "أنشئ حسابا"
   },
   forgotPasswordForm: {
-    email: "البريد الالكتروني",
-    reset: "اعادة تعين كلمة السر",
+    email: "البريد",
+    reset: "إعادة تعين كلمة السر",
     invalidEmail: "البريد خاطئ"
   },
   loginButtonsBackToLoginLink: {
@@ -52,28 +52,28 @@ i18n.map("ar", {
     configure: "تعيين"
   },
   loginButtonsLoggedInSingleLogoutButton: {
-    signOut: "سجل خروج"
+    signOut: "اخرج"
   },
   loginButtonsLoggedOut: {
     noLoginServices: "لا يوجد خدمة دخول مفعله"
   },
   loginFields: {
-    usernameOrEmail: "اسم المستخدم او عنوان البريد الالكتروني",
+    usernameOrEmail: "اسم المستخدم او عنوان البريد",
     username: "اسم المستخدم",
-    email: "البريد الالكتروني",
+    email: "البريد",
     password: "كلمة السر"
   },
   signupFields: {
     username: "اسم المستخدم",
-    email: "البريد الالكتروني",
-    emailOpt: "البريد الالكتروني - اختياري -",
+    email: "البريد",
+    emailOpt: "-اختياري- البريد",
     password: "كلمة السر",
-    passwordAgain: "تأكيد كلمة السر"
+    passwordAgain: "أعد كتابة كلمة السر"
   },
   changePasswordFields: {
     currentPassword: "كلمة السر الحالية",
     newPassword: "كلمة السر الجديدة",
-    newPasswordAgain: "تأكيد كلمة السر الجديدة"
+    newPasswordAgain: "أعد كتابة كلمة السر الجديدة"
   },
   infoMessages : {
     emailSent: "تم الارسال",
@@ -81,7 +81,7 @@ i18n.map("ar", {
   },
   errorMessages: {
     userNotFound: "المستخدم غير موجود",
-    invalidEmail: "بريد الكتروني خاطئ",
+    invalidEmail: "بريد خاطئ",
     incorrectPassword: "كلمة السر خطأ",
     usernameTooShort: "اسم المستخدم لابد ان يكون علي الاقل ٣ حروف",
     passwordTooShort: "كلمة السر لابد ان تكون علي الاقل ٦ احرف",
