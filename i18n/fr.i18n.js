@@ -80,12 +80,12 @@ i18n.map("fr", {
 		passwordChanged: "Mot de passe modifié"
 	},
 	errorMessages: {
-		userNotFound: "User not found",
+		userNotFound: "Utilisateur non trouvé",
 		invalidEmail: "L'adresse email est invalide",
 		incorrectPassword: "Mot de passe incorrect",
 		usernameTooShort: "Le nom d'utilisateur doit comporter au moins 3 caractères",
 		passwordTooShort: "Le mot de passe doit comporter au moins 6 caractères",
 		passwordsDontMatch: "Les mots de passe ne sont pas identiques",
-		newPasswordSameAsOld: "New and old passwords must be different"
+		newPasswordSameAsOld: "Le nouveau et le vieux mot de passe doivent être différent"
 	}
 })
