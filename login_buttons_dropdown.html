@@ -81,7 +81,7 @@
 		{{#each fields}}
 			{{> _loginButtonsFormField}}
 		{{/each}}
-		<button class="btn btn-primary col-sm-12" id="login-buttons-password" type="button">
+		<button class="btn btn-primary col-xs-12" id="login-buttons-password" type="button">
 			{{#if inSignupFlow}}
 				{{i18n 'loginButtonsLoggedOutPasswordService.create'}}
 			{{else}}
@@ -110,13 +110,13 @@
 		<div id="forgot-password-email-label-and-input"> {{! XXX we should probably use loginButtonsFormField }}
 			<input id="forgot-password-email" type="email" placeholder="{{i18n 'forgotPasswordForm.email'}}" class="form-control" />
 		</div>
-		<button class="btn btn-primary login-button-form-submit col-sm-12" id="login-buttons-forgot-password">{{i18n 'forgotPasswordForm.reset'}}</button>
+		<button class="btn btn-primary login-button-form-submit col-xs-12" id="login-buttons-forgot-password">{{i18n 'forgotPasswordForm.reset'}}</button>
 		{{> _loginButtonsBackToLoginLink}}
 	</div>
 </template>
 
 <template name="_loginButtonsBackToLoginLink">
-		<button id="back-to-login-link" class="btn btn-default col-sm-12">{{i18n 'loginButtonsBackToLoginLink.back'}}</button>
+		<button id="back-to-login-link" class="btn btn-default col-xs-12">{{i18n 'loginButtonsBackToLoginLink.back'}}</button>
 </template>
 
 <template name="_loginButtonsFormField">
