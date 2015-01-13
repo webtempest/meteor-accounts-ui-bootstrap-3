@@ -12,7 +12,7 @@ i18n.map("de", {
 		submit: "Passwort ändern"
 	},
 	justVerifiedEmailDialog: {
-		verified: "Email Adresse verifizieren",
+		verified: "Email Adresse verifiziert",
 		dismiss: "Schließen"
 	},
 	loginButtonsMessagesDialog: {
