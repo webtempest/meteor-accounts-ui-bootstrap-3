@@ -12,8 +12,15 @@
 	// shared between dropdown and single mode
 	Template._loginButtons.events({
 		'click #login-buttons-logout': function() {
-			Meteor.logout(function() {
+			Meteor.logout(function(error) {
 				loginButtonsSession.closeDropdown();
+				if (accountsUIBootstrap3.logoutCallback) {
+					if (error) {
+						accountsUIBootstrap3.logoutCallback(error);
+					} else {
+						accountsUIBootstrap3.logoutCallback();
+					}
+				}
 			});
 		}
 	});
