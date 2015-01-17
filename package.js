@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'ian:accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.17',
+	version: '1.2.18',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
 })
 
