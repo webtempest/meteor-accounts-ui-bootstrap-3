@@ -17,6 +17,8 @@
 	input
 		margin:0 0 -1px;
 		border-radius: 0px;
+		position: relative;
+		z-index: 1;
 
 	input:first-of-type
 		border-top-left-radius: 5px;
@@ -26,6 +28,9 @@
 		margin-bottom: 5px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
+		
+	input:focus
+		z-index: 2;
 
 .modal-backdrop
 	opacity: 0.75;
