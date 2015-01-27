@@ -70,7 +70,6 @@ Accounts.ui.config = function(options) {
 		}
 	}
 
-	
 	// deal with `requestOfflineToken`
 	if (options.requestOfflineToken) {
 		_.each(options.requestOfflineToken, function (value, service) {
