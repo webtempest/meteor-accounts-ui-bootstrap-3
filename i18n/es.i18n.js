@@ -32,7 +32,7 @@ i18n.map("es", {
 	loginButtonsLoggedOutPasswordService: {
 		create: "Crear",
 		signIn: "Iniciar sesión",
-		forgot: "Ha olvidado su contraseña?",
+		forgot: "¿Ha olvidado su contraseña?",
 		createAcc: "Registrarse"
 	},
 	forgotPasswordForm: {
