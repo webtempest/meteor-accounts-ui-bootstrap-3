@@ -72,6 +72,22 @@ Template._loginButtonsLoggedInDropdown.events({
 
 Note that the dropdown will close since we're not stopping the propagation of the click event.
 
+
+Provide custom signup options
+-----------------------------
+
+If the function `setCustomSignupOptions` exists, the returned value is handled as the initial options object,
+which is later available in onCreateUser on the server
+
+```javascript
+setCustomSignupOptions = function() {
+    return {
+    	refId: Session.get('refId') // Or whatever
+    }
+}
+```
+
+
 Localization
 -------------
 
