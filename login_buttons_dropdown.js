@@ -474,7 +474,9 @@
 	var signup = function() {
 		loginButtonsSession.resetMessages();
 
-		var options = {}; // to be passed to Accounts.createUser
+		// to be passed to Accounts.createUser
+		var options = (typeof setCustomSignupOptions === 'function') setCustomSignupOptions() : {};
+		if (!(options instanceof Object)) options = {}
 
 		var username = trimmedElementValueById('login-username');
 		if (username !== null) {
