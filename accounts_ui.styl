@@ -1,6 +1,6 @@
 #login-dropdown-list
 	.dropdown-menu
-		min-width:	300px;
+		min-width: 300px;
 		padding: 15px;
 		.or
 			margin: 5px 0;
@@ -32,8 +32,12 @@
 	input:focus
 		z-index: 2;
 
+opacity(n)
+	opacity: n
+	filter: unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
 .modal-backdrop
-	opacity: 0.75;
+	opacity(0.75);
 
 #login-buttons-reset-password-modal, #login-buttons-enroll-account-modal, #login-buttons-email-address-verified-modal
 	.modal-content

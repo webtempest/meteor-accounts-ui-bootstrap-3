@@ -19,7 +19,7 @@ Accounts.ui.navigate = function (route, hash) {
 
 Accounts.ui.config = function(options) {
 	// validate options keys
-	var VALID_KEYS = ['passwordSignupFields', 'requestPermissions', 'extraSignupFields', 'requestOfflineToken'];
+	var VALID_KEYS = ['passwordSignupFields', 'requestPermissions', 'extraSignupFields', 'requestOfflineToken', 'forceApprovalPrompt'];
 	_.each(_.keys(options), function(key) {
 		if (!_.contains(VALID_KEYS, key))
 			throw new Error("Accounts.ui.config: Invalid key: " + key);
@@ -70,7 +70,6 @@ Accounts.ui.config = function(options) {
 		}
 	}
 
-	
 	// deal with `requestOfflineToken`
 	if (options.requestOfflineToken) {
 		_.each(options.requestOfflineToken, function (value, service) {

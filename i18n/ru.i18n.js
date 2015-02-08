@@ -24,7 +24,7 @@ i18n.map("ru", {
 	},
 	loginButtonsLoggedOutDropdown: {
 		signIn: "Войти",
-		up: "Зарегистриоваться"
+		up: "Зарегистрироваться"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
 		or: "или"
@@ -77,15 +77,15 @@ i18n.map("ru", {
 	},
 	infoMessages : {
 		sent: "Вам отправлено письмо",
-		passwordChanged: "Password changed"
+		passwordChanged: "Пароль изменён"
 	},
 	errorMessages: {
-		userNotFound: "User not found",
+		userNotFound: "Пользователь не найден",
 		invalidEmail: "Некорректный email",
-		incorrectPassword: "Incorrect password",
+		incorrectPassword: "Неправильный пароль",
 		usernameTooShort: "Имя пользователя должно быть длиной не менее 3-х символов",
 		passwordTooShort: "Пароль должен быть длиной не менее 6-ти символов",
 		passwordsDontMatch: "Пароли не совпадают",
-		newPasswordSameAsOld: "New and old passwords must be different"
+		newPasswordSameAsOld: "Новый и старый пароли должны быть разными"
 	}
 })
