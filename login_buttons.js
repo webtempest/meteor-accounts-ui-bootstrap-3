@@ -14,12 +14,8 @@
 		'click #login-buttons-logout': function() {
 			Meteor.logout(function(error) {
 				loginButtonsSession.closeDropdown();
-				if (accountsUIBootstrap3.logoutCallback) {
-					if (error) {
-						accountsUIBootstrap3.logoutCallback(error);
-					} else {
-						accountsUIBootstrap3.logoutCallback();
-					}
+				if (typeof accountsUIBootstrap3.logoutCallback === 'function') {
+					accountsUIBootstrap3.logoutCallback(error);
 				}
 			});
 		}

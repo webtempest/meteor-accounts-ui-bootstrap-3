@@ -1,10 +1,10 @@
 meteor-accounts-ui-bootstrap-3
-=====================================
+==============================
 
 Meteor accounts-ui styled with Twitter's Bootstrap 3, now with multi-language support.
 
 Installation
--------------
+------------
 
 With Meteor 0.9:
 
@@ -18,7 +18,7 @@ $ meteor add ian:accounts-ui-bootstrap-3
 You will also need at least one accounts plugin: `meteor add accounts-password`, `meteor add accounts-github`, etc.
 
 How to use
--------------
+----------
 
 Add `{{> loginButtons}}` to your template
 
@@ -48,8 +48,7 @@ Example:
 
 You can also configure `Accounts.ui` to your liking as you would [with the official `accounts-ui` package](https://docs.meteor.com/#/full/accounts_ui_config).
 
-Add additional logged in actions
---------------------------------
+### Add additional logged in actions
 
 You can add additional markup to the logged in dropdown, e.g. to edit
 the user's account or profile, by defining a 
@@ -72,24 +71,31 @@ Template._loginButtonsLoggedInDropdown.events({
 
 Note that the dropdown will close since we're not stopping the propagation of the click event.
 
+### Add logout callback
 
-Provide custom signup options
------------------------------
-
-If the function `setCustomSignupOptions` exists, the returned value is handled as the initial options object,
-which is later available in onCreateUser on the server
+If the function `accountsUIBootstrap3.logoutCallback` exists, it will be called as the callback of Meteor.logout. For example:
 
 ```javascript
-setCustomSignupOptions = function() {
+accountsUIBootstrap3.logoutCallback = function(error) {
+  if(error) console.log("Error:" + error);
+  Router.go('home');
+}
+```
+
+### Custom signup options
+
+If the function `accountsUIBootstrap3.setCustomSignupOptions` exists, the returned value is handled as the initial options object,
+which is later available in onCreateUser on the server. For example:
+
+```javascript
+accountsUIBootstrap3.setCustomSignupOptions = function() {
     return {
-    	refId: Session.get('refId') // Or whatever
+    	referrerId: Session.get('referrerId') // Or whatever
     }
 }
 ```
 
-
-Localization
--------------
+### Localization
 
 The default language is English, but this package also comes with translations to many other languages built in. If you want to change the language run one of the following on the client:
 
@@ -128,7 +134,7 @@ accountsUIBootstrap3.map('es', {
 You can use the translation files in the `i18n` folder as an example.
 
 Screenshots
--------------
+-----------
 
 ![Sign In](http://i.imgur.com/SGLZkOE.png)
 ![Sign Up](http://i.imgur.com/7S3C18J.png)

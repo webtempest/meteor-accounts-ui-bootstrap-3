@@ -475,8 +475,11 @@
 		loginButtonsSession.resetMessages();
 
 		// to be passed to Accounts.createUser
-		var options = (typeof setCustomSignupOptions === 'function') ? setCustomSignupOptions() : {};
-		if (!(options instanceof Object)) options = {}
+		var options = {};
+		if(typeof accountsUIBootstrap3.setCustomSignupOptions === 'function') {
+			options = accountsUIBootstrap3.setCustomSignupOptions();
+			if (!(options instanceof Object)) options = {};
+		}
 
 		var username = trimmedElementValueById('login-username');
 		if (username !== null) {
