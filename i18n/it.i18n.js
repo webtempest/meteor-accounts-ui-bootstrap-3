@@ -27,7 +27,7 @@ i18n.map("it", {
 		up: "Registrati"
 	},
 	loginButtonsLoggedOutPasswordServiceSeparator: {
-		or: "o"
+		or: "oppure"
 	},
 	loginButtonsLoggedOutPasswordService: {
 		create: "Crea",
