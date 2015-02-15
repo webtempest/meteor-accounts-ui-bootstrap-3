@@ -79,6 +79,7 @@ object of the user document or not. Specify an array of fields using `Accounts.u
 
 ```javascript
 Accounts.ui.config({
+    requestPermissions: {},
     extraSignupFields: [{
         fieldName: 'first-name',
         fieldLabel: 'First name',
