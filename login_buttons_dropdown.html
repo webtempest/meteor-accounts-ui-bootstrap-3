@@ -4,7 +4,7 @@
 <!--           -->
 <template name="_loginButtonsLoggedInDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle"  data-toggle="dropdown">
+		<a class="dropdown-toggle">
 			{{displayName}}
 			{{#with user_profile_picture}}
 				<img src="{{this}}" width="30px" class="img-circular" alt="#" />
@@ -42,7 +42,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle"  data-toggle="dropdown">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
+		<a class="dropdown-toggle">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
 		<div class="dropdown-menu">
 			{{> _loginButtonsLoggedOutAllServices}}
 		</div>
@@ -121,7 +121,15 @@
 
 <template name="_loginButtonsFormField">
 	{{#if visible}}
+		<!-- TODO: Implement more input types -->
+		{{#if equals inputType "checkbox"}}
+			<div class="checkbox">
+				<label><input type="checkbox" id="login-{{fieldName}}" name="login-{{fieldName}}" value="true">
+				{{fieldLabel}}</label>
+			</div>
+		{{else}}
 		<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
+		{{/if}}
 	{{/if}}
 </template>
 

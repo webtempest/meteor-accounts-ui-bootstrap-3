@@ -17,8 +17,9 @@
 		'click .login-close': function() {
 			loginButtonsSession.closeDropdown();
 		},
-		'click .dropdown-toggle': function() {
-			focusInput();
+		'click .dropdown-toggle': function(event) {
+			event.stopPropagation();
+			Template._loginButtons.toggleDropdown();
 		}
 	});
 
@@ -299,7 +300,7 @@
 				}
 			}];
 
-			signupFields = Accounts.ui._options.extraSignupFields.concat(signupFields);
+			signupFields = signupFields.concat(Accounts.ui._options.extraSignupFields);
 
 			return loginButtonsSession.get('inSignupFlow') ? signupFields : loginFields;
 		},
@@ -328,6 +329,9 @@
 	});
 
 	Template._loginButtonsFormField.helpers({
+		equals: function(a, b) {
+			return (a === b);
+		},
 		inputType: function() {
 			return this.inputType || "text";
 		}
@@ -508,7 +512,8 @@
 			return;
 
 		// prepare the profile object
-		options.profile = {};
+		// it could have already been set through setCustomSignupOptions
+		if (!(options.profile instanceof Object)) options.profile = {};
 
 		// define a proxy function to allow extraSignupFields set error messages
 		var errorFn = function(errorMessage) {
@@ -522,12 +527,15 @@
 			var value = elementValueById('login-' + field.fieldName);
 			if (typeof field.validate === 'function') {
 				if (field.validate(value, errorFn)) {
-					options.profile[field.fieldName] = elementValueById('login-' + field.fieldName);
+					if (typeof field.saveToProfile !== 'undefined' && !field.saveToProfile)
+						options[field.fieldName] = value;
+					else
+						options.profile[field.fieldName] = value;
 				} else {
 					invalidExtraSignupFields = true;
 				}
 			} else {
-				options.profile[field.fieldName] = elementValueById('login-' + field.fieldName);
+				options.profile[field.fieldName] = value;
 			}
 		});
 

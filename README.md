@@ -71,7 +71,53 @@ Template._loginButtonsLoggedInDropdown.events({
 
 Note that the dropdown will close since we're not stopping the propagation of the click event.
 
-### Add logout callback
+
+### Custom signup options
+
+You can define additional input fields to appear in the signup form, and you can decide wether to save these values to the profile
+object of the user document or not. Specify an array of fields using `Accounts.ui.config` like so:
+
+```javascript
+Accounts.ui.config({
+    extraSignupFields: [{
+        fieldName: 'first-name',
+        fieldLabel: 'First name',
+        inputType: 'text',
+        visible: true,
+        saveToProfile: true
+    }, {
+        fieldName: 'last-name',
+        fieldLabel: 'Last name',
+        inputType: 'text',
+        visible: true,
+        saveToProfile: true
+    }, {
+        fieldName: 'terms',
+        fieldLabel: 'I accept the terms and conditions',
+        inputType: 'checkbox',
+        visible: true,
+        saveToProfile: false
+    }]
+});
+```
+
+#### Result:
+
+![Custom signup form example](http://i.imgur.com/pvd5L1U.png)
+
+Alternatively, if you prefer to pass values directly to the `onCreateUser` function, without creating new fields in the signup form,
+you can use the `accountsUIBootstrap3.setCustomSignupOptions` function. If it exists, the returned value is handled as the initial options object,
+which is later available in `onCreateUser` on the server. For example:
+
+```javascript
+accountsUIBootstrap3.setCustomSignupOptions = function() {
+    return {
+    	referrerId: Session.get('referrerId') // Or whatever
+    }
+}
+```
+
+### Logout callback
 
 If the function `accountsUIBootstrap3.logoutCallback` exists, it will be called as the callback of Meteor.logout. For example:
 
@@ -79,19 +125,6 @@ If the function `accountsUIBootstrap3.logoutCallback` exists, it will be called 
 accountsUIBootstrap3.logoutCallback = function(error) {
   if(error) console.log("Error:" + error);
   Router.go('home');
-}
-```
-
-### Custom signup options
-
-If the function `accountsUIBootstrap3.setCustomSignupOptions` exists, the returned value is handled as the initial options object,
-which is later available in onCreateUser on the server. For example:
-
-```javascript
-accountsUIBootstrap3.setCustomSignupOptions = function() {
-    return {
-    	referrerId: Session.get('referrerId') // Or whatever
-    }
 }
 ```
 
