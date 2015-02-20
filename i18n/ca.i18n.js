@@ -58,7 +58,7 @@ i18n.map("ca", {
 		noLoginServices: "No hi ha cap servei configurat"
 	},
 	loginFields: {
-		usernameOrEmail: "Usuari o contrasenya",
+		usernameOrEmail: "Usuari o correu electrònic",
 		username: "Usuari",
 		email: "Adreça electrònica",
 		password: "Contrasenya"

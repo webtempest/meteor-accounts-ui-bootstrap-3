@@ -58,7 +58,7 @@ i18n.map("es", {
 		noLoginServices: "No hay ningún servicio configurado"
 	},
 	loginFields: {
-		usernameOrEmail: "Usuario o contraseña",
+		usernameOrEmail: "Usuario o correo electrónico",
 		username: "Usuario",
 		email: "Correo electrónico",
 		password: "Contraseña"
