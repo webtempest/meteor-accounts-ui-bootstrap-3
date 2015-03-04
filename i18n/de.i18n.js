@@ -88,4 +88,5 @@ i18n.map("de", {
 		passwordsDontMatch: "Die Passwörter stimmen nicht überein",
 		newPasswordSameAsOld: "Neue und aktuelle Passwörter müssen unterschiedlich sein"
 	}
-})
+});
+

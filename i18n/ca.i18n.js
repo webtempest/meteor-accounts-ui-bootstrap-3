@@ -88,4 +88,5 @@ i18n.map("ca", {
 		passwordsDontMatch: "Les contrasenyes no són iguals",
 		newPasswordSameAsOld: "La contrasenya nova i l'actual no poden ser iguals"
 	}
-})
+});
+

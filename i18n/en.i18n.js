@@ -89,4 +89,5 @@ i18n.map("en", {
 		newPasswordSameAsOld: "New and old passwords must be different",
 		signupsForbidden: "Signups forbidden"
 	}
-})
+});
+

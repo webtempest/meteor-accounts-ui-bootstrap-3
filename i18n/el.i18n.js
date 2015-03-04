@@ -88,4 +88,5 @@ i18n.map("el", {
 		passwordsDontMatch: "Οι κωδικοί δεν ταιριάζουν",
 		newPasswordSameAsOld: "New and old passwords must be different"
 	}
-})
+});
+

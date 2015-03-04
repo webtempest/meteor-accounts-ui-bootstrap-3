@@ -1,5 +1,6 @@
-if (!Accounts.ui)
+if (!Accounts.ui){
 	Accounts.ui = {};
+}
 
 if (!Accounts.ui._options) {
 	Accounts.ui._options = {
@@ -12,7 +13,7 @@ if (!Accounts.ui._options) {
 
 Accounts.ui.navigate = function (route, hash) {
 	// if router is iron-router
-	if(window.Router && _.isFunction(Router.go)) {
+	if (window.Router && _.isFunction(Router.go)) {
 		Router.go(route, hash);
 	}
 }
@@ -21,11 +22,12 @@ Accounts.ui.config = function(options) {
 	// validate options keys
 	var VALID_KEYS = ['passwordSignupFields', 'requestPermissions', 'extraSignupFields', 'requestOfflineToken', 'forceApprovalPrompt'];
 	_.each(_.keys(options), function(key) {
-		if (!_.contains(VALID_KEYS, key))
+		if (!_.contains(VALID_KEYS, key)){
 			throw new Error("Accounts.ui.config: Invalid key: " + key);
+		}
 	});
 	
-	options.extraSignupFields = options.extraSignupFields || []
+	options.extraSignupFields = options.extraSignupFields || [];
 	// deal with `passwordSignupFields`
 	if (options.passwordSignupFields) {
 		if (_.contains([
@@ -35,10 +37,11 @@ Accounts.ui.config = function(options) {
 			"USERNAME_ONLY",
 			"EMAIL_ONLY"
 		], options.passwordSignupFields)) {
-			if (Accounts.ui._options.passwordSignupFields)
+			if (Accounts.ui._options.passwordSignupFields){
 				throw new Error("Accounts.ui.config: Can't set `passwordSignupFields` more than once");
-			else
+			} else {
 				Accounts.ui._options.passwordSignupFields = options.passwordSignupFields;
+			}
 		} else {
 			throw new Error("Accounts.ui.config: Invalid option for `passwordSignupFields`: " + options.passwordSignupFields);
 		}
@@ -60,10 +63,12 @@ Accounts.ui.config = function(options) {
 		} else {
 			if (options.extraSignupFields) {
 				_.each(options.extraSignupFields, function(field, index) {
-					if (!field.fieldName || !field.fieldLabel)
+					if (!field.fieldName || !field.fieldLabel){
 						throw new Error("Accounts.ui.config: `extraSignupFields` objects must have `fieldName` and `fieldLabel` attributes.");
-					if (typeof field.visible === 'undefined')
+					}
+					if (typeof field.visible === 'undefined'){
 						field.visible = true;
+					}
 					Accounts.ui._options.extraSignupFields[index] = field;
 				});
 			}
@@ -73,9 +78,9 @@ Accounts.ui.config = function(options) {
 	// deal with `requestOfflineToken`
 	if (options.requestOfflineToken) {
 		_.each(options.requestOfflineToken, function (value, service) {
-			if (service !== 'google')
+			if (service !== 'google'){
 				throw new Error("Accounts.ui.config: `requestOfflineToken` only supported for Google login at the moment.");
-
+			}
 			if (Accounts.ui._options.requestOfflineToken[service]) {
 				throw new Error("Accounts.ui.config: Can't set `requestOfflineToken` more than once for " + service);
 			} else {
@@ -87,9 +92,9 @@ Accounts.ui.config = function(options) {
 	// deal with `forceApprovalPrompt`
 	if (options.forceApprovalPrompt) {
 		_.each(options.forceApprovalPrompt, function (value, service) {
-			if (service !== 'google')
+			if (service !== 'google'){
 				throw new Error("Accounts.ui.config: `forceApprovalPrompt` only supported for Google login at the moment.");
-
+			}
 			if (Accounts.ui._options.forceApprovalPrompt[service]) {
 				throw new Error("Accounts.ui.config: Can't set `forceApprovalPrompt` more than once for " + service);
 			} else {
@@ -102,3 +107,4 @@ Accounts.ui.config = function(options) {
 Accounts.ui._passwordSignupFields = function() {
 	return Accounts.ui._options.passwordSignupFields || "EMAIL_ONLY";
 };
+

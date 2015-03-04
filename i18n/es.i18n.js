@@ -88,4 +88,5 @@ i18n.map("es", {
 		passwordsDontMatch: "Las contraseñas no son iguales",
 		newPasswordSameAsOld: "La contraseña nueva y la actual no pueden ser iguales"
 	}
-})
+});
+

@@ -88,4 +88,5 @@ ptBR = {
 		passwordsDontMatch: "Senhas estão diferentes",
 		newPasswordSameAsOld: "A nova senha tem de ser diferente da antiga"
 	}
-}
+};
+

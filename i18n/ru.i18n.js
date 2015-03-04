@@ -88,4 +88,5 @@ i18n.map("ru", {
 		passwordsDontMatch: "Пароли не совпадают",
 		newPasswordSameAsOld: "Новый и старый пароли должны быть разными"
 	}
-})
+});
+

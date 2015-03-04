@@ -88,4 +88,5 @@ i18n.map("ko", {
 		passwordsDontMatch: "비밀번호가 맞지 않습니다",
 		newPasswordSameAsOld: "New and old passwords must be different"
 	}
-})
+});
+
