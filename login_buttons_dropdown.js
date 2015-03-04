@@ -88,8 +88,9 @@
 
 		'keypress #forgot-password-email': function(event) {
 			event.stopPropagation();
-			if (event.keyCode === 13)
+			if (event.keyCode === 13){
 				forgotPassword();
+			}
 		},
 
 		'click #login-buttons-forgot-password': function(event) {
@@ -115,15 +116,17 @@
 			Meteor.flush();
 
 			// update new fields with appropriate defaults
-			if (username !== null)
+			if (username !== null){
 				document.getElementById('login-username').value = username;
-			else if (email !== null)
+			} else if (email !== null){
 				document.getElementById('login-email').value = email;
-			else if (usernameOrEmail !== null)
-				if (usernameOrEmail.indexOf('@') === -1)
+			} else if (usernameOrEmail !== null){
+				if (usernameOrEmail.indexOf('@') === -1){
 					document.getElementById('login-username').value = usernameOrEmail;
-				else
+				} else {
 					document.getElementById('login-email').value = usernameOrEmail;
+				}
+			}
 		},
 		'click #forgot-password-link': function(event) {
 			event.stopPropagation();
@@ -141,11 +144,13 @@
 			//toggleDropdown();
 
 			// update new fields with appropriate defaults
-			if (email !== null)
+			if (email !== null){
 				document.getElementById('forgot-password-email').value = email;
-			else if (usernameOrEmail !== null)
-				if (usernameOrEmail.indexOf('@') !== -1)
+			} else if (usernameOrEmail !== null){
+				if (usernameOrEmail.indexOf('@') !== -1){
 					document.getElementById('forgot-password-email').value = usernameOrEmail;
+				}
+			}
 		},
 		'click #back-to-login-link': function(event) {
 			event.stopPropagation();
@@ -160,17 +165,21 @@
 			// force the ui to update so that we have the approprate fields to fill in
 			Meteor.flush();
 
-			if (document.getElementById('login-username'))
+			if (document.getElementById('login-username')){
 				document.getElementById('login-username').value = username;
-			if (document.getElementById('login-email'))
+			}
+			if (document.getElementById('login-email')){
 				document.getElementById('login-email').value = email;
+			}
 			// "login-password" is preserved thanks to the preserve-inputs package
-			if (document.getElementById('login-username-or-email'))
+			if (document.getElementById('login-username-or-email')){
 				document.getElementById('login-username-or-email').value = email || username;
+			}
 		},
 		'keypress #login-username, keypress #login-email, keypress #login-username-or-email, keypress #login-password, keypress #login-password-again': function(event) {
-			if (event.keyCode === 13)
+			if (event.keyCode === 13){
 				loginOrSignup();
+			}
 		}
 	});
 
@@ -342,8 +351,9 @@
 	//
 	Template._loginButtonsChangePassword.events({
 		'keypress #login-old-password, keypress #login-password, keypress #login-password-again': function(event) {
-			if (event.keyCode === 13)
+			if (event.keyCode === 13){
 				changePassword();
+			}
 		},
 		'click #login-buttons-do-change-password': function(event) {
 			event.stopPropagation();
@@ -395,25 +405,28 @@
 
 	var elementValueById = function(id) {
 		var element = document.getElementById(id);
-		if (!element)
+		if (!element){
 			return null;
-		else
+		} else {
 			return element.value;
+		}
 	};
 
 	var trimmedElementValueById = function(id) {
 		var element = document.getElementById(id);
-		if (!element)
+		if (!element){
 			return null;
-		else
+		} else {
 			return element.value.replace(/^\s*|\s*$/g, ""); // trim;
+		}
 	};
 
 	var loginOrSignup = function() {
-		if (loginButtonsSession.get('inSignupFlow'))
+		if (loginButtonsSession.get('inSignupFlow')){
 			signup();
-		else
+		} else {
 			login();
+		}
 	};
 
 	var login = function() {
@@ -427,38 +440,42 @@
 
 		var loginSelector;
 		if (username !== null) {
-			if (!Accounts._loginButtons.validateUsername(username))
+			if (!Accounts._loginButtons.validateUsername(username)){
 				return;
-			else
+			} else {
 				loginSelector = {
 					username: username
 				};
+			}
 		} else if (email !== null) {
-			if (!Accounts._loginButtons.validateEmail(email))
+			if (!Accounts._loginButtons.validateEmail(email)){
 				return;
-			else
+			} else {
 				loginSelector = {
 					email: email
 				};
+			}
 		} else if (usernameOrEmail !== null) {
 			// XXX not sure how we should validate this. but this seems good enough (for now),
 			// since an email must have at least 3 characters anyways
-			if (!Accounts._loginButtons.validateUsername(usernameOrEmail))
+			if (!Accounts._loginButtons.validateUsername(usernameOrEmail)){
 				return;
-			else
+			} else {
 				loginSelector = usernameOrEmail;
+			}
 		} else {
 			throw new Error("Unexpected -- no element to use as a login user selector");
 		}
 
 		Meteor.loginWithPassword(loginSelector, password, function(error, result) {
 			if (error) {
-				if (error.reason == 'User not found')
+				if (error.reason == 'User not found'){
 					loginButtonsSession.errorMessage(i18n('errorMessages.userNotFound'))
-				else if (error.reason == 'Incorrect password')
+				} else if (error.reason == 'Incorrect password'){
 					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
-				else 
+				} else {
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				}
 			} else {
 				loginButtonsSession.closeDropdown();
 			}
@@ -482,38 +499,44 @@
 		var options = {};
 		if(typeof accountsUIBootstrap3.setCustomSignupOptions === 'function') {
 			options = accountsUIBootstrap3.setCustomSignupOptions();
-			if (!(options instanceof Object)) options = {};
+			if (!(options instanceof Object)){ options = {}; }
 		}
 
 		var username = trimmedElementValueById('login-username');
 		if (username !== null) {
-			if (!Accounts._loginButtons.validateUsername(username))
+			if (!Accounts._loginButtons.validateUsername(username)){
 				return;
-			else
+			} else {
 				options.username = username;
+			}
 		}
 
 		var email = trimmedElementValueById('login-email');
 		if (email !== null) {
-			if (!Accounts._loginButtons.validateEmail(email))
+			if (!Accounts._loginButtons.validateEmail(email)){
 				return;
-			else
+			} else {
 				options.email = email;
+			}
 		}
 
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
-		if (!Accounts._loginButtons.validatePassword(password))
+		if (!Accounts._loginButtons.validatePassword(password)){
 			return;
-		else
+		} else {
 			options.password = password;
+		}
 
-		if (!matchPasswordAgainIfPresent())
+		if (!matchPasswordAgainIfPresent()){
 			return;
+		}
 
 		// prepare the profile object
 		// it could have already been set through setCustomSignupOptions
-		if (!(options.profile instanceof Object)) options.profile = {};
+		if (!(options.profile instanceof Object)){
+			options.profile = {};
+		}
 
 		// define a proxy function to allow extraSignupFields set error messages
 		var errorFn = function(errorMessage) {
@@ -527,10 +550,11 @@
 			var value = elementValueById('login-' + field.fieldName);
 			if (typeof field.validate === 'function') {
 				if (field.validate(value, errorFn)) {
-					if (typeof field.saveToProfile !== 'undefined' && !field.saveToProfile)
+					if (typeof field.saveToProfile !== 'undefined' && !field.saveToProfile){
 						options[field.fieldName] = value;
-					else
+					} else {
 						options.profile[field.fieldName] = value;
+					}
 				} else {
 					invalidExtraSignupFields = true;
 				}
@@ -539,15 +563,17 @@
 			}
 		});
 
-		if (invalidExtraSignupFields)
+		if (invalidExtraSignupFields){
 			return;
+		}
 
 		Accounts.createUser(options, function(error) {
 			if (error) {
-				if (error.reason == 'Signups forbidden')
+				if (error.reason == 'Signups forbidden'){
 					loginButtonsSession.errorMessage(i18n('errorMessages.signupsForbidden'))
-				else 
+				} else {
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				}
 			} else {
 				loginButtonsSession.closeDropdown();
 			}
@@ -563,18 +589,19 @@
 				email: email
 			}, function(error) {
 				if (error) {
-					if (error.reason == 'User not found')
+					if (error.reason == 'User not found'){
 						loginButtonsSession.errorMessage(i18n('errorMessages.userNotFound'))
-					else 
+					} else {
 						loginButtonsSession.errorMessage(error.reason || "Unknown error");
-				} else
+					}
+				} else {
 					loginButtonsSession.infoMessage(i18n('infoMessages.emailSent'));
+				}
 			});
 		} else {
 			loginButtonsSession.errorMessage(i18n('forgotPasswordForm.invalidEmail'));
 		}
 	};
-
 	var changePassword = function() {
 		loginButtonsSession.resetMessages();
 		// notably not trimmed. a password could (?) start or end with a space
@@ -587,18 +614,21 @@
 			return;
 		}
 
-		if (!Accounts._loginButtons.validatePassword(password))
+		if (!Accounts._loginButtons.validatePassword(password)){
 			return;
+		}
 
-		if (!matchPasswordAgainIfPresent())
+		if (!matchPasswordAgainIfPresent()){
 			return;
+		}
 
 		Accounts.changePassword(oldPassword, password, function(error) {
 			if (error) {
-				if (error.reason == 'Incorrect password')
+				if (error.reason == 'Incorrect password'){
 					loginButtonsSession.errorMessage(i18n('errorMessages.incorrectPassword'))
-				else 
+				} else {
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
+				}
 			} else {
 				loginButtonsSession.infoMessage(i18n('infoMessages.passwordChanged'));
 

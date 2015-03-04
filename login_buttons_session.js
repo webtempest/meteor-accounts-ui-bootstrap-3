@@ -22,8 +22,9 @@
 	];
 
 	var validateKey = function (key) {
-		if (!_.contains(VALID_KEYS, key))
+		if (!_.contains(VALID_KEYS, key)){
 			throw new Error("Invalid key in loginButtonsSession: " + key);
+		}
 	};
 
 	var KEY_PREFIX = "Meteor.loginButtons.";
@@ -32,8 +33,9 @@
 	Accounts._loginButtonsSession = {
 		set: function(key, value) {
 			validateKey(key);
-			if (_.contains(['errorMessage', 'infoMessage'], key))
+			if (_.contains(['errorMessage', 'infoMessage'], key)){
 				throw new Error("Don't set errorMessage or infoMessage directly. Instead, use errorMessage() or infoMessage().");
+			}
 
 			this._set(key, value);
 		},
@@ -84,8 +86,9 @@
 		// (_loginButtonsMessageDialog), and dropdownVisible is ignored in
 		// this case.
 		ensureMessageVisible: function () {
-			if (!this.isMessageDialogVisible())
+			if (!this.isMessageDialogVisible()){
 				this.set("dropdownVisible", true);
+			}
 		},
 
 		resetMessages: function () {

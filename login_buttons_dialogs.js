@@ -25,8 +25,9 @@
 		if (Accounts._verifyEmailToken) {
 			Accounts.verifyEmail(Accounts._verifyEmailToken, function(error) {
 				Accounts._enableAutoLogin();
-				if (!error)
+				if (!error){
 					loginButtonsSession.set('justVerifiedEmail', true);
+				}
 				// XXX show something if there was an error.
 			});
 		}
@@ -42,8 +43,9 @@
 			resetPassword();
 		},
 		'keypress #reset-password-new-password': function(event) {
-			if (event.keyCode === 13)
+			if (event.keyCode === 13){
 				resetPassword();
+			}
 		},
 		'click #login-buttons-cancel-reset-password': function(event) {
 			event.stopPropagation();
@@ -56,8 +58,9 @@
 	var resetPassword = function() {
 		loginButtonsSession.resetMessages();
 		var newPassword = document.getElementById('reset-password-new-password').value;
-		if (!Accounts._loginButtons.validatePassword(newPassword))
+		if (!Accounts._loginButtons.validatePassword(newPassword)){
 			return;
+		}
 
 		Accounts.resetPassword(
 			loginButtonsSession.get('resetPasswordToken'), newPassword,
@@ -92,8 +95,9 @@
 			enrollAccount();
 		},
 		'keypress #enroll-account-password': function(event) {
-			if (event.keyCode === 13)
+			if (event.keyCode === 13){
 				enrollAccount();
+			}
 		},
 		'click #login-buttons-cancel-enroll-account-button': function() {
 			loginButtonsSession.set('enrollAccountToken', null);
@@ -105,8 +109,9 @@
 	var enrollAccount = function() {
 		loginButtonsSession.resetMessages();
 		var password = document.getElementById('enroll-account-password').value;
-		if (!Accounts._loginButtons.validatePassword(password))
+		if (!Accounts._loginButtons.validatePassword(password)){
 			return;
+		}
 
 		Accounts.resetPassword(
 			loginButtonsSession.get('enrollAccountToken'), password,
@@ -203,10 +208,11 @@
 
 				// Configure this login service
 				Meteor.call("configureLoginService", configuration, function(error, result) {
-					if (error)
+					if (error){
 						Meteor._debug("Error configuring login service " + serviceName, error);
-					else
+					} else {
 						loginButtonsSession.set('configureLoginServiceDialogVisible', false);
+					}
 					$('#configure-login-service-dialog-modal').modal('hide');
 				});
 			}
@@ -217,8 +223,9 @@
 		'input, keyup input': function(event) {
 			// if the event fired on one of the configuration input fields,
 			// check whether we should enable the 'save configuration' button
-			if (event.target.id.indexOf('configure-login-service-dialog') === 0)
+			if (event.target.id.indexOf('configure-login-service-dialog') === 0){
 				updateSaveDisabled();
+			}
 		}
 	});
 

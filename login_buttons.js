@@ -1,6 +1,7 @@
 (function() {
-	if (!Accounts._loginButtons)
+	if (!Accounts._loginButtons){
 		Accounts._loginButtons = {};
+	}
 
 	// for convenience
 	var loginButtonsSession = Accounts._loginButtonsSession;
@@ -33,9 +34,10 @@
 		},
 		singleService: function() {
 			var services = Accounts._loginButtons.getLoginServices();
-			if (services.length !== 1)
+			if (services.length !== 1){
 				throw new Error(
 					"Shouldn't be rendering this template with more than one configured service");
+			}
 			return services[0];
 		},
 		configurationLoaded: function() {
@@ -83,15 +85,19 @@
 
 	Accounts._loginButtons.displayName = function() {
 		var user = Meteor.user();
-		if (!user)
+		if (!user){
 			return '';
+		}
 
-		if (user.profile && user.profile.name)
+		if (user.profile && user.profile.name){
 			return user.profile.name;
-		if (user.username)
+		}
+		if (user.username){
 			return user.username;
-		if (user.emails && user.emails[0] && user.emails[0].address)
+		}
+		if (user.emails && user.emails[0] && user.emails[0].address){
 			return user.emails[0].address;
+		}
 
 		return '';
 	};
@@ -106,8 +112,9 @@
 		services.sort();
 
 		// Add password, if it's there; it must come last.
-		if (this.hasPasswordService())
+		if (this.hasPasswordService()){
 			services.push('password');
+		}
 
 		return _.map(services, function(name) {
 			return {
@@ -137,8 +144,9 @@
 		}
 	};
 	Accounts._loginButtons.validateEmail = function(email) {
-		if (Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL" && email === '')
+		if (Accounts.ui._passwordSignupFields() === "USERNAME_AND_OPTIONAL_EMAIL" && email === ''){
 			return true;
+		}
 
 		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
