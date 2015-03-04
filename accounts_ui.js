@@ -107,3 +107,4 @@ Accounts.ui.config = function(options) {
 Accounts.ui._passwordSignupFields = function() {
 	return Accounts.ui._options.passwordSignupFields || "EMAIL_ONLY";
 };
+

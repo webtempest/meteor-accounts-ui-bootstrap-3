@@ -89,4 +89,5 @@ ptPT = {
 		incorrectPassword: "Palavra-passe incorreta",
 		newPasswordSameAsOld: "A nova palavra-passe tem de ser diferente da antiga"
 	}
-}
+};
+
