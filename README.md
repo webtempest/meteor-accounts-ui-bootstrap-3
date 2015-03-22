@@ -6,14 +6,23 @@ Meteor accounts-ui styled with Twitter's Bootstrap 3, now with multi-language su
 Installation
 ------------
 
-With Meteor 0.9:
+With Meteor >=0.9.0:
 
 ```sh
-$ meteor add twbs:bootstrap
 $ meteor add ian:accounts-ui-bootstrap-3
 ```
 
-[twbs:bootstrap](https://atmospherejs.com/twbs/bootstrap) is the recommended Meteor implementation of Twitter's Bootstrap, and is declared as a weak dependency in this package. If you're using your own Bootstrap package, you're on your own regarding load order problems.
+[twbs:bootstrap](https://atmospherejs.com/twbs/bootstrap) is the recommended Meteor implementation of Twitter's Bootstrap, and is declared as a weak dependency in this package. If you're using your own Bootstrap package, you're on your own regarding load order problems. Install it like so:
+
+```sh
+$ meteor add twbs:bootstrap
+```
+
+This package is a replacement for the official `accounts-ui` package, so remove it if it's already in your project:
+
+```sh
+$ meteor remove accounts-ui
+```
 
 You will also need at least one accounts plugin: `meteor add accounts-password`, `meteor add accounts-github`, etc.
 
