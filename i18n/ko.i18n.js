@@ -58,13 +58,13 @@ i18n.map("ko", {
 		noLoginServices: "사용 가능한 로그인 서비스가 없습니다"
 	},
 	loginFields: {
-		usernameOrEmail: "사용자이름 또는 이메일 주소",
-		username: "사용자이름",
+		usernameOrEmail: "사용자 이름 또는 이메일 주소",
+		username: "사용자 이름",
 		email: "이메일 주소",
 		password: "비밀번호"
 	},
 	signupFields: {
-		username: "사용자이름",
+		username: "사용자 이름",
 		email: "이메일 주소",
 		emailOpt: "이메일 주소 (선택)",
 		password: "비밀번호",
@@ -76,17 +76,17 @@ i18n.map("ko", {
 		newPasswordAgain: "새로운 비밀번호 (확인)"
 	},
 	infoMessages: {
-		sent: "이메일이 보내졌습니다",
-		passwordChanged: "Password changed"
+		sent: "이메일이 발송되었습니다",
+		passwordChanged: "비밀번호가 변경되었습니다"
 	},
 	errorMessages: {
-		userNotFound: "User not found",
+		userNotFound: "찾을 수 없는 회원입니다",
 		invalidEmail: "잘못된 이메일 주소",
-		incorrectPassword: "Incorrect password",
-		usernameTooShort: "사용자이름은 최소 3글자 이상이어야 합니다",
+		incorrectPassword: "비밀번호가 틀렸습니다",
+		usernameTooShort: "사용자 이름은 최소 3글자 이상이어야 합니다",
 		passwordTooShort: "비밀번호는 최소 6글자 이상이어야 합니다",
-		passwordsDontMatch: "비밀번호가 맞지 않습니다",
-		newPasswordSameAsOld: "New and old passwords must be different"
+		passwordsDontMatch: "비밀번호가 같지 않습니다",
+		newPasswordSameAsOld: "새 비밀번호와 기존 비밀번호는 달라야합니다"
 	}
 });
 
