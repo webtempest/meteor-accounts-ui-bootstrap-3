@@ -3,7 +3,7 @@
 <!--           -->
 <template name="_loginButtonsLoggedInDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle">
+		<a class="dropdown-toggle" data-toggle="dropdown">
 			{{displayName}}
 			{{#with user_profile_picture}}
 				<img src="{{this}}" width="30px" class="img-circular" alt="#" />
@@ -41,7 +41,7 @@
 <!--            -->
 <template name="_loginButtonsLoggedOutDropdown">
 	<li id="login-dropdown-list" class="dropdown">
-		<a class="dropdown-toggle">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
+		<a class="dropdown-toggle" data-toggle="dropdown">{{i18n 'loginButtonsLoggedOutDropdown.signIn'}}{{#unless forbidClientAccountCreation}} / {{i18n 'loginButtonsLoggedOutDropdown.up'}}{{/unless}} <b class="caret"></b></a>
 		<div class="dropdown-menu">
 			{{> _loginButtonsLoggedOutAllServices}}
 		</div>
