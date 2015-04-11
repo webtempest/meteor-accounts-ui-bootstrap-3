@@ -88,7 +88,6 @@ object of the user document or not. Specify an array of fields using `Accounts.u
 
 ```javascript
 Accounts.ui.config({
-    requestPermissions: {},
     extraSignupFields: [{
         fieldName: 'first-name',
         fieldLabel: 'First name',
@@ -136,6 +135,17 @@ accountsUIBootstrap3.logoutCallback = function(error) {
   if(error) console.log("Error:" + error);
   Router.go('home');
 }
+```
+
+### Forcing lowercase username and/or password
+
+This will force usernames and passwords to be lowercase on signup and will also allow users to login using uppercase usernames and passwords, as it will convert them to lowercase before checking against the database. Beware however that users who already have an account with uppercase usernames or passwords won't be able to login anymore.
+
+```javascript
+Accounts.ui.config({
+    forceUsernameLowercase: true,
+    forcePasswordLowercase: true
+});
 ```
 
 ### Localization

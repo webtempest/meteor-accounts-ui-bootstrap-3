@@ -7,7 +7,9 @@ if (!Accounts.ui._options) {
 		extraSignupFields: [],
 		requestPermissions: {},
 		requestOfflineToken: {},
-		forceApprovalPrompt: {}
+		forceApprovalPrompt: {},
+		forceUsernameLowercase: false,
+		forcePasswordLowercase: false
 	};
 }
 
@@ -20,7 +22,9 @@ Accounts.ui.navigate = function (route, hash) {
 
 Accounts.ui.config = function(options) {
 	// validate options keys
-	var VALID_KEYS = ['passwordSignupFields', 'requestPermissions', 'extraSignupFields', 'requestOfflineToken', 'forceApprovalPrompt'];
+	var VALID_KEYS = ['passwordSignupFields', 'extraSignupFields', 'forceUsernameLowercase', 'forcePasswordLowercase',
+					  'requestPermissions', 'requestOfflineToken', 'forceApprovalPrompt'];
+
 	_.each(_.keys(options), function(key) {
 		if (!_.contains(VALID_KEYS, key)){
 			throw new Error("Accounts.ui.config: Invalid key: " + key);
@@ -46,6 +50,9 @@ Accounts.ui.config = function(options) {
 			throw new Error("Accounts.ui.config: Invalid option for `passwordSignupFields`: " + options.passwordSignupFields);
 		}
 	}
+
+	Accounts.ui._options.forceUsernameLowercase = options.forceUsernameLowercase;
+	Accounts.ui._options.forcePasswordLowercase = options.forcePasswordLowercase;
 
 	// deal with `requestPermissions`
 	if (options.requestPermissions) {
