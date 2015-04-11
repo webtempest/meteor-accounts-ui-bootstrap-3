@@ -433,14 +433,14 @@
 		loginButtonsSession.resetMessages();
 
 		var username = trimmedElementValueById('login-username');
-		if (Accounts.ui._options.forceUsernameLowercase) {
+		if (username && Accounts.ui._options.forceUsernameLowercase) {
 			username = username.toLowerCase();
 		}
 		var email = trimmedElementValueById('login-email');
 		var usernameOrEmail = trimmedElementValueById('login-username-or-email');
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
-		if (Accounts.ui._options.forcePasswordLowercase) {
+		if (password && Accounts.ui._options.forcePasswordLowercase) {
 			password = password.toLowerCase();
 		}
 
@@ -509,7 +509,7 @@
 		}
 
 		var username = trimmedElementValueById('login-username');
-		if (Accounts.ui._options.forceUsernameLowercase) {
+		if (username && Accounts.ui._options.forceUsernameLowercase) {
 			username = username.toLowerCase();
 		}
 		if (username !== null) {
@@ -531,7 +531,7 @@
 
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
-		if (Accounts.ui._options.forcePasswordLowercase) {
+		if (password && Accounts.ui._options.forcePasswordLowercase) {
 			password = password.toLowerCase();
 		}
 		if (!Accounts._loginButtons.validatePassword(password)){
