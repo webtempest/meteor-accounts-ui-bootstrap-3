@@ -551,17 +551,16 @@
 		}
 
 		// define a proxy function to allow extraSignupFields set error messages
-		var errorFn = function(errorMessage) {
+		var errorFunction = function(errorMessage) {
 			Accounts._loginButtonsSession.errorMessage(errorMessage);
 		};
 
 		var invalidExtraSignupFields = false;
-
 		// parse extraSignupFields to populate account's profile data
 		_.each(Accounts.ui._options.extraSignupFields, function(field, index) {
 			var value = elementValueById('login-' + field.fieldName);
 			if (typeof field.validate === 'function') {
-				if (field.validate(value, errorFn)) {
+				if (field.validate(value, errorFunction)) {
 					if (typeof field.saveToProfile !== 'undefined' && !field.saveToProfile){
 						options[field.fieldName] = value;
 					} else {
@@ -578,7 +577,7 @@
 		if (invalidExtraSignupFields){
 			return;
 		}
-
+		console.log(options)
 		Accounts.createUser(options, function(error) {
 			if (error) {
 				if (error.reason == 'Signups forbidden'){

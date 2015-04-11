@@ -32,6 +32,7 @@ Accounts.ui.config = function(options) {
 	});
 	
 	options.extraSignupFields = options.extraSignupFields || [];
+	
 	// deal with `passwordSignupFields`
 	if (options.passwordSignupFields) {
 		if (_.contains([
