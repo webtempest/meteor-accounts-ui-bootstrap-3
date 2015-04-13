@@ -23,7 +23,7 @@ Accounts.ui.navigate = function (route, hash) {
 
 Accounts.ui.config = function(options) {
 	// validate options keys
-	var VALID_KEYS = ['passwordSignupFields', 'extraSignupFields', 'forceUsernameLowercase', 'forcePasswordLowercase',
+	var VALID_KEYS = ['passwordSignupFields', 'extraSignupFields', 'forceEmailLowercase', 'forceUsernameLowercase','forcePasswordLowercase',
 					  'requestPermissions', 'requestOfflineToken', 'forceApprovalPrompt'];
 
 	_.each(_.keys(options), function(key) {
@@ -53,6 +53,7 @@ Accounts.ui.config = function(options) {
 		}
 	}
 
+	Accounts.ui._options.forceEmailLowercase = options.forceEmailLowercase;
 	Accounts.ui._options.forceUsernameLowercase = options.forceUsernameLowercase;
 	Accounts.ui._options.forcePasswordLowercase = options.forcePasswordLowercase;
 
