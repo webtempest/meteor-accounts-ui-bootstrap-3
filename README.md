@@ -158,6 +158,7 @@ This will force usernames and passwords to be lowercase on signup and will also 
 
 ```javascript
 Accounts.ui.config({
+    forceEmailLowercase: true,
     forceUsernameLowercase: true,
     forcePasswordLowercase: true
 });

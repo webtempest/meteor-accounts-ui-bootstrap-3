@@ -8,6 +8,7 @@ if (!Accounts.ui._options) {
 		requestPermissions: {},
 		requestOfflineToken: {},
 		forceApprovalPrompt: {},
+		forceEmailLowercase: false,
 		forceUsernameLowercase: false,
 		forcePasswordLowercase: false
 	};
