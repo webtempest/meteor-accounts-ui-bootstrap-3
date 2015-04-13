@@ -441,6 +441,10 @@
 			email = email.toLowerCase();
 		}
 		var usernameOrEmail = trimmedElementValueById('login-username-or-email');
+		if (usernameOrEmail && Accounts.ui._options.forceEmailLowercase && Accounts.ui._options.forceUsernameLowercase) {
+			usernameOrEmail = usernameOrEmail.toLowerCase();
+		}
+
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
 		if (password && Accounts.ui._options.forcePasswordLowercase) {
