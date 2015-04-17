@@ -86,8 +86,8 @@ i18n.map("en", {
 		usernameTooShort: "De gebruikersnaam moet minimaal uit 3 tekens bestaan",
 		passwordTooShort: "Het wachtwoord moet minimaal uit 6 tekens bestaan",
 		passwordsDontMatch: "De wachtwoorden komen niet overeen",
-		newPasswordSameAsOld: "New and old passwords must be different",
-		signupsForbidden: "Signups forbidden"
+		newPasswordSameAsOld: "Het oude en het nieuwe wachtwoord mogen niet hetzelfde zijn",
+		signupsForbidden: "Aanmeldingen niet toegestaan"
 	}
 });
 
