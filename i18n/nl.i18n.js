@@ -1,4 +1,4 @@
-i18n.map("en", {
+i18n.map("nl", {
 	resetPasswordDialog: {
 		title: "Wachtwoord resetten",
 		newPassword: "Nieuw wachtwoord",
