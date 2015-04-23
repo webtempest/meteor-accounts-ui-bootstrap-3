@@ -2,12 +2,14 @@ ptBR = {
 	resetPasswordDialog: {
 		title: "Esqueceu sua senha?",
 		newPassword: "Nova senha",
+		newPasswordAgain: "Nova senha (confirmacao)",
 		cancel: "Cancelar",
 		submit: "Alterar senha"
 	},
 	enrollAccountDialog: {
 		title: "Digite a nova senha",
 		newPassword: "Nova senha",
+		newPasswordAgain: "Nova senha (confirmacao)",
 		cancel: "Fechar",
 		submit: "Alterar senha"
 	},

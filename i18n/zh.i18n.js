@@ -1,13 +1,15 @@
 i18n.map("zh", {
-	    resetPasswordDialog: {
+    resetPasswordDialog: {
         title: "重置密码",
         newPassword: "新密码",
+        newPasswordAgain: "重复新密码",
         cancel: "取消",
         submit: "确定"
     },
     enrollAccountDialog: {
         title: "选择一个密码",
         newPassword: "新密码",
+        newPasswordAgain: "重复新密码",
         cancel: "取消",
         submit: "确定"
     },

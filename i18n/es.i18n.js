@@ -2,12 +2,14 @@ i18n.map("es", {
 	resetPasswordDialog: {
 		title: "Restablece tu contraseña",
 		newPassword: "Nueva contraseña",
+		newPasswordAgain: "Nueva contraseña (otra vez)",
 		cancel: "Cancelar",
 		submit: "Guardar"
 	},
 	enrollAccountDialog: {
 		title: "Escribe una contraseña",
 		newPassword: "Nueva contraseña",
+		newPasswordAgain: "Nueva contraseña (otra vez)",
 		cancel: "Cerrar",
 		submit: "Guardar contraseña"
 	},

@@ -2,12 +2,14 @@ i18n.map("ar", {
   resetPasswordDialog: {
     title: "استرجع كلمة المرور",
     newPassword: "كلمة المرور الجديدة",
+    newPasswordAgain: "أعد كتابة كلمة السر الجديدة",
     cancel: "إلغ",
     submit: "تم"
   },
   enrollAccountDialog: {
     title: "اختر كلمة سر",
     newPassword: "كلمة السر",
+    newPasswordAgain: "أعد كتابة كلمة السر الجديدة",
     cancel: "أغلق",
     submit: "تم"
   },

@@ -2,12 +2,14 @@ i18n.map("ko", {
 	resetPasswordDialog: {
 		title: "비밀번호 초기화하기",
 		newPassword: "새로운 비밀번호",
+		newPasswordAgain: "새로운 비밀번호 (확인)",
 		cancel: "취소",
 		submit: "변경"
 	},
 	enrollAccountDialog: {
 		title: "비밀번호를 입력해주세요",
 		newPassword: "새로운 비밀번호",
+		newPasswordAgain: "새로운 비밀번호 (확인)",
 		cancel: "닫기",
 		submit: "변경"
 	},

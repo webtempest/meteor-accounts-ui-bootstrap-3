@@ -58,7 +58,8 @@
 	var resetPassword = function() {
 		loginButtonsSession.resetMessages();
 		var newPassword = document.getElementById('reset-password-new-password').value;
-		if (!Accounts._loginButtons.validatePassword(newPassword)){
+		var passwordAgain= document.getElementById('reset-password-new-password-again').value;
+		if (!Accounts._loginButtons.validatePassword(newPassword,passwordAgain)){
 			return;
 		}
 
@@ -109,7 +110,8 @@
 	var enrollAccount = function() {
 		loginButtonsSession.resetMessages();
 		var password = document.getElementById('enroll-account-password').value;
-		if (!Accounts._loginButtons.validatePassword(password)){
+		var passwordAgain= document.getElementById('enroll-account-password-again').value;
+		if (!Accounts._loginButtons.validatePassword(password,passwordAgain)){
 			return;
 		}
 
