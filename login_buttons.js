@@ -158,7 +158,6 @@
 		}
 	};
 	Accounts._loginButtons.validatePassword = function(password, passwordAgain) {
-		console.log('debug',password,passwordAgain);
 		if (password.length >= 6) {
 			if (passwordAgain && (password != passwordAgain)) {
 				loginButtonsSession.errorMessage(i18n('errorMessages.passwordsDontMatch'));
