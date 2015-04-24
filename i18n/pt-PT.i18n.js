@@ -2,12 +2,14 @@ ptPT = {
 	resetPasswordDialog: {
 		title: "Esqueci-me da palavra-passe",
 		newPassword: "Nova palavra-passe",
+		newPasswordAgain: "Nova palavra-passe (confirmacao)",
 		cancel: "Cancelar",
 		submit: "Alterar palavra-passe"
 	},
 	enrollAccountDialog: {
 		title: "Introduza a nova palavra-passe",
 		newPassword: "Nova palavra-passe",
+		newPasswordAgain: "Nova palavra-passe (confirmacao)",
 		cancel: "Fechar",
 		submit: "Alterar palavra-passe"
 	},

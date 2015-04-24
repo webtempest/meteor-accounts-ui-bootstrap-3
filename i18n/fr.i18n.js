@@ -2,12 +2,14 @@ i18n.map("fr", {
 	resetPasswordDialog: {
 		title: "Réinitialiser mon mot de passe",
 		newPassword: "Nouveau mot de passe",
+		newPasswordAgain: "Nouveau mot de passe (confirmation)",
 		cancel: "Annuler",
 		submit: "Définir le mot de passe"
 	},
 	enrollAccountDialog: {
 		title: "Choisir un mot de passe",
 		newPassword: "Nouveau mot de passe",
+		newPasswordAgain: "Nouveau mot de passe (confirmation)",
 		cancel: "Fermer",
 		submit: "Définir le mot de passe"
 	},

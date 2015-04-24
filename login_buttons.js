@@ -157,8 +157,12 @@
 			return false;
 		}
 	};
-	Accounts._loginButtons.validatePassword = function(password) {
+	Accounts._loginButtons.validatePassword = function(password, passwordAgain) {
 		if (password.length >= 6) {
+			if (passwordAgain && (password != passwordAgain)) {
+				loginButtonsSession.errorMessage(i18n('errorMessages.passwordsDontMatch'));
+				return false;
+			}
 			return true;
 		} else {
 			loginButtonsSession.errorMessage(i18n('errorMessages.passwordTooShort'));

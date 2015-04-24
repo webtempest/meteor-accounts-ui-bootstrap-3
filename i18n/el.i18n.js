@@ -2,12 +2,14 @@ i18n.map("el", {
 	resetPasswordDialog: {
 		title: "Ακύρωση κωδικού",
 		newPassword: "Νέος κωδικός",
+		newPasswordAgain: "Νέος Κωδικός (ξανά)",
 		cancel: "Ακύρωση",
 		submit: "Ορισμός κωδικού"
 	},
 	enrollAccountDialog: {
 		title: "Επιλέξτε κωδικό",
 		newPassword: "Νέος κωδικός",
+		newPasswordAgain: "Νέος Κωδικός (ξανά)",
 		cancel: "Ακύρωση",
 		submit: "Ορισμός κωδικού"
 	},

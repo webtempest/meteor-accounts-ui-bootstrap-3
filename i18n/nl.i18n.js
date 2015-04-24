@@ -2,12 +2,14 @@ i18n.map("nl", {
 	resetPasswordDialog: {
 		title: "Wachtwoord resetten",
 		newPassword: "Nieuw wachtwoord",
+		newPasswordAgain: "Nieuw wachtwoord (opnieuw)",
 		cancel: "Annuleren",
 		submit: "Wachtwoord instellen"
 	},
 	enrollAccountDialog: {
 		title: "Stel een wachtwoord in",
 		newPassword: "Nieuw wachtwoord",
+		newPasswordAgain: "Nieuw wachtwoord (opnieuw)",
 		cancel: "Sluiten",
 		submit: "Wachtwoord instellen"
 	},

@@ -2,12 +2,14 @@ i18n.map("ru", {
 	resetPasswordDialog: {
 		title: "Сбросить пароль",
 		newPassword: "Новый пароль",
+		newPasswordAgain: "Новый пароль (еще раз)",
 		cancel: "Отмена",
 		submit: "Сохранить пароль"
 	},
 	enrollAccountDialog: {
 		title: "Выбрать пароль",
 		newPassword: "Новый пароль",
+		newPasswordAgain: "Новый пароль (еще раз)",
 		cancel: "Отмена",
 		submit: "Сохранить пароль"
 	},

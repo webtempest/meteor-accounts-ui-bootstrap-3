@@ -2,12 +2,14 @@ i18n.map("ca", {
 	resetPasswordDialog: {
 		title: "Restablir la contrasenya",
 		newPassword: "Nova contrasenya",
+		newPasswordAgain: "Nova contrasenya (un altre cop)",
 		cancel: "Cancel·lar",
 		submit: "Guardar"
 	},
 	enrollAccountDialog: {
 		title: "Escriu una contrasenya",
 		newPassword: "Nova contrasenya",
+		newPasswordAgain: "Nova contrasenya (un altre cop)",
 		cancel: "Tancar",
 		submit: "Guardar contrasenya"
 	},
