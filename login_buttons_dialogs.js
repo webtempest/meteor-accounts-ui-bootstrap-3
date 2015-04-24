@@ -84,7 +84,11 @@
 
 	Template._resetPasswordDialog.rendered = function() {
 		var $modal = $(this.find('#login-buttons-reset-password-modal'));
-		$modal.modal();
+		if (!_.isFunction($modal.modal)) {
+			console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
+		} else {
+			$modal.modal();
+		}
 	};
 
 	//
@@ -136,7 +140,11 @@
 
 	Template._enrollAccountDialog.rendered = function() {
 		$modal = $(this.find('#login-buttons-enroll-account-modal'));
-		$modal.modal();
+		if (!_.isFunction($modal.modal)) {
+			console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
+		} else {
+			$modal.modal();
+		}
 	};
 
 	//
@@ -167,7 +175,11 @@
 
 	// Template._loginButtonsMessagesDialog.rendered = function() {
 	//   var $modal = $(this.find('#configure-login-service-dialog-modal'));
-	//   $modal.modal();
+	// 	 if (!_.isFunction($modal.modal)) {
+	// 	 	console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
+	// 	 } else {
+	// 	 	$modal.modal();
+	// 	 }
 	// }
 
 	Template._loginButtonsMessagesDialog.events({
