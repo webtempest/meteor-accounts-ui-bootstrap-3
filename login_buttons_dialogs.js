@@ -208,6 +208,10 @@
 						.replace(/^\s*|\s*$/g, ""); // trim;
 				});
 
+				configuration.loginStyle =
+				$('#configure-login-service-dialog input[name="loginStyle"]:checked')
+				.val();
+
 				// Configure this login service
 				Meteor.call("configureLoginService", configuration, function(error, result) {
 					if (error){

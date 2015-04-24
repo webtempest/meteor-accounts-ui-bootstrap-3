@@ -109,6 +109,20 @@
 													{{/each}}
 											</table>
 											</p>
+											<p class="new-section">
+												Choose the login style:
+											</p>
+											<p>
+												&emsp;<input id="configure-login-service-dialog-popupBasedLogin" type="radio" checked="checked" name="loginStyle" value="popup">
+												<label for="configure-login-service-dialog-popupBasedLogin">Popup-based login (recommended for most applications)</label>
+
+												<br>&emsp;<input id="configure-login-service-dialog-redirectBasedLogin" type="radio" name="loginStyle" value="redirect">
+												<label for="configure-login-service-dialog-redirectBasedLogin">
+												Redirect-based login (special cases explained
+												<a href="https://github.com/meteor/meteor/wiki/OAuth-for-mobile-Meteor-clients#popup-versus-redirect-flow"
+												target="_blank">here</a>)
+												</label>
+											</p>
 									</div>
 							</div>
 							<div class="modal-footer new-section">
