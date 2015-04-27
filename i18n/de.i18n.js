@@ -91,4 +91,3 @@ i18n.map("de", {
 		newPasswordSameAsOld: "Neue und aktuelle Passwörter müssen unterschiedlich sein"
 	}
 });
-

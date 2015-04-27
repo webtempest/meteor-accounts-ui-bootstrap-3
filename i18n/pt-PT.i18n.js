@@ -92,4 +92,3 @@ ptPT = {
 		newPasswordSameAsOld: "A nova palavra-passe tem de ser diferente da antiga"
 	}
 };
-

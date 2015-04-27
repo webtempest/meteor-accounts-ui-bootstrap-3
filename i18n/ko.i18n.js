@@ -91,4 +91,3 @@ i18n.map("ko", {
 		newPasswordSameAsOld: "새 비밀번호와 기존 비밀번호는 달라야합니다"
 	}
 });
-

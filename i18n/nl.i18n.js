@@ -92,4 +92,3 @@ i18n.map("nl", {
 		signupsForbidden: "Aanmeldingen niet toegestaan"
 	}
 });
-

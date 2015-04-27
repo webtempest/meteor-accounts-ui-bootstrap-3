@@ -91,4 +91,3 @@ i18n.map("es", {
 		newPasswordSameAsOld: "La contraseña nueva y la actual no pueden ser iguales"
 	}
 });
-

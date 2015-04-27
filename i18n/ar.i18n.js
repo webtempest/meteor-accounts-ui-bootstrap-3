@@ -92,4 +92,3 @@ i18n.map("ar", {
     signupsForbidden: "التسجيل مغلق"
   }
 });
-

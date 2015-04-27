@@ -92,4 +92,3 @@ i18n.map("en", {
 		signupsForbidden: "Signups forbidden"
 	}
 });
-

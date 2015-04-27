@@ -1,4 +1,4 @@
-i18n.map("zh-TW", {
+zhTW = {
     resetPasswordDialog: {
         title: "重設密碼",
         newPassword: "新密碼",

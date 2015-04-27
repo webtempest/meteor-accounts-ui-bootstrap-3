@@ -91,4 +91,3 @@ i18n.map("el", {
 		newPasswordSameAsOld: "New and old passwords must be different"
 	}
 });
-
