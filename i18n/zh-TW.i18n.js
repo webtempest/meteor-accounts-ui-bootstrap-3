@@ -91,4 +91,4 @@ zhTW = {
         newPasswordSameAsOld: "新密碼和舊的不能一樣",
         signupsForbidden: "沒有權限"
     }
-});
+};

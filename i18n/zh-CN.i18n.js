@@ -91,4 +91,4 @@ zhCN = {
         newPasswordSameAsOld: "新密码和旧的不能一样",
         signupsForbidden: "没有权限"
     }
-});
+};
