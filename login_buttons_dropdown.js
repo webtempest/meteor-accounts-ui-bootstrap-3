@@ -587,7 +587,7 @@
 		if (invalidExtraSignupFields){
 			return;
 		}
-		console.log(options)
+
 		Accounts.createUser(options, function(error) {
 			if (error) {
 				if (error.reason == 'Signups forbidden'){
