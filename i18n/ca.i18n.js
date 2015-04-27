@@ -91,4 +91,3 @@ i18n.map("ca", {
 		newPasswordSameAsOld: "La contrasenya nova i l'actual no poden ser iguals"
 	}
 });
-

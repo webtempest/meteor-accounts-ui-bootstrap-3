@@ -91,4 +91,3 @@ ptBR = {
 		newPasswordSameAsOld: "A nova senha tem de ser diferente da antiga"
 	}
 };
-
