@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'ian:accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.54',
+	version: '1.2.55',
 	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
 })
 
@@ -26,7 +26,7 @@ Package.on_use(function (api) {
 	// Allows us to directly test if accounts-password (which doesn't use
 	// Accounts.oauth.registerService) exists.
 	api.use('accounts-password@1.0.0', {weak: true});
-	
+
 	api.add_files([
 		'accounts_ui.js',
 
@@ -67,4 +67,3 @@ Package.on_use(function (api) {
 
 	api.export('accountsUIBootstrap3', 'client')
 })
-
