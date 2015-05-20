@@ -108,6 +108,21 @@ Accounts.ui.config({
         inputType: 'text',
         visible: true,
     }, {
+        fieldName: 'gender',
+        fieldLabel: 'Gender',
+        inputType: 'radio',
+	data: [{
+	  id: 1,
+	  label: 'Male',
+	  value: 'm'
+	}, {
+	  id: 2,
+	  label: 'Female',
+	  value: 'f',
+	  checked: 'checked'
+	}], 
+        visible: true
+    }, {
         fieldName: 'terms',
         fieldLabel: 'I accept the terms and conditions',
         inputType: 'checkbox',
