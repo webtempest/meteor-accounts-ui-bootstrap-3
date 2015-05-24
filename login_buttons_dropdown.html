@@ -142,6 +142,9 @@
 		{{#if equals inputType "text"}}
 		<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
 		{{/if}}
+		{{#if equals inputType "password"}}
+		<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
+		{{/if}}
 	{{/if}}
 </template>
 
