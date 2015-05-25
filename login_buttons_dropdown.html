@@ -126,10 +126,46 @@
 				<label><input type="checkbox" id="login-{{fieldName}}" name="login-{{fieldName}}" value="true">
 				{{{fieldLabel}}}</label>
 			</div>
-		{{else}}
+		{{/if}}
+		{{#if equals inputType "radio"}}
+            {{#if showFieldLabel}}
+			<div>{{fieldLabel}}</div>
+            {{/if}}
+            {{#if equals radioLayout 'inline'}}
+              {{> radioLayoutInline}}
+            {{/if}}
+            {{#if equals radioLayout 'vertical'}}
+              {{> radioLayoutVertical}}
+            {{/if}}
+		{{/if}}
+		{{#if equals inputType "text"}}
+		<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
+		{{/if}}
+		{{#if equals inputType "password"}}
 		<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
 		{{/if}}
 	{{/if}}
+</template>
+
+<template name="radioLayoutInline">
+    <div class="radio">
+      {{#each data}}
+      <label>
+        <input type="radio" id="login-{{../fieldName}}-{{id}}" name="login-{{../fieldName}}" value="{{value}}" {{checked}}>
+        {{label}}
+      </label>
+      {{/each}}
+    </div> 
+</template>
+<template name="radioLayoutVertical">
+    {{#each data}}
+    <div class="radio">
+      <label>
+        <input type="radio" id="login-{{../fieldName}}-{{id}}" name="login-{{../fieldName}}" value="{{value}}" {{checked}}>
+        {{label}}
+      </label>
+    </div>
+    {{/each}}
 </template>
 
 <template name="_loginButtonsChangePassword">
