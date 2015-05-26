@@ -347,7 +347,6 @@
         inputTextual: function() {
           return !_.contains(["radio", "checkbox", "select"], this.inputType);
         }
-
 	});
 
 	//

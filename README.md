@@ -108,15 +108,15 @@ Accounts.ui.config({
         inputType: 'text',
         visible: true,
     }, {
-        fieldName: 'gender',//Mandatory
-        fieldLabel: 'Gender',//Mandatory
-        inputType: 'radio', //Mandatory. 
-        showFieldLabel: false,//Mandatory, if true, a header label will be shown before radio group. 
-        radioLayout: 'vertical', //Mandatory, There are two options 'inline' or 'vertical', 
-        data: [{ //data is an array of radio options. All properties are required. 
-        		id: 1, //id suffix of the radio element
-            label: 'Male',//label for the radio element
-            value: 'm'// value of the radio element, this will be saved. 
+        fieldName: 'gender', 
+        showFieldLabel: false,      // If true, fieldLabel will be shown before radio group
+        fieldLabel: 'Gender',
+        inputType: 'radio',
+        radioLayout: 'vertical',    // It can be 'inline' or 'vertical'
+        data: [{                    // Array of radio options, all properties are required
+    		id: 1,                  // id suffix of the radio element
+            label: 'Male',          // label for the radio element
+            value: 'm'              // value of the radio element, this will be saved. 
           }, {
             id: 2,
             label: 'Female',
