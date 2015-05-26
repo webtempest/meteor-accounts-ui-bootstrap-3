@@ -343,7 +343,10 @@
 		},
 		inputType: function() {
 			return this.inputType || "text";
-		}
+		},
+        inputTextual: function() {
+          return !_.contains(["radio", "checkbox", "select"], this.inputType);
+        }
 	});
 
 	//
@@ -411,6 +414,17 @@
 			return element.value;
 		}
 	};
+
+    var elementValueByIdForRadio = function(fieldIdPrefix, radioOptions) {
+      var value = null;
+      for (i in radioOptions) {
+        var element = document.getElementById(fieldIdPrefix + '-' + radioOptions[i].id);
+		if (element && element.checked){
+			value =  element.value;
+		}
+      }
+      return value;
+    }
 
 	var trimmedElementValueById = function(id) {
 		var element = document.getElementById(id);
@@ -568,7 +582,15 @@
 		var invalidExtraSignupFields = false;
 		// parse extraSignupFields to populate account's profile data
 		_.each(Accounts.ui._options.extraSignupFields, function(field, index) {
-			var value = elementValueById('login-' + field.fieldName);
+            var value = null;
+            var elementIdPrefix = 'login-';
+
+            if (field.inputType === 'radio') {
+              value = elementValueByIdForRadio(elementIdPrefix + field.fieldName, field.data);
+            } else {
+              value = elementValueById(elementIdPrefix + field.fieldName);
+            }
+
 			if (typeof field.validate === 'function') {
 				if (field.validate(value, errorFunction)) {
 					if (typeof field.saveToProfile !== 'undefined' && !field.saveToProfile){

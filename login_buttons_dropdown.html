@@ -126,8 +126,22 @@
 				<label><input type="checkbox" id="login-{{fieldName}}" name="login-{{fieldName}}" value="true">
 				{{{fieldLabel}}}</label>
 			</div>
-		{{else}}
-		<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
+		{{/if}}
+		{{#if equals inputType "radio"}}
+		    <div class="radio">
+            {{#if showFieldLabel}}
+				<label>{{fieldLabel}}</label><br>
+			{{/if}}
+				{{#each data}}
+					<label><input type="radio" id="login-{{../fieldName}}-{{id}}" name="login-{{../fieldName}}" value="{{value}}" {{checked}}> {{label}}</label>
+					{{#if equals ../radioLayout 'vertical'}}
+						<br>
+					{{/if}}
+				{{/each}}
+		    </div>
+		{{/if}}
+		{{#if inputTextual}}
+			<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
 		{{/if}}
 	{{/if}}
 </template>
