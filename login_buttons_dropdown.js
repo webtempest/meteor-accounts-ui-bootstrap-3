@@ -80,7 +80,7 @@
 	// loginButtonsLoggedOutDropdown template and related
 	//
 
-	Template._loginButtonsLoggedOutDropdown.events({
+	Template._loginButtonsLoggedOutAllServices.events({
 		'click #login-buttons-password': function(event) {
 			event.stopPropagation();
 			loginOrSignup();
@@ -184,7 +184,7 @@
 	});
 
 
-	Template._loginButtonsLoggedOutDropdown.helpers({
+	Template._loginButtonsLoggedOutAllServices.helpers({
 		// additional classes that can be helpful in styling the dropdown
 		additionalClasses: function() {
 			if (!Accounts.password) {
@@ -651,7 +651,7 @@
 		var oldPassword = elementValueById('login-old-password');
 		// notably not trimmed. a password could (?) start or end with a space
 		var password = elementValueById('login-password');
-		
+
 		if (password == oldPassword) {
 			loginButtonsSession.errorMessage(i18n('errorMessages.newPasswordSameAsOld'));
 			return;
@@ -697,4 +697,3 @@
 		return true;
 	};
 })();
-
