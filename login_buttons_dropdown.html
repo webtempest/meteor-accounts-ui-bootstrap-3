@@ -129,7 +129,9 @@
 		{{/if}}
 		{{#if equals inputType "select"}}		
     			<div class="select-dropdown form-control">
-    				<label>{{{fieldLabel}}}</label>
+    			{{#if showFieldLabel}}
+    				<label>{{{fieldLabel}}}</label><br />
+    			{{/if}}
 	    		<select  id="login-{{fieldName}}" >
 	    		{{#if empty}}
 	    			<option value="">{{empty}}</option>
@@ -143,7 +145,7 @@
 		{{#if equals inputType "radio"}}
 		    <div class="radio">
             {{#if showFieldLabel}}
-				<label>{{fieldLabel}}</label><br>
+				<label>{{fieldLabel}}</label><br />
 			{{/if}}
 				{{#each data}}
 					<label><input type="radio" id="login-{{../fieldName}}-{{id}}" name="login-{{../fieldName}}" value="{{value}}" {{checked}}> {{label}}</label>

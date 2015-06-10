@@ -1,7 +1,7 @@
 Package.describe({
 	name: 'sscaff1:accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
-	version: '1.2.62',
+	version: '1.2.63',
 	git: "https://github.com/sscaff1/meteor-accounts-ui-bootstrap-3"
 })
 
