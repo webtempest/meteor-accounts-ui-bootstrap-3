@@ -6,7 +6,7 @@
 	// events shared between loginButtonsLoggedOutDropdown and
 	// loginButtonsLoggedInDropdown
 	Template._loginButtons.events({
-		'click input, select, option': function(event) {
+		'click input': function(event) {
 			event.stopPropagation();
 		},
 		'click #login-name-link, click #login-sign-in-link': function(event) {
@@ -19,7 +19,7 @@
 		},
 		'click .dropdown-toggle': function(event) {
 			event.stopPropagation();
-			//Template._loginButtons.toggleDropdown();
+			Template._loginButtons.toggleDropdown();
 		}
 	});
 
