@@ -131,6 +131,9 @@
     			<div class="select-dropdown form-control">
     				<label>{{{fieldLabel}}}</label>
 	    		<select  id="login-{{fieldName}}" >
+	    		{{#if empty}}
+	    			<option value="">{{empty}}</option>
+	    		{{/if}}
 				{{#each data}}
 					<option value="{{value}}">{{label}}</option>
 				{{/each}}
