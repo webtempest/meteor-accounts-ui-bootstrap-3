@@ -6,7 +6,7 @@
 	// events shared between loginButtonsLoggedOutDropdown and
 	// loginButtonsLoggedInDropdown
 	Template._loginButtons.events({
-		'click input': function(event) {
+		'click input, click option, click select': function(event) {
 			event.stopPropagation();
 		},
 		'click #login-name-link, click #login-sign-in-link': function(event) {
