@@ -206,12 +206,14 @@
 
 		hasPasswordService: function() {
 			return Accounts._loginButtons.hasPasswordService();
-		},
-
-		forbidClientAccountCreation: function() {
-			return Accounts._options.forbidClientAccountCreation;
 		}
 	});
+    
+    Template._loginButtonsLoggedOutDropdown.helpers({
+        forbidClientAccountCreation: function() {
+            return Accounts._options.forbidClientAccountCreation;
+        }
+    });
 
 	Template._loginButtonsLoggedOutAllServices.helpers({
 		services: function() {
