@@ -183,6 +183,11 @@
 		}
 	});
 
+	Template._loginButtonsLoggedOutDropdown.helpers({
+	  forbidClientAccountCreation: function() {
+	    return Accounts._options.forbidClientAccountCreation;
+    }
+  });
 
 	Template._loginButtonsLoggedOutAllServices.helpers({
 		// additional classes that can be helpful in styling the dropdown
@@ -204,18 +209,6 @@
 			return loginButtonsSession.get('dropdownVisible');
 		},
 
-		hasPasswordService: function() {
-			return Accounts._loginButtons.hasPasswordService();
-		}
-	});
-    
-    Template._loginButtonsLoggedOutDropdown.helpers({
-        forbidClientAccountCreation: function() {
-            return Accounts._options.forbidClientAccountCreation;
-        }
-    });
-
-	Template._loginButtonsLoggedOutAllServices.helpers({
 		services: function() {
 			return Accounts._loginButtons.getLoginServices();
 		},
