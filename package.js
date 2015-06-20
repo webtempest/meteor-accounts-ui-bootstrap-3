@@ -1,8 +1,8 @@
 Package.describe({
-	name: 'ian:accounts-ui-bootstrap-3',
+	name: 'launux:accounts-ui-bootstrap-3',
 	summary: 'Bootstrap-styled accounts-ui with multi-language support.',
 	version: '1.2.61',
-	git: "https://github.com/ianmartorell/meteor-accounts-ui-bootstrap-3"
+	git: "https://github.com/launux/meteor-accounts-ui-bootstrap-3"
 })
 
 Package.on_use(function (api) {
