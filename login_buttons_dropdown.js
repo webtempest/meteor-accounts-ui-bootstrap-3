@@ -410,16 +410,21 @@
 		}
 	};
 
-    var elementValueByIdForRadio = function(fieldIdPrefix, radioOptions) {
-      var value = null;
-      for (i in radioOptions) {
-        var element = document.getElementById(fieldIdPrefix + '-' + radioOptions[i].id);
-		if (element && element.checked){
-			value =  element.value;
-		}
-      }
-      return value;
+	var elementValueByIdForRadio = function(fieldIdPrefix, radioOptions) {
+    var value = null;
+    for (i in radioOptions) {
+      var element = document.getElementById(fieldIdPrefix + '-' + radioOptions[i].id);
+			if (element && element.checked){
+				value =  element.value;
+			}
     }
+    return value;
+  };
+
+	var elementValueByIdForCheckbox = function(id) {
+		var element = document.getElementById(id);
+		return element.checked;
+  };
 
 	var trimmedElementValueById = function(id) {
 		var element = document.getElementById(id);
@@ -582,6 +587,8 @@
 
             if (field.inputType === 'radio') {
               value = elementValueByIdForRadio(elementIdPrefix + field.fieldName, field.data);
+            } else if (field.inputType === 'checkbox') {
+            	value = elementValueByIdForCheckbox(elementIdPrefix + field.fieldName);
             } else {
               value = elementValueById(elementIdPrefix + field.fieldName);
             }

@@ -60,7 +60,7 @@ You can also configure `Accounts.ui` to your liking as you would [with the offic
 ### Add additional logged in actions
 
 You can add additional markup to the logged in dropdown, e.g. to edit
-the user's account or profile, by defining a 
+the user's account or profile, by defining a
 `_loginButtonsAdditionalLoggedInDropdownActions` template and specifying
 the corresponding events.
 
@@ -108,7 +108,7 @@ Accounts.ui.config({
         inputType: 'text',
         visible: true,
     }, {
-        fieldName: 'gender', 
+        fieldName: 'gender',
         showFieldLabel: false,      // If true, fieldLabel will be shown before radio group
         fieldLabel: 'Gender',
         inputType: 'radio',
@@ -116,28 +116,28 @@ Accounts.ui.config({
         data: [{                    // Array of radio options, all properties are required
     		id: 1,                  // id suffix of the radio element
             label: 'Male',          // label for the radio element
-            value: 'm'              // value of the radio element, this will be saved. 
+            value: 'm'              // value of the radio element, this will be saved.
           }, {
             id: 2,
             label: 'Female',
             value: 'f',
             checked: 'checked'
-        }], 
+        }],
         visible: true
     }, {
         fieldName: 'terms',
         fieldLabel: 'I accept the terms and conditions',
         inputType: 'checkbox',
         visible: true,
-        validate: function(value, errorFunction){
-          if (value != 'true') {
-            errorFunction("You must accept the terms and conditions.");
-            return false;
-          } else {
-            return true;
-          }
-        },
-        saveToProfile: false
+        saveToProfile: false,
+        validate: function(value, errorFunction) {
+            if (value) {
+                return true;
+            } else {
+                errorFunction('You must accept the terms and conditions.');
+                return false;
+            }
+        }
     }]
 });
 ```
