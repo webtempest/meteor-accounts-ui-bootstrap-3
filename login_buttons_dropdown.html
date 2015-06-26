@@ -127,19 +127,37 @@
 				{{{fieldLabel}}}</label>
 			</div>
 		{{/if}}
-		{{#if equals inputType "radio"}}
-		    <div class="radio">
-            {{#if showFieldLabel}}
+
+		{{#if equals inputType "select"}}
+			<div class="select-dropdown">
+			{{#if showFieldLabel}}
 				<label>{{fieldLabel}}</label><br>
 			{{/if}}
+			<select id="login-{{fieldName}}" >
+				{{#if empty}}
+					<option value="">{{empty}}</option>
+				{{/if}}
+				{{#each data}}
+					<option value="{{value}}">{{label}}</option>
+				{{/each}}
+			</select>
+			</div>
+		{{/if}}
+
+		{{#if equals inputType "radio"}}
+	    <div class="radio">
+	      {{#if showFieldLabel}}
+				<label>{{fieldLabel}}</label><br>
+				{{/if}}
 				{{#each data}}
 					<label><input type="radio" id="login-{{../fieldName}}-{{id}}" name="login-{{../fieldName}}" value="{{value}}" {{checked}}> {{label}}</label>
 					{{#if equals ../radioLayout 'vertical'}}
 						<br>
 					{{/if}}
 				{{/each}}
-		    </div>
+	    </div>
 		{{/if}}
+
 		{{#if inputTextual}}
 			<input id="login-{{fieldName}}" type="{{inputType}}" placeholder="{{fieldLabel}}" class="form-control" />
 		{{/if}}
