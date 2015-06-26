@@ -19,10 +19,6 @@ Install Bootstrap like so:
 ```sh
 $ meteor add twbs:bootstrap
 ```
-or
-```sh
-$ meteor add nemo64:bootstrap
-```
 
 This package is a replacement for the official `accounts-ui` package, so remove it if it's already in your project:
 
