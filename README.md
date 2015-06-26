@@ -12,10 +12,16 @@ With Meteor >=0.9.0:
 $ meteor add ian:accounts-ui-bootstrap-3
 ```
 
-[twbs:bootstrap](https://atmospherejs.com/twbs/bootstrap) is the recommended Meteor implementation of Twitter's Bootstrap, and is declared as a weak dependency in this package. If you're using your own Bootstrap package, you're on your own regarding load order problems. Install it like so:
+[`twbs:bootstrap`](https://atmospherejs.com/twbs/bootstrap) is the recommended Meteor implementation of Twitter's Bootstrap, and is declared as a weak dependency in this package. [`nemo64:bootstrap`](https://atmospherejs.com/nemo64/bootstrap) is also supported. If you're using any other Bootstrap package, you're on your own regarding load order problems.
+
+Install Bootstrap like so:
 
 ```sh
 $ meteor add twbs:bootstrap
+```
+or
+```sh
+$ meteor add nemo64:bootstrap
 ```
 
 This package is a replacement for the official `accounts-ui` package, so remove it if it's already in your project:
