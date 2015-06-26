@@ -125,6 +125,22 @@ Accounts.ui.config({
         }],
         visible: true
     }, {
+        fieldName: 'country',
+        fieldLabel: 'Country',
+        inputType: 'select',
+        showFieldLabel: true,
+        empty: 'Please select your country of residence',
+        data: [{
+            id: 1,
+            label: 'United States',
+            value: 'us'
+          }, {
+            id: 2,
+            label: 'Spain',
+            value: 'es',
+        }],
+        visible: true
+    }, {
         fieldName: 'terms',
         fieldLabel: 'I accept the terms and conditions',
         inputType: 'checkbox',
