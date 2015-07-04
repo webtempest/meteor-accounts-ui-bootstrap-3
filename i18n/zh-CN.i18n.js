@@ -25,7 +25,7 @@ zhCN = {
         signOut: "退出"
     },
     loginButtonsLoggedOutDropdown: {
-        signIn: "登陆",
+        signIn: "登录",
         up: "注册"
     },
     loginButtonsLoggedOutPasswordServiceSeparator: {
