@@ -68,20 +68,20 @@ Accounts.ui.config = function(options) {
 				Accounts.ui._options.requestPermissions[service] = scope;
 			}
 		});
-		if (typeof options.extraSignupFields !== 'object' || !options.extraSignupFields instanceof Array) {
-			throw new Error("Accounts.ui.config: `extraSignupFields` must be an array.");
-		} else {
-			if (options.extraSignupFields) {
-				_.each(options.extraSignupFields, function(field, index) {
-					if (!field.fieldName || !field.fieldLabel){
-						throw new Error("Accounts.ui.config: `extraSignupFields` objects must have `fieldName` and `fieldLabel` attributes.");
-					}
-					if (typeof field.visible === 'undefined'){
-						field.visible = true;
-					}
-					Accounts.ui._options.extraSignupFields[index] = field;
-				});
-			}
+	}
+	if (typeof options.extraSignupFields !== 'object' || !options.extraSignupFields instanceof Array) {
+		throw new Error("Accounts.ui.config: `extraSignupFields` must be an array.");
+	} else {
+		if (options.extraSignupFields) {
+			_.each(options.extraSignupFields, function(field, index) {
+				if (!field.fieldName || !field.fieldLabel){
+					throw new Error("Accounts.ui.config: `extraSignupFields` objects must have `fieldName` and `fieldLabel` attributes.");
+				}
+				if (typeof field.visible === 'undefined'){
+					field.visible = true;
+				}
+				Accounts.ui._options.extraSignupFields[index] = field;
+			});
 		}
 	}
 
