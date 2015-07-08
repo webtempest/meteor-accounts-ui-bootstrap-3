@@ -82,14 +82,14 @@
 		}
 	});
 
-	Template._resetPasswordDialog.rendered = function() {
+	Template._resetPasswordDialog.onRendered(function() {
 		var $modal = $(this.find('#login-buttons-reset-password-modal'));
 		if (!_.isFunction($modal.modal)) {
 			console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
 		} else {
 			$modal.modal();
 		}
-	};
+	});
 
 	//
 	// enrollAccountDialog template
@@ -138,14 +138,14 @@
 		}
 	});
 
-	Template._enrollAccountDialog.rendered = function() {
+	Template._enrollAccountDialog.onRendered(function() {
 		$modal = $(this.find('#login-buttons-enroll-account-modal'));
 		if (!_.isFunction($modal.modal)) {
 			console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
 		} else {
 			$modal.modal();
 		}
-	};
+	});
 
 	//
 	// justVerifiedEmailDialog template
@@ -173,14 +173,26 @@
 	// loginButtonsMessagesDialog template
 	//
 
-	// Template._loginButtonsMessagesDialog.rendered = function() {
-	//   var $modal = $(this.find('#configure-login-service-dialog-modal'));
-	// 	 if (!_.isFunction($modal.modal)) {
-	// 	 	console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
-	// 	 } else {
-	// 	 	$modal.modal();
-	// 	 }
-	// }
+	var messagesDialogVisible = function() {
+		var hasMessage = loginButtonsSession.get('infoMessage') || loginButtonsSession.get('errorMessage');
+		return !Accounts._loginButtons.dropdown() && hasMessage;
+	}
+
+
+	Template._loginButtonsMessagesDialog.onRendered(function() {
+		var self = this;
+
+		self.autorun(function() {
+			if (messagesDialogVisible()) {
+				var $modal = $(self.find('#login-buttons-message-dialog'));
+				if (!_.isFunction($modal.modal)) {
+					console.error("You have to add a Bootstrap package, i.e. meteor add twbs:bootstrap");
+				} else {
+					$modal.modal();
+				}
+			}
+		});
+	});
 
 	Template._loginButtonsMessagesDialog.events({
 		'click #messages-dialog-dismiss-button': function() {
@@ -189,10 +201,7 @@
 	});
 
 	Template._loginButtonsMessagesDialog.helpers({
-		visible: function() {
-			var hasMessage = loginButtonsSession.get('infoMessage') || loginButtonsSession.get('errorMessage');
-			return !Accounts._loginButtons.dropdown() && hasMessage;
-		}
+		visible: function() { return messagesDialogVisible(); }
 	});
 
 
@@ -302,4 +311,3 @@
 	};
 
 })();
-
