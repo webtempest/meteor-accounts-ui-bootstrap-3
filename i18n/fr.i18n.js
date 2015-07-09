@@ -82,6 +82,7 @@ i18n.map("fr", {
 		passwordChanged: "Mot de passe modifié"
 	},
 	errorMessages: {
+		genericTitle: "Il y avait une erreur",
 		userNotFound: "Utilisateur non trouvé",
 		invalidEmail: "L'adresse email est invalide",
 		incorrectPassword: "Mot de passe incorrect",

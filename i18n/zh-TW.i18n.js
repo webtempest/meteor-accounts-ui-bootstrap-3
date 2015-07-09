@@ -82,6 +82,7 @@ zhTW = {
         passwordChanged: "密碼更改成功"
     },
     errorMessages: {
+        genericTitle: "出現了一個錯誤",
         userNotFound: "用户不存在",
         invalidEmail: "Email格式不正確",
         incorrectPassword: "密碼错误",

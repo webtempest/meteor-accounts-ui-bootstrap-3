@@ -82,6 +82,7 @@ i18n.map("ko", {
 		passwordChanged: "비밀번호가 변경되었습니다"
 	},
 	errorMessages: {
+		genericTitle: "오류가 발생했습니다",
 		userNotFound: "찾을 수 없는 회원입니다",
 		invalidEmail: "잘못된 이메일 주소",
 		incorrectPassword: "비밀번호가 틀렸습니다",

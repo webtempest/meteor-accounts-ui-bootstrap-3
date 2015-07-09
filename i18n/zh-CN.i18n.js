@@ -82,6 +82,7 @@ zhCN = {
         passwordChanged: "密码更改成功"
     },
     errorMessages: {
+        genericTitle: "出現了一個錯誤",
         userNotFound: "用户不存在",
         invalidEmail: "Email格式不正确",
         incorrectPassword: "密码错误",

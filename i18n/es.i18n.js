@@ -82,6 +82,7 @@ i18n.map("es", {
 		passwordChanged: "Contraseña modificada"
 	},
 	errorMessages: {
+		genericTitle: "Ha ocurrido un error",
 		userNotFound: "El usuario no existe",
 		invalidEmail: "Correo electrónico inválido",
 		incorrectPassword: "Contraseña incorrecta",

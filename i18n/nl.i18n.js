@@ -82,6 +82,7 @@ i18n.map("nl", {
 		passwordChanged: "Wachtwoord veranderd"
 	},
 	errorMessages: {
+		genericTitle: "Er is een fout opgetreden",
 		userNotFound: "Gebruiker niet gevonden",
 		invalidEmail: "Ongeldig e-mailadres",
 		incorrectPassword: "Onjuist wachtwoord",

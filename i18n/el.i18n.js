@@ -82,12 +82,13 @@ i18n.map("el", {
 		passwordChanged: "Password changed"
 	},
 	errorMessages: {
-		userNotFound: "User not found",
+		genericTitle: "Υπήρξε ένα σφάλμα",
+		userNotFound: "Ο χρήστης δεν βρέθηκε",
 		invalidEmail: "Μη έγκυρος λογαριασμός ηλεκτρονικού ταχυδρομείου (email)",
-		incorrectPassword: "Incorrect password",
+		incorrectPassword: "Λάθος κωδικός",
 		usernameTooShort: "Το όνομα χρήστη πρέπει να είναι τουλάχιστον 3 χαρακτήρες",
 		passwordTooShort: "Ο κωδικός πρέπει να είναι τουλάχιστον 6 χαρακτήρες",
 		passwordsDontMatch: "Οι κωδικοί δεν ταιριάζουν",
-		newPasswordSameAsOld: "New and old passwords must be different"
+		newPasswordSameAsOld: "Νέα και παλιά κωδικούς πρόσβασης πρέπει να είναι διαφορετική"
 	}
 });

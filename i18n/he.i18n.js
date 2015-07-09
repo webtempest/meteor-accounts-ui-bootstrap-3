@@ -82,6 +82,7 @@ i18n.map("he", {
 		passwordChanged: "סיסמא שונתה"
 	},
 	errorMessages: {
+		genericTitle: "תרעה שגיאה",
 		userNotFound: "משתמש/ת לא קיים/מת",
 		invalidEmail: "כתובת דואר אלקטרוני לא חוקי",
 		incorrectPassword: "סיסמא שגויה",

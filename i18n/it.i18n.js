@@ -82,12 +82,13 @@ i18n.map("it", {
 		passwordChanged: "Password changed"
 	},
 	errorMessages: {
-		userNotFound: "User not found",
+		genericTitle: "C'era un errore",
+		userNotFound: "Username non trovato",
 		invalidEmail: "Email non valida",
-		incorrectPassword: "Incorrect password",
+		incorrectPassword: "Password errata",
 		usernameTooShort: "La Username deve essere almeno di 3 caratteri",
 		passwordTooShort: "La Password deve essere almeno di 6 caratteri",
 		passwordsDontMatch: "Le password non corrispondono",
-		newPasswordSameAsOld: "New and old passwords must be different"
+		newPasswordSameAsOld: "Nuove e vecchie password devono essere diversi"
 	}
 });

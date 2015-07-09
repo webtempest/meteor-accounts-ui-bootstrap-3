@@ -82,6 +82,7 @@ i18n.map("ru", {
 		passwordChanged: "Пароль изменён"
 	},
 	errorMessages: {
+		genericTitle: "Там была ошибка",
 		userNotFound: "Пользователь не найден",
 		invalidEmail: "Некорректный email",
 		incorrectPassword: "Неправильный пароль",

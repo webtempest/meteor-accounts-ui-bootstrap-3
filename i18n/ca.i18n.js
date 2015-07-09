@@ -82,6 +82,7 @@ i18n.map("ca", {
 		passwordChanged: "Contrasenya canviada"
 	},
 	errorMessages: {
+		genericTitle: "Hi ha hagut un error",
 		userNotFound: "L'usuari no existeix",
 		invalidEmail: "Adreça invàlida",
 		incorrectPassword: "Contrasenya incorrecta",

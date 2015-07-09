@@ -82,6 +82,7 @@ ptBR = {
 		passwordChanged: "Senha alterada"
 	},
 	errorMessages: {
+		genericTitle: "Houve um erro",
 		userNotFound: "Usuário não encontrado",
 		invalidEmail: "E-mail inválido",
 		incorrectPassword: "Senha incorreta",

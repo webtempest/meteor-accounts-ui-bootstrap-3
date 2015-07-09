@@ -82,6 +82,7 @@ i18n.map("ar", {
     passwordChanged: "تمت إعادة تعيين كلمة السر"
   },
   errorMessages: {
+    genericTitle: "كان هناك خطأ",
     userNotFound: "المستخدم غير موجود",
     invalidEmail: "بريد خاطئ",
     incorrectPassword: "كلمة السر خطأ",

@@ -83,6 +83,7 @@ ptPT = {
 		passwordChanged: "Palavra-passe alterada"
 	},
 	errorMessages: {
+		genericTitle: "Houve um erro",
 		usernameTooShort: "Utilizador precisa de ter mais de 3 caracteres",
 		invalidEmail: "E-mail inválido",
 		passwordTooShort: "Palavra-passe precisa ter mais de 6 caracteres",

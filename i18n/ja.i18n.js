@@ -82,6 +82,7 @@ i18n.map("ja", {
 		passwordChanged: "パスワードが変わりました"
 	},
 	errorMessages: {
+		genericTitle: "エラーが発生しました",
 		userNotFound: "ユーザーが見つかりません",
 		invalidEmail: "無効なメール",
 		incorrectPassword: "無効なパスワード",
