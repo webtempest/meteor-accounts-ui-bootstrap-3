@@ -18,20 +18,17 @@
 				}
 			};
 
-	    // XXX Service providers should be able to specify their
-	    // `Meteor.loginWithX` method name.
-	    var loginWithService = Meteor["loginWith" +
-	                                  (serviceName === 'meteor-developer' ?
-	                                   'MeteorDeveloperAccount' :
-	                                   capitalize(serviceName))];
+			// XXX Service providers should be able to specify their
+			// `Meteor.loginWithX` method name.
+			var loginWithService = Meteor["loginWith" + (serviceName === 'meteor-developer' ?  'MeteorDeveloperAccount' :  capitalize(serviceName))];
 
-	    var options = {}; // use default scope unless specified
-	    if (Accounts.ui._options.requestPermissions[serviceName])
-	      options.requestPermissions = Accounts.ui._options.requestPermissions[serviceName];
-	    if (Accounts.ui._options.requestOfflineToken[serviceName])
-	      options.requestOfflineToken = Accounts.ui._options.requestOfflineToken[serviceName];
-	    if (Accounts.ui._options.forceApprovalPrompt[serviceName])
-	      options.forceApprovalPrompt = Accounts.ui._options.forceApprovalPrompt[serviceName];
+			var options = {}; // use default scope unless specified
+			if (Accounts.ui._options.requestPermissions[serviceName])
+				options.requestPermissions = Accounts.ui._options.requestPermissions[serviceName];
+			if (Accounts.ui._options.requestOfflineToken[serviceName])
+				options.requestOfflineToken = Accounts.ui._options.requestOfflineToken[serviceName];
+			if (Accounts.ui._options.forceApprovalPrompt[serviceName])
+				options.forceApprovalPrompt = Accounts.ui._options.forceApprovalPrompt[serviceName];
 
 			loginWithService(options, callback);
 		}

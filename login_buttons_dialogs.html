@@ -17,7 +17,7 @@
 					</div>
 					<div class="modal-body">
 						<input id="reset-password-new-password" class="form-control" type="password" placeholder="{{i18n 'resetPasswordDialog.newPassword'}}"/><br>
-                        <input id="reset-password-new-password-again" class="form-control" type="password" placeholder="{{i18n 'resetPasswordDialog.newPasswordAgain'}}"/><br>
+						<input id="reset-password-new-password-again" class="form-control" type="password" placeholder="{{i18n 'resetPasswordDialog.newPasswordAgain'}}"/><br>
 						{{> _loginButtonsMessages}}
 					</div>
 					<div class="modal-footer">
@@ -43,7 +43,7 @@
 					</div>
 					<div class="modal-body">
 						<input id="enroll-account-password" class="form-control" type="password" placeholder="{{i18n 'enrollAccountDialog.newPassword'}}" /><br>
-                        <input id="enroll-account-password-again" class="form-control" type="password" placeholder="{{i18n 'enrollAccountDialog.newPasswordAgain'}}" /><br>
+												<input id="enroll-account-password-again" class="form-control" type="password" placeholder="{{i18n 'enrollAccountDialog.newPasswordAgain'}}" /><br>
 						{{> _loginButtonsMessages}}
 					</div>
 					<div class="modal-footer">
@@ -81,7 +81,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						<h4 class="modal-title">Configure Service</h4>
 					</div>
 					<div class="modal-body">
@@ -144,10 +144,10 @@
 		{{#if visible}}
 		<div class="modal-dialog">
 			<div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title">{{i18n 'errorMessages.genericTitle'}}</h4>
-	      </div>
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">{{i18n 'errorMessages.genericTitle'}}</h4>
+				</div>
 				<div class="modal-body">
 					{{> _loginButtonsMessages}}
 				</div>

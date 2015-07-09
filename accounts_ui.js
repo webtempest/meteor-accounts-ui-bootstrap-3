@@ -24,16 +24,16 @@ Accounts.ui.navigate = function (route, hash) {
 Accounts.ui.config = function(options) {
 	// validate options keys
 	var VALID_KEYS = ['passwordSignupFields', 'extraSignupFields', 'forceEmailLowercase', 'forceUsernameLowercase','forcePasswordLowercase',
-					  'requestPermissions', 'requestOfflineToken', 'forceApprovalPrompt'];
+	'requestPermissions', 'requestOfflineToken', 'forceApprovalPrompt'];
 
 	_.each(_.keys(options), function(key) {
 		if (!_.contains(VALID_KEYS, key)){
 			throw new Error("Accounts.ui.config: Invalid key: " + key);
 		}
 	});
-	
+
 	options.extraSignupFields = options.extraSignupFields || [];
-	
+
 	// deal with `passwordSignupFields`
 	if (options.passwordSignupFields) {
 		if (_.contains([

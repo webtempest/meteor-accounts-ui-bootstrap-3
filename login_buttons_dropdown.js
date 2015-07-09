@@ -184,10 +184,10 @@
 	});
 
 	Template._loginButtonsLoggedOutDropdown.helpers({
-	  forbidClientAccountCreation: function() {
-	    return Accounts._options.forbidClientAccountCreation;
-    }
-  });
+		forbidClientAccountCreation: function() {
+			return Accounts._options.forbidClientAccountCreation;
+		}
+	});
 
 	Template._loginButtonsLoggedOutAllServices.helpers({
 		// additional classes that can be helpful in styling the dropdown
@@ -339,9 +339,9 @@
 		inputType: function() {
 			return this.inputType || "text";
 		},
-        inputTextual: function() {
-          return !_.contains(["radio", "checkbox", "select"], this.inputType);
-        }
+		inputTextual: function() {
+			return !_.contains(["radio", "checkbox", "select"], this.inputType);
+		}
 	});
 
 	//
@@ -411,20 +411,20 @@
 	};
 
 	var elementValueByIdForRadio = function(fieldIdPrefix, radioOptions) {
-    var value = null;
-    for (i in radioOptions) {
-      var element = document.getElementById(fieldIdPrefix + '-' + radioOptions[i].id);
+		var value = null;
+		for (i in radioOptions) {
+			var element = document.getElementById(fieldIdPrefix + '-' + radioOptions[i].id);
 			if (element && element.checked){
 				value =  element.value;
 			}
-    }
-    return value;
-  };
+		}
+		return value;
+	};
 
 	var elementValueByIdForCheckbox = function(id) {
 		var element = document.getElementById(id);
 		return element.checked;
-  };
+	};
 
 	var trimmedElementValueById = function(id) {
 		var element = document.getElementById(id);
@@ -582,16 +582,16 @@
 		var invalidExtraSignupFields = false;
 		// parse extraSignupFields to populate account's profile data
 		_.each(Accounts.ui._options.extraSignupFields, function(field, index) {
-            var value = null;
-            var elementIdPrefix = 'login-';
+						var value = null;
+						var elementIdPrefix = 'login-';
 
-            if (field.inputType === 'radio') {
-              value = elementValueByIdForRadio(elementIdPrefix + field.fieldName, field.data);
-            } else if (field.inputType === 'checkbox') {
-            	value = elementValueByIdForCheckbox(elementIdPrefix + field.fieldName);
-            } else {
-              value = elementValueById(elementIdPrefix + field.fieldName);
-            }
+						if (field.inputType === 'radio') {
+							value = elementValueByIdForRadio(elementIdPrefix + field.fieldName, field.data);
+						} else if (field.inputType === 'checkbox') {
+							value = elementValueByIdForCheckbox(elementIdPrefix + field.fieldName);
+						} else {
+							value = elementValueById(elementIdPrefix + field.fieldName);
+						}
 
 			if (typeof field.validate === 'function') {
 				if (field.validate(value, errorFunction)) {
