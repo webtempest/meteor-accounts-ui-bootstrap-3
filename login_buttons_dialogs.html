@@ -141,11 +141,19 @@
 </template>
 
 <template name="_loginButtonsMessagesDialog">
-	{{#if visible}}
-		<div class="accounts-dialog accounts-centered-dialog" id="login-buttons-message-dialog">
-			{{> _loginButtonsMessages}}
-			<div class="login-button" id="messages-dialog-dismiss-button">{{i18n 'loginButtonsMessagesDialog.dismiss'}}</div>
+		<div class="modal" id="login-buttons-message-dialog">
+			{{#if visible}}
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						<h4><b>{{> _loginButtonsMessages}}</b></h4>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary login-button" id="messages-dialog-dismiss-button" data-dismiss="modal">{{i18n 'loginButtonsMessagesDialog.dismiss'}}</button>
+					</div>
+				</div>
+			</div>
+			{{/if}}
 		</div>
-	{{/if}}
 </template>
 
