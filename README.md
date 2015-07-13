@@ -187,9 +187,9 @@ accountsUIBootstrap3.logoutCallback = function(error) {
 }
 ```
 
-### Forcing lowercase username and/or password
+### Forcing lowercase email, username or password
 
-This will force usernames and passwords to be lowercase on signup and will also allow users to login using uppercase usernames and passwords, as it will convert them to lowercase before checking against the database. Beware however that users who already have an account with uppercase usernames or passwords won't be able to login anymore.
+This will force emails, usernames or passwords to be lowercase on signup and will also allow users to login using uppercase emails, usernames or passwords, as it will convert them to lowercase before checking against the database. Beware however that users who already have an account with uppercase usernames or passwords won't be able to login anymore.
 
 ```javascript
 Accounts.ui.config({
