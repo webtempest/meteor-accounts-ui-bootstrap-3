@@ -16,10 +16,6 @@
 		},
 		'click .login-close': function() {
 			loginButtonsSession.closeDropdown();
-		},
-		'click .dropdown-toggle': function(event) {
-			event.stopPropagation();
-			Template._loginButtons.toggleDropdown();
 		}
 	});
 
