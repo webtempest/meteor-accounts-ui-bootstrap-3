@@ -52,6 +52,10 @@
 			loginButtonsSession.set('resetPasswordToken', null);
 			Accounts._enableAutoLogin();
 			$('#login-buttons-reset-password-modal').modal("hide");
+		},
+		'click #login-buttons-dismiss-reset-password-success': function(event) {
+			event.stopPropagation();
+			$('#login-buttons-reset-password-modal-success').modal("hide");
 		}
 	});
 
@@ -69,9 +73,11 @@
 				if (error) {
 					loginButtonsSession.errorMessage(error.reason || "Unknown error");
 				} else {
+					$('#login-buttons-reset-password-modal').modal("hide");
+					$('#login-buttons-reset-password-modal-success').modal();
+					loginButtonsSession.infoMessage(i18n('infoMessages.passwordChanged'));
 					loginButtonsSession.set('resetPasswordToken', null);
 					Accounts._enableAutoLogin();
-					$('#login-buttons-reset-password-modal').modal("hide");
 				}
 			});
 	};
