@@ -15,10 +15,10 @@ i18n.map("ru", {
 	},
 	justVerifiedEmailDialog: {
 		verified: "Email подтвержден",
-	    dismiss: "Закрыть"
+		dismiss: "Закрыть"
 	},
 	loginButtonsMessagesDialog: {
-	    dismiss: "Закрыть"
+			dismiss: "Закрыть"
 	},
 	loginButtonsLoggedInDropdownActions: {
 		password: "Изменить пароль",
