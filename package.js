@@ -54,7 +54,6 @@ Package.on_use(function (api) {
     'i18n/sv.i18n.js',
     'i18n/ua.i18n.js',
     'i18n/fi.i18n.js',
-    'i18n/vi.i18n.js',
 		'i18n.js',
 
 		'login_buttons.html',
